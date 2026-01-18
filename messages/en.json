@@ -1,0 +1,69 @@
+{
+    "app": {
+        "name": "MS Core",
+        "tagline": "Your application tagline"
+    },
+    "common": {
+        "loading": "Loading...",
+        "error": "An error occurred",
+        "success": "Success",
+        "cancel": "Cancel",
+        "confirm": "Confirm",
+        "save": "Save",
+        "delete": "Delete",
+        "edit": "Edit",
+        "create": "Create",
+        "back": "Back",
+        "next": "Next",
+        "submit": "Submit",
+        "search": "Search",
+        "filter": "Filter",
+        "sort": "Sort",
+        "yes": "Yes",
+        "no": "No",
+        "close": "Close",
+        "open": "Open",
+        "view": "View",
+        "download": "Download",
+        "upload": "Upload"
+    },
+    "navigation": {
+        "home": "Home",
+        "services": "Services",
+        "career": "Career",
+        "about": "About",
+        "contact": "Contact",
+        "settings": "Settings",
+        "profile": "Profile",
+        "dashboard": "Dashboard"
+    },
+    "auth": {
+        "login": "Login",
+        "logout": "Logout",
+        "register": "Register",
+        "forgotPassword": "Forgot Password",
+        "resetPassword": "Reset Password",
+        "email": "Email",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "rememberMe": "Remember me",
+        "signInWith": "Sign in with {provider}",
+        "noAccount": "Don't have an account?",
+        "hasAccount": "Already have an account?"
+    },
+    "errors": {
+        "required": "This field is required",
+        "invalidEmail": "Please enter a valid email",
+        "minLength": "Must be at least {min} characters",
+        "maxLength": "Must be at most {max} characters",
+        "passwordMismatch": "Passwords do not match",
+        "generic": "Something went wrong. Please try again.",
+        "notFound": "Page not found",
+        "unauthorized": "You are not authorized to view this page",
+        "forbidden": "Access forbidden"
+    },
+    "metadata": {
+        "title": "MS Core",
+        "description": "MS Core Application"
+    }
+}

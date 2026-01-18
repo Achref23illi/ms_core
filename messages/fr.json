@@ -1,0 +1,76 @@
+{
+    "app": {
+        "name": "Technologies MS Core",
+        "tagline": "Transformation numérique sécurisée"
+    },
+    "common": {
+        "loading": "Chargement...",
+        "error": "Une erreur est survenue",
+        "success": "Succès",
+        "cancel": "Annuler",
+        "confirm": "Confirmer",
+        "save": "Enregistrer",
+        "delete": "Supprimer",
+        "edit": "Modifier",
+        "create": "Créer",
+        "back": "Retour",
+        "next": "Suivant",
+        "submit": "Soumettre",
+        "search": "Rechercher",
+        "filter": "Filtrer",
+        "sort": "Trier",
+        "yes": "Oui",
+        "no": "Non",
+        "close": "Fermer",
+        "open": "Ouvrir",
+        "view": "Voir",
+        "download": "Télécharger",
+        "upload": "Téléverser"
+    },
+    "navigation": {
+        "home": "Accueil",
+        "services": "Services",
+        "career": "Carrière",
+        "about": "À propos",
+        "contact": "Contact",
+        "settings": "Paramètres",
+        "profile": "Profil",
+        "dashboard": "Tableau de bord"
+    },
+    "hero": {
+        "badge": "Partenaire Microsoft Certifié",
+        "title": "Transformation Numérique Sécurisée & Innovante",
+        "description": "Nous combinons l'expertise Microsoft, l'IA et la cybersécurité de pointe pour accroître votre efficacité et renforcer votre résilience. Opérant au Canada et en Côte d'Ivoire.",
+        "primaryCta": "Nous Contacter",
+        "secondaryCta": "Découvrir nos Services"
+    },
+    "auth": {
+        "login": "Connexion",
+        "logout": "Déconnexion",
+        "register": "Inscription",
+        "forgotPassword": "Mot de passe oublié",
+        "resetPassword": "Réinitialiser le mot de passe",
+        "email": "Courriel",
+        "password": "Mot de passe",
+        "confirmPassword": "Confirmer le mot de passe",
+        "rememberMe": "Se souvenir de moi",
+        "signInWith": "Se connecter avec {provider}",
+        "noAccount": "Pas encore de compte?",
+        "hasAccount": "Déjà un compte?"
+    },
+    "errors": {
+        "required": "Ce champ est requis",
+        "invalidEmail": "Veuillez entrer une adresse courriel valide",
+        "minLength": "Doit contenir au moins {min} caractères",
+        "maxLength": "Doit contenir au maximum {max} caractères",
+        "passwordMismatch": "Les mots de passe ne correspondent pas",
+        "generic": "Une erreur est survenue. Veuillez réessayer.",
+        "notFound": "Page non trouvée",
+        "unauthorized": "Vous n'êtes pas autorisé à accéder à cette page",
+        "forbidden": "Accès interdit"
+    },
+    "metadata": {
+        "title": "Technologies MS Core",
+        "description": "Transformation numérique, Cybersécurité, IA et Solutions Microsoft."
+    }
+}
