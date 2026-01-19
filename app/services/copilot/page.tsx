@@ -114,19 +114,19 @@ export default function CopilotPage() {
                             Boostez votre efficacité et concentrez-vous sur ce qui compte grâce à l’intelligence artificielle intégrée à vos outils quotidiens.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                            <Button className="rounded-full bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 text-sm font-bold shadow-lg shadow-purple-500/20">
+                            <Link href="/contact" className="inline-flex items-center justify-center rounded-full bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 text-sm font-bold shadow-lg shadow-purple-500/20 transition-all">
                                 Découvrir Copilot
-                            </Button>
-                            <Button className="rounded-full bg-transparent border border-white text-white hover:bg-white hover:text-[#092963] backdrop-blur-sm px-6 py-2 text-sm font-medium transition-all">
+                            </Link>
+                            <Link href="#details" className="inline-flex items-center justify-center rounded-full bg-transparent border border-white text-white hover:bg-white hover:text-[#092963] backdrop-blur-sm px-6 py-2 text-sm font-medium transition-all">
                                 En savoir plus
-                            </Button>
+                            </Link>
                         </div>
                     </motion.div>
                 </div>
             </section>
 
             {/* Intro Section - What Copilot can do */}
-            <section className="py-20 px-4">
+            <section id="details" className="py-20 px-4">
                 <div className="container mx-auto max-w-6xl">
                     <div className="text-center mb-16">
                         <span className="text-purple-600 font-bold tracking-wider text-sm uppercase">Fonctionnalités Clés</span>

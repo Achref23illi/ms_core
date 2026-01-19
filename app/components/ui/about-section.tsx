@@ -5,6 +5,7 @@ import { motion } from 'motion/react';
 import { MapPin, Phone, Mail, Award, Globe, ShieldCheck } from 'lucide-react';
 import { cn } from '@/app/lib/utils';
 import { Button } from '@/app/components/ui/button';
+import { CertificationsBadges } from '@/app/components/ui/certifications-badges';
 
 export function AboutSection() {
     return (
@@ -100,19 +101,7 @@ export function AboutSection() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5 }}
                         >
-                            <h4 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-6 flex items-center gap-2">
-                                <ShieldCheck className="w-4 h-4" /> Certifications & Expertise
-                            </h4>
-                            <div className="flex flex-wrap gap-3">
-                                {["CISSP", "CEH", "ISO 27001", "SC-100", "CompTIA Security+"].map((cert, idx) => (
-                                    <span
-                                        key={idx}
-                                        className="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-semibold text-[#092963] shadow-sm hover:border-[#eb7e2a]/30 hover:shadow-md transition-all cursor-default"
-                                    >
-                                        {cert}
-                                    </span>
-                                ))}
-                            </div>
+                            <CertificationsBadges />
                         </motion.div>
 
                         {/* Divider */}

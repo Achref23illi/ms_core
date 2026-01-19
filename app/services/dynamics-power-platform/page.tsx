@@ -143,19 +143,19 @@ export default function DynamicsPage() {
                             Quel que soit votre domaine d’activité, révolutionnez votre manière de travailler avec des solutions innovantes conçues pour automatiser, analyser et optimiser.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                            <Button className="rounded-full bg-[#eb7e2a] hover:bg-[#eb7e2a]/90 text-white px-6 py-2 text-sm font-bold shadow-lg shadow-[#eb7e2a]/20">
+                            <Link href="/contact" className="inline-flex items-center justify-center rounded-full bg-[#eb7e2a] hover:bg-[#eb7e2a]/90 text-white px-6 py-2 text-sm font-bold shadow-lg shadow-[#eb7e2a]/20 transition-all">
                                 Transformer mon entreprise
-                            </Button>
-                            <Button className="rounded-full bg-transparent border border-white text-white hover:bg-white hover:text-[#092963] backdrop-blur-sm px-6 py-2 text-sm font-medium transition-all">
+                            </Link>
+                            <Link href="#details" className="inline-flex items-center justify-center rounded-full bg-transparent border border-white text-white hover:bg-white hover:text-[#092963] backdrop-blur-sm px-6 py-2 text-sm font-medium transition-all">
                                 En savoir plus
-                            </Button>
+                            </Link>
                         </div>
                     </motion.div>
                 </div>
             </section>
 
             {/* Intro Section */}
-            <section className="py-20 px-4">
+            <section id="details" className="py-20 px-4">
                 <div className="container mx-auto max-w-5xl">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <motion.div

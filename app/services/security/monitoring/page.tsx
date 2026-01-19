@@ -93,19 +93,19 @@ export default function SecurityMonitoringPage() {
                             Assurez la protection de votre entreprise avec une visibilité complète, une détection proactive et une réponse rapide aux incidents 24/7.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                            <Button className="rounded-full bg-red-600 hover:bg-red-700 text-white px-6 py-2 text-sm font-bold shadow-lg shadow-red-500/20">
+                            <Link href="/contact" className="inline-flex items-center justify-center rounded-full bg-red-600 hover:bg-red-700 text-white px-6 py-2 text-sm font-bold shadow-lg shadow-red-500/20 transition-all">
                                 Sécuriser mon entreprise
-                            </Button>
-                            <Button className="rounded-full bg-transparent border border-white text-white hover:bg-white hover:text-[#092963] backdrop-blur-sm px-6 py-2 text-sm font-medium transition-all">
+                            </Link>
+                            <Link href="#details" className="inline-flex items-center justify-center rounded-full bg-transparent border border-white text-white hover:bg-white hover:text-[#092963] backdrop-blur-sm px-6 py-2 text-sm font-medium transition-all">
                                 En savoir plus
-                            </Button>
+                            </Link>
                         </div>
                     </motion.div>
                 </div>
             </section>
 
             {/* Intro Section */}
-            <section className="py-20 px-4 bg-gray-50">
+            <section id="details" className="py-20 px-4 bg-gray-50">
                 <div className="container mx-auto max-w-5xl text-center">
                     <h2 className="text-2xl md:text-3xl font-bold text-[#092963] mb-6">
                         Expertise et outils de pointe pour votre sécurité

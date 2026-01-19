@@ -15,6 +15,9 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "MS Core",
   description: "MS Core Application",
+  icons: {
+    icon: '/favicon.png',
+  },
 };
 
 export default async function RootLayout({

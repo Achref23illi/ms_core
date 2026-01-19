@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Shield, Brain, Cloud, Package, ChevronRight, CheckCircle2, ArrowRight } from 'lucide-react';
 import { cn } from '@/app/lib/utils';
 import { Button } from '@/app/components/ui/button';
+import Link from 'next/link';
 
 // --- Data Structure ---
 
@@ -13,61 +14,65 @@ const servicesData = [
         id: 'cybersecurity',
         title: "Cybersécurité",
         icon: Shield,
+        link: '/services/security',
         tagline: "Protégez ce qui compte le plus : vos informations.",
         accroche: "Nous sécurisons votre entreprise contre les menaces modernes.",
-        description: "Une approche complète pour identifier, protéger et défendre votre organisation contre les cybermenaces de plus en plus sophistiquées.",
+        description: "Diagnostiquez, testez et protégez vos infrastructures. De la surveillance SOC 24/7 à la conformité ISO 27001, nous couvrons tous vos besoins de sécurité.",
         subServices: [
-            { title: "Diagnostic en cybersécurité", desc: "Évaluez le niveau réel de sécurité de votre organisation et identifiez les vulnérabilités." },
-            { title: "Tests d’intrusion", desc: "Testez la résistance de vos systèmes face à des attaques réelles simulées par nos experts." },
-            { title: "Sécurité cloud", desc: "Sécurisez vos environnements Microsoft Azure et 365 contre les accès non autorisés." },
-            { title: "Surveillance et réponse (SOC)", desc: "Détectez et réagissez rapidement aux activités suspectes 24/7." },
-            { title: "Audit et conformité", desc: "Mise en conformité avec ISO 27001, RGPD, PCI DSS et autres normes." },
-            { title: "Test d’hameçonnage", desc: "Campagnes simulées pour réduire les risques liés au facteur humain." },
-            { title: "Cyberenquête", desc: "Investigation numérique approfondie suite à un incident pour identifier l'origine et l'impact." },
-            { title: "Formation et sensibilisation", desc: "Développez une culture de sécurité durable au sein de vos équipes." },
+            { title: "Diagnostic en cybersécurité", desc: "Évaluez le niveau réel de sécurité de votre organisation." },
+            { title: "Tests d’intrusion", desc: "Testez la résistance de vos systèmes face à des attaques réelles." },
+            { title: "Sécurité cloud", desc: "Sécurisez vos environnements cloud et vos données critiques." },
+            { title: "Surveillance (SOC)", desc: "Détectez et réagissez rapidement aux cybermenaces." },
+            { title: "Audit et conformité", desc: "Respectez les exigences réglementaires (ISO 27001, RGPD, etc.)." },
+            { title: "Test d’hameçonnage", desc: "Réduisez les risques liés au facteur humain." },
+            { title: "Cyberenquête", desc: "Analyse approfondie après incident pour identifier l'origine." },
+            { title: "Formation", desc: "Développez une culture de cybersécurité durable." },
         ]
     },
     {
         id: 'ai',
         title: "Intelligence Artificielle",
         icon: Brain,
+        link: '/services/copilot',
         tagline: "Boostez votre entreprise avec la puissance de l’IA.",
         accroche: "Transformez vos processus, gagnez du temps et augmentez votre performance.",
-        description: "L'intelligence artificielle n'est plus le futur, c'est le présent. Nous vous aidons à l'intégrer de manière pragmatique et sécurisée.",
+        description: "De la conception de solutions sur mesure à l'intégration de Microsoft Copilot, nous transformons vos données en leviers de performance.",
         subServices: [
-            { title: "Solutions IA sur mesure", desc: "Conception et intégration de modèles IA adaptés à vos données et besoins métier." },
-            { title: "Chatbots & Assistants", desc: "Automatisez le support et améliorez l'expérience client avec l'IA conversationnelle." },
-            { title: "Formation IA", desc: "Rendez vos équipes autonomes et responsables face aux technologies émergentes." },
+            { title: "Solutions IA sur mesure", desc: "Conception et intégration adaptées à vos besoins métier." },
+            { title: "Chatbots & Assistants", desc: "Améliorez l'expérience client grâce à l'IA conversationnelle." },
+            { title: "Formation IA", desc: "Rendez vos équipes autonomes et responsables face à l'IA." },
         ]
     },
     {
         id: 'microsoft',
         title: "Solutions Microsoft & Cloud",
         icon: Cloud,
+        link: '/services/microsoft-365',
         tagline: "Travaillez plus vite, plus intelligemment et en toute sécurité.",
         accroche: "Votre partenaire Microsoft pour moderniser votre entreprise.",
-        description: "En tant que partenaire Microsoft, nous vous accompagnons dans la transformation de votre environnement de travail numérique.",
+        description: "Intégration, migration et sécurisation de votre environnement Microsoft 365 et Azure pour une productivité sans faille.",
         subServices: [
-            { title: "Intégration Microsoft 365", desc: "Déploiement et adoption des outils collaboratifs modernes (Teams, SharePoint, etc.)." },
-            { title: "Migration vers le cloud", desc: "Transition fluide de vos systèmes et données vers Microsoft Azure." },
-            { title: "Infrastructures sécurisées", desc: "Architecture cloud robuste, incluant réseaux, sauvegarde et reprise après sinistre." },
-            { title: "Sécurisation Microsoft", desc: "Renforcement des contrôles d'accès et protection des données dans le cloud." },
-            { title: "Optimisation Cloud", desc: "Gestion proactive pour améliorer les performances et réduire les coûts." },
-            { title: "Support et Conseil", desc: "Assistance technique et accompagnement stratégique au quotidien." },
+            { title: "Intégration Microsoft 365", desc: "Modernisez votre environnement de travail avec Power Platform & Teams." },
+            { title: "Migration vers le cloud", desc: "Passez au cloud Microsoft en toute confiance." },
+            { title: "Infrastructures sécurisées", desc: "Des fondations cloud robustes et évolutives." },
+            { title: "Sécurisation", desc: "Protégez vos utilisateurs, données et accès Microsoft." },
+            { title: "Optimisation Cloud", desc: "Tirez le maximum de valeur de vos investissements." },
+            { title: "Support et Conseil", desc: "Un accompagnement fiable au quotidien." },
         ]
     },
     {
         id: 'hardware',
         title: "Matériels & Électronique",
         icon: Package,
+        link: '/services/materiels',
         tagline: "Équipez vos équipes avec des solutions fiables et performantes.",
-        accroche: "Le bon outil pour le bon travail.",
-        description: "Nous assurons la chaîne d'approvisionnement complète pour vos besoins en équipements technologiques.",
+        accroche: "Le matériel adapté à votre excellence opérationnelle.",
+        description: "Fourniture de matériels informatiques, logiciels et licences. Nous gérons l'installation, la configuration et la logistique pour vous.",
         subServices: [
-            { title: "Matériels informatiques", desc: "Ordinateurs, serveurs et périphériques professionnels performants." },
-            { title: "Logiciels et licences", desc: "Fourniture et gestion des licences adaptées à vos besoins opérationnels." },
-            { title: "Installation & Config", desc: "Mise en service rapide, sécurisée et conforme aux bonnes pratiques." },
-            { title: "Import / Export", desc: "Vente et distribution de solutions électroniques au niveau local et international." },
+            { title: "Matériels informatiques", desc: "Fourniture d'ordinateurs, serveurs et périphériques professionnels." },
+            { title: "Logiciels et licences", desc: "Accédez aux outils adaptés à vos besoins métiers." },
+            { title: "Installation & Config", desc: "Une mise en service rapide et maîtrisée." },
+            { title: "Import / Export", desc: "Vente et distribution de solutions électroniques locales et internationales." },
         ]
     }
 ];
@@ -225,12 +230,16 @@ export function ServicesSection() {
 
                                 {/* Footer Action */}
                                 <div className="flex flex-col sm:flex-row gap-4 pt-6 mt-auto border-t border-gray-100">
-                                    <Button className="rounded-full bg-[#092963] hover:bg-[#092963]/90 text-white px-8">
-                                        Demander une consultation
-                                    </Button>
-                                    <Button variant="outline" className="rounded-full border-gray-200 hover:bg-gray-50 hover:text-[#092963]">
-                                        Voir plus de détails
-                                    </Button>
+                                    <Link href="/contact" className="w-full sm:w-auto">
+                                        <Button className="w-full sm:w-auto rounded-full bg-[#092963] hover:bg-[#092963]/90 text-white px-8">
+                                            Demander une consultation
+                                        </Button>
+                                    </Link>
+                                    <Link href={activeService.link} className="w-full sm:w-auto">
+                                        <Button variant="outline" className="w-full sm:w-auto rounded-full border-gray-200 hover:bg-gray-50 hover:text-[#092963]">
+                                            Voir plus de détails
+                                        </Button>
+                                    </Link>
                                 </div>
                             </motion.div>
                         </AnimatePresence>
