@@ -59,7 +59,7 @@ export default function Microsoft365Page() {
             </div>
 
             {/* Hero Section */}
-            <section className="relative h-[80vh] flex items-center justify-center overflow-hidden bg-[#092963]">
+            <section className="relative min-h-[80vh] h-auto flex items-center justify-center overflow-hidden bg-[#092963] pb-16">
                 {/* Background Image / Overlay */}
                 <div className="absolute inset-0 z-0">
                     <Image
@@ -73,7 +73,7 @@ export default function Microsoft365Page() {
                     <div className="absolute inset-0 bg-gradient-to-t from-[#092963] to-transparent" />
                 </div>
 
-                <div className="container mx-auto max-w-4xl px-4 relative z-10 text-center pt-36">
+                <div className="container mx-auto max-w-4xl px-4 relative z-10 text-center pt-32 md:pt-36">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}

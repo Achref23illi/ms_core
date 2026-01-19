@@ -17,17 +17,41 @@ const navItems: NavItem[] = [
     {
         label: 'Services',
         children: [
-            { label: 'Services dynamics et Power platform', href: '/services/dynamics-power-platform' },
-            { label: 'Service Copilot', href: '/services/copilot' },
-            { label: 'Service Microsoft 365', href: '/services/microsoft-365' },
             {
-                label: 'Protéger votre entreprise',
+                label: 'Cybersécurité et protection des données',
                 children: [
-                    { label: 'Surveillance de la sécurité', href: '/services/security/monitoring' },
-                    { label: 'Conformité Loi 25 et ISO 27 001', href: '/services/security/compliance' },
-                    { label: 'Services Azure security', href: '/services/security/azure' },
-                    { label: 'Architecture de Sécurité', href: '/services/security/architecture' },
+                    { label: 'Diagnostic en cybersécurité', href: '/services/security/diagnostic' },
+                    { label: 'Tests d\'intrusion', href: '/services/security/penetration-testing' },
+                    { label: 'Sécurité cloud', href: '/services/security/cloud' },
+                    { label: 'Surveillance et réponse aux incidents (SOC)', href: '/services/security/monitoring' },
+                    { label: 'Audit et conformité', href: '/services/security/compliance' },
+                    { label: 'Test d\'hameçonnage', href: '/services/security/phishing' },
+                    { label: 'Cyberenquête et investigation numérique', href: '/services/security/investigation' },
+                    { label: 'Formation et sensibilisation', href: '/services/security/training' },
                 ]
+            },
+            {
+                label: 'Intelligence artificielle et automatisation',
+                children: [
+                    { label: 'Conception et intégration de solutions IA', href: '/services/ai/integration' },
+                    { label: 'Chatbots et assistants virtuels', href: '/services/ai/chatbots' },
+                    { label: 'Formation et accompagnement IA', href: '/services/ai/training' },
+                ]
+            },
+            {
+                label: 'Solutions Microsoft et services Cloud',
+                children: [
+                    { label: 'Intégration et déploiement Microsoft', href: '/services/microsoft-365' },
+                    { label: 'Migration vers le cloud', href: '/services/cloud/migration' },
+                    { label: 'Infrastructures cloud sécurisées', href: '/services/cloud/infrastructure' },
+                    { label: 'Sécurisation des environnements', href: '/services/security/azure' },
+                    { label: 'Optimisation et gestion cloud', href: '/services/cloud/optimization' },
+                    { label: 'Conseil et support Microsoft', href: '/services/microsoft/support' },
+                ]
+            },
+            {
+                label: 'Fourniture de matériels et solutions électroniques',
+                href: '/services/materiels'
             }
         ]
     },
