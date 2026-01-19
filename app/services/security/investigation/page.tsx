@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowLeft, Search, FileSearch, HardDrive, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, Search, FileSearch, HardDrive, CheckCircle2, FileText } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
