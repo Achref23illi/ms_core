@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowLeft, Cloud, Lock, Server, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, Cloud, Lock, Server, CheckCircle2, ShieldCheck, Activity, Key, FileText, LayoutDashboard } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -52,35 +52,137 @@ export default function CloudSecurityPage() {
             </section>
 
             <section className="py-20 px-4">
-                <div className="container mx-auto max-w-5xl">
+                <div className="container mx-auto max-w-6xl space-y-20">
+
+                    {/* Introduction */}
+                    <div className="text-center md:text-left max-w-4xl mx-auto md:mx-0">
+                        <h2 className="text-3xl font-bold text-[#092963] mb-6">Sécurisation complète de vos environnements</h2>
+                        <p className="text-gray-600 mb-6 leading-relaxed text-lg">
+                            La sécurité cloud est un enjeu majeur pour les organisations qui exploitent des environnements tels que Microsoft Azure, Microsoft 365 ou d’autres plateformes infonuagiques. Une mauvaise configuration, des accès mal maîtrisés ou des contrôles insuffisants peuvent exposer vos données et vos services à des risques importants.
+                        </p>
+                        <p className="text-gray-600 leading-relaxed text-lg">
+                            Chez Technologies MS Core, nous accompagnons les organisations dans la sécurisation complète de leurs environnements cloud afin de réduire les risques de compromission, protéger les données sensibles et assurer la continuité des activités.
+                        </p>
+                    </div>
+
+                    {/* Ce que nous sécurisons */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                        <div>
-                            <h2 className="text-3xl font-bold text-[#092963] mb-6">Environnements Azure et M365 sécurisés</h2>
-                            <p className="text-gray-600 mb-6 leading-relaxed">
-                                Nous accompagnons les organisations dans la sécurisation de leurs environnements cloud (Microsoft Azure, Microsoft 365, etc.) en corrigeant les mauvaises configurations, en renforçant les contrôles d’accès et en protégeant les données contre les fuites, les intrusions et les accès non autorisés.
-                            </p>
-                            <ul className="space-y-3">
-                                <li className="flex items-start gap-2">
-                                    <CheckCircle2 className="w-5 h-5 text-[#eb7e2a] mt-1" />
-                                    <span className="text-gray-700">Audit de configuration cloud</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <CheckCircle2 className="w-5 h-5 text-[#eb7e2a] mt-1" />
-                                    <span className="text-gray-700">Gestion des identités et accès (IAM)</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <CheckCircle2 className="w-5 h-5 text-[#eb7e2a] mt-1" />
-                                    <span className="text-gray-700">Protection contre les fuites de données (DLP)</span>
-                                </li>
+                        <div className="order-2 md:order-1">
+                            <h3 className="text-2xl font-bold text-[#eb7e2a] mb-6">Ce que nous sécurisons</h3>
+                            <p className="text-gray-600 mb-4">Nos interventions couvrent notamment :</p>
+                            <ul className="grid grid-cols-1 gap-4">
+                                {[
+                                    { icon: Cloud, text: "Les environnements Microsoft Azure et Microsoft 365" },
+                                    { icon: Key, text: "Les identités, accès et privilèges utilisateurs" },
+                                    { icon: ShieldCheck, text: "Les configurations de sécurité cloud (politiques, journaux, alertes)" },
+                                    { icon: Lock, text: "La protection des données et des informations sensibles" },
+                                    { icon: Activity, text: "Les accès externes, API et connexions hybrides" },
+                                    { icon: CheckCircle2, text: "La conformité aux bonnes pratiques et standards de sécurité cloud" }
+                                ].map((item, idx) => (
+                                    <li key={idx} className="flex items-center gap-4 bg-gray-50 p-4 rounded-xl border border-gray-100 hover:border-[#eb7e2a]/30 transition-colors">
+                                        <div className="p-2 bg-white rounded-full text-[#eb7e2a] shadow-sm">
+                                            <item.icon className="w-5 h-5" />
+                                        </div>
+                                        <span className="text-gray-700 font-medium">{item.text}</span>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
-                        <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl">
-                            <Image
-                                src="/images/security-cloud.png"
-                                alt="Cloud Security Visualization"
-                                fill
-                                className="object-cover"
-                            />
+                        <div className="order-1 md:order-2">
+                            <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
+                                <Image
+                                    src="/images/security-cloud.png"
+                                    alt="Visualization Security Cloud"
+                                    fill
+                                    className="object-cover"
+                                />
+                                <div className="absolute inset-0 bg-[#092963]/10 mix-blend-overlay" />
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Approche, Livrables, Bénéfices */}
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                        {/* Approach */}
+                        <div className="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-[#eb7e2a]">
+                            <h3 className="text-xl font-bold text-[#092963] mb-4">Notre approche</h3>
+                            <p className="text-gray-600 mb-4 text-sm">Nous adoptons une approche progressive et pragmatique :</p>
+                            <ul className="space-y-3">
+                                {[
+                                    "Analyse de la configuration actuelle",
+                                    "Identification des mauvaises configurations",
+                                    "Renforcement des contrôles d’accès",
+                                    "Mise en place de bonnes pratiques",
+                                    "Accompagnement adoption outils sécurité"
+                                ].map((item, idx) => (
+                                    <li key={idx} className="flex items-start gap-2">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-[#eb7e2a] mt-2" />
+                                        <span className="text-sm text-gray-700">{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Deliverables */}
+                        <div className="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-[#092963]">
+                            <h3 className="text-xl font-bold text-[#092963] mb-4">Livrables</h3>
+                            <p className="text-gray-600 mb-4 text-sm">À l’issue de notre intervention :</p>
+                            <ul className="space-y-3">
+                                {[
+                                    "État des lieux de la sécurité",
+                                    "Liste des risques et configurations à corriger",
+                                    "Recommandations techniques priorisées",
+                                    "Plan d’actions clair et réaliste",
+                                    "Documentation de gestion continue"
+                                ].map((item, idx) => (
+                                    <li key={idx} className="flex items-start gap-2">
+                                        <FileText className="w-4 h-4 text-[#092963] mt-1 shrink-0" />
+                                        <span className="text-sm text-gray-700">{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Benefits */}
+                        <div className="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-[#eb7e2a]">
+                            <h3 className="text-xl font-bold text-[#092963] mb-4">Bénéfices</h3>
+                            <ul className="space-y-3">
+                                {[
+                                    "Réduction risques mauvaises configs",
+                                    "Protection renforcée données et accès",
+                                    "Meilleure visibilité activités/menaces",
+                                    "Amélioration conformité et gouvernance",
+                                    "Environnements plus résilients"
+                                ].map((item, idx) => (
+                                    <li key={idx} className="flex items-start gap-2">
+                                        <CheckCircle2 className="w-4 h-4 text-[#eb7e2a] mt-1 shrink-0" />
+                                        <span className="text-sm text-gray-700">{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+
+                    {/* Why Secure Cloud */}
+                    <div className="bg-gray-50 rounded-3xl p-8 md:p-12">
+                        <h3 className="text-2xl font-bold text-[#092963] mb-8 text-center">Pourquoi sécuriser vos environnements cloud ?</h3>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div className="text-center">
+                                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-[#eb7e2a] shadow-sm">1</div>
+                                <h4 className="font-bold text-[#092963] mb-2">Réduire les risques</h4>
+                                <p className="text-gray-600 text-sm">Corriger les failles de configuration avant qu'elles ne soient exploitées.</p>
+                            </div>
+                            <div className="text-center">
+                                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-[#eb7e2a] shadow-sm">2</div>
+                                <h4 className="font-bold text-[#092963] mb-2">Protéger les critiques</h4>
+                                <p className="text-gray-600 text-sm">Limiter les risques de fuite, d’intrusion ou d’abus de privilèges sur vos données.</p>
+                            </div>
+                            <div className="text-center">
+                                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-[#eb7e2a] shadow-sm">3</div>
+                                <h4 className="font-bold text-[#092963] mb-2">Assurer la continuité</h4>
+                                <p className="text-gray-600 text-sm">Maintenir la disponibilité des services et renforcer la confiance des clients.</p>
+                            </div>
                         </div>
                     </div>
                 </div>

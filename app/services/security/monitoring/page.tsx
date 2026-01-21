@@ -1,51 +1,9 @@
-'use client';
-
-import React from 'react';
-import { motion } from 'motion/react';
-import { Button } from '@/app/components/ui/button';
-import { ArrowLeft, ShieldAlert, Lock, Eye, Activity, Workflow, Database, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, ShieldAlert, Lock, Eye, Activity, Workflow, Database, CheckCircle2, Siren, Clock, LineChart, FileText } from 'lucide-react';
 import Image from 'next/image';
+import { motion } from 'motion/react';
 import Link from 'next/link';
 
-// Services Data
-const services = [
-    {
-        title: "SOC 24/7 (Sentinel)",
-        icon: Activity,
-        desc: "Surveillance continue et intelligente.",
-        detail: "Utilisation de Microsoft Sentinel pour une détection proactive des menaces 24/7 et une remédiation rapide."
-    },
-    {
-        title: "Défense Renforcée",
-        icon: ShieldAlert,
-        desc: "Protection multicouche complète.",
-        detail: "Microsoft Defender protège vos endpoints, courriels et identités contre les malwares et ransomwares."
-    },
-    {
-        title: "Gestion des Données",
-        icon: Database,
-        desc: "Sécurisez vos informations sensibles.",
-        detail: "Microsoft Purview assure la classification et la protection de vos données, où qu'elles soient."
-    },
-    {
-        title: "Services Gérés",
-        icon: Eye,
-        desc: "Tranquillité d'esprit totale.",
-        detail: "Gestion complète des alertes, reporting détaillé et recommandations stratégiques par nos experts."
-    },
-    {
-        title: "Détection Avancée",
-        icon: Lock,
-        desc: "L'IA au service de votre sécurité.",
-        detail: "Identification des menaces complexes grâce à l'intelligence artificielle et au Threat Intelligence mondial."
-    },
-    {
-        title: "Automatisation",
-        icon: Workflow,
-        desc: "Réponse aux incidents accélérée.",
-        detail: "Orchestration des réponses avec Microsoft Logic Apps pour neutraliser les attaques en temps réel."
-    }
-];
+// ... (keep services if needed or replace them, but user provided new content structure so I will essentially replace the body content)
 
 export default function SecurityMonitoringPage() {
     return (
@@ -84,95 +42,170 @@ export default function SecurityMonitoringPage() {
                             CYBERSÉCURITÉ AVANCÉE
                         </span>
                         <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
-                            Surveillance de Sécurité <br />
+                            Surveillance et <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-300">
-                                Basée sur Microsoft
+                                Réponse aux incidents
                             </span>
                         </h1>
                         <p className="max-w-2xl mx-auto text-base text-gray-200 leading-relaxed mb-8">
-                            Assurez la protection de votre entreprise avec une visibilité complète, une détection proactive et une réponse rapide aux incidents 24/7.
+                            Protection continue et proactive pour détecter et neutraliser les menaces avant impact.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                             <Link href="/contact" className="inline-flex items-center justify-center rounded-full bg-red-600 hover:bg-red-700 text-white px-6 py-2 text-sm font-bold shadow-lg shadow-red-500/20 transition-all">
                                 Sécuriser mon entreprise
-                            </Link>
-                            <Link href="#details" className="inline-flex items-center justify-center rounded-full bg-transparent border border-white text-white hover:bg-white hover:text-[#092963] backdrop-blur-sm px-6 py-2 text-sm font-medium transition-all">
-                                En savoir plus
                             </Link>
                         </div>
                     </motion.div>
                 </div>
             </section>
 
-            {/* Intro Section */}
-            <section id="details" className="py-20 px-4 bg-gray-50">
-                <div className="container mx-auto max-w-5xl text-center">
-                    <h2 className="text-2xl md:text-3xl font-bold text-[#092963] mb-6">
-                        Expertise et outils de pointe pour votre sécurité
-                    </h2>
-                    <p className="text-gray-600 leading-relaxed max-w-3xl mx-auto text-lg">
-                        Nous combinons l'expertise de nos spécialistes certifiés avec la puissance des solutions Microsoft (Sentinel, Defender, Purview) pour offrir une protection inégalée contre les cybermenaces modernes.
-                    </p>
-                </div>
-            </section>
+            <section className="py-20 px-4">
+                <div className="container mx-auto max-w-6xl space-y-20">
 
-            {/* Services Grid */}
-            <section className="py-20 px-4 bg-white">
-                <div className="container mx-auto max-w-7xl">
-                    <div className="text-center mb-16">
-                        <span className="text-[#eb7e2a] font-bold tracking-wider text-sm uppercase">Nos Services Inclus</span>
-                        <h2 className="text-3xl md:text-4xl font-bold text-[#092963] mt-3 mb-6">
-                            Une approche globale de la sécurité
-                        </h2>
+                    {/* Introduction */}
+                    <div className="text-center md:text-left max-w-4xl mx-auto md:mx-0">
+                        <h2 className="text-3xl font-bold text-[#092963] mb-6">Détecter rapidement, réagir efficacement</h2>
+                        <p className="text-gray-600 mb-6 leading-relaxed text-lg">
+                            Face à des menaces de plus en plus sophistiquées, la capacité à détecter rapidement les activités suspectes et à réagir efficacement aux incidents est devenue essentielle. Le service de Surveillance et réponse aux incidents permet de surveiller en continu vos systèmes, d’identifier les comportements anormaux et de contenir les attaques avant qu’elles n’aient un impact majeur sur vos opérations.
+                        </p>
+                        <p className="text-gray-600 leading-relaxed text-lg">
+                            Chez Technologies MS Core, notre centre de surveillance combine technologies avancées, expertise humaine et processus éprouvés pour offrir une protection continue et proactive.
+                        </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {services.map((service, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.1 }}
-                                className="group bg-white rounded-2xl p-8 border border-gray-100 hover:border-red-100 hover:shadow-xl transition-all duration-300"
-                            >
-                                <div className="w-14 h-14 bg-red-50 rounded-xl flex items-center justify-center mb-6 text-[#092963] group-hover:bg-[#092963] group-hover:text-white transition-colors duration-300">
-                                    <service.icon className="w-7 h-7" />
-                                </div>
-                                <h3 className="text-xl font-bold text-[#092963] mb-3 group-hover:text-red-600 transition-colors">{service.title}</h3>
-                                <p className="text-gray-700 font-medium mb-3">{service.desc}</p>
-                                <p className="text-sm text-gray-500 leading-relaxed border-t border-gray-100 pt-3">
-                                    {service.detail}
-                                </p>
-                            </motion.div>
-                        ))}
+                    {/* Ce que nous surveillons */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                        <div className="order-2 md:order-1">
+                            <h3 className="text-2xl font-bold text-[#eb7e2a] mb-6">Ce que nous surveillons</h3>
+                            <p className="text-gray-600 mb-4">Notre service centre de surveillance couvre notamment :</p>
+                            <ul className="grid grid-cols-1 gap-3">
+                                {[
+                                    "Les environnements TI et cloud (réseaux, serveurs, postes, applications)",
+                                    "Les environnements Microsoft Azure et Microsoft 365",
+                                    "Les identités, accès et comptes utilisateurs",
+                                    "Les journaux de sécurité et événements critiques",
+                                    "Les activités suspectes et tentatives d’intrusion",
+                                    "Les signaux de compromission et comportements anormaux"
+                                ].map((item, idx) => (
+                                    <li key={idx} className="flex items-start gap-3 bg-gray-50 p-4 rounded-xl border border-gray-100">
+                                        <Eye className="w-5 h-5 text-[#eb7e2a] mt-1 shrink-0" />
+                                        <span className="text-gray-700 font-medium">{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className="order-1 md:order-2 h-96 bg-gray-900 rounded-2xl flex items-center justify-center relative overflow-hidden shadow-2xl">
+                            <div className="absolute inset-0 bg-[url('/images/grid.svg')] opacity-20" />
+                            <Activity className="w-32 h-32 text-red-500 animate-pulse relative z-10" />
+                            <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/80 to-transparent z-0" />
+                        </div>
                     </div>
-                </div>
-            </section>
 
-            {/* Why Choose Us Section */}
-            <section className="py-20 px-4 bg-[#092963] text-white">
-                <div className="container mx-auto max-w-6xl">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-6">Pourquoi Choisir Technologies MS Core ?</h2>
+                    {/* Approche & Réponse */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                            <h3 className="text-2xl font-bold text-[#092963] mb-6 flex items-center gap-3">
+                                <Clock className="w-8 h-8 text-[#eb7e2a]" /> Notre approche
+                            </h3>
+                            <p className="text-gray-600 mb-4">Nous adoptons une approche structurée et continue :</p>
+                            <ul className="space-y-3">
+                                {[
+                                    "Collecte et corrélation des journaux de sécurité",
+                                    "Surveillance 24/7 ou selon les besoins de l’organisation",
+                                    "Détection des menaces et priorisation des alertes",
+                                    "Analyse approfondie des incidents",
+                                    "Réponse rapide pour contenir, éradiquer et corriger"
+                                ].map((item, idx) => (
+                                    <li key={idx} className="flex items-start gap-3">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-[#eb7e2a] mt-2.5" />
+                                        <span className="text-gray-700">{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                            <h3 className="text-2xl font-bold text-[#092963] mb-6 flex items-center gap-3">
+                                <Siren className="w-8 h-8 text-red-500" /> Réponse aux incidents
+                            </h3>
+                            <p className="text-gray-600 mb-4">En cas d’incident de sécurité, nous intervenons pour :</p>
+                            <ul className="space-y-3">
+                                {[
+                                    "Identifier l’origine et la nature de l’incident",
+                                    "Contenir la menace afin de limiter les impacts",
+                                    "Éliminer les causes de compromission",
+                                    "Restaurer les systèmes et les services",
+                                    "Formuler des recommandations pour prévenir la récurrence"
+                                ].map((item, idx) => (
+                                    <li key={idx} className="flex items-start gap-3">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2.5" />
+                                        <span className="text-gray-700">{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="p-6 bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm">
-                            <CheckCircle2 className="w-10 h-10 text-red-400 mb-4" />
-                            <h3 className="text-xl font-bold mb-3">Expertise Certifiée</h3>
-                            <p className="text-blue-100">Nos spécialistes détiennent les certifications SC-100, AZ-500 et SC-200, garantissant une maîtrise totale des technologies Microsoft.</p>
+
+                    {/* Livrables & Bénéfices */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <div>
+                            <h3 className="text-2xl font-bold text-[#eb7e2a] mb-6">Livrables</h3>
+                            <ul className="space-y-3">
+                                {[
+                                    "Alertes de sécurité qualifiées et contextualisées",
+                                    "Rapports d’incidents clairs et exploitables",
+                                    "Tableaux de bord de visibilité et de suivi",
+                                    "Recommandations d’amélioration continue",
+                                    "Rapports exécutifs pour la direction"
+                                ].map((item, idx) => (
+                                    <li key={idx} className="flex items-start gap-3">
+                                        <FileText className="w-5 h-5 text-[#092963] mt-1 shrink-0" />
+                                        <span className="text-gray-700">{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
-                        <div className="p-6 bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm">
-                            <CheckCircle2 className="w-10 h-10 text-red-400 mb-4" />
-                            <h3 className="text-xl font-bold mb-3">Partenariat Microsoft</h3>
-                            <p className="text-blue-100">Notre statut de partenaire nous permet de tirer le meilleur parti des outils Sentinel, Defender et Purview pour votre entreprise.</p>
-                        </div>
-                        <div className="p-6 bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm">
-                            <CheckCircle2 className="w-10 h-10 text-red-400 mb-4" />
-                            <h3 className="text-xl font-bold mb-3">Approche Personnalisée</h3>
-                            <p className="text-blue-100">Des solutions sur mesure adaptées à vos besoins spécifiques, quelle que soit la taille ou le secteur de votre organisation.</p>
+                        <div>
+                            <h3 className="text-2xl font-bold text-[#eb7e2a] mb-6">Les bénéfices</h3>
+                            <ul className="space-y-3">
+                                {[
+                                    "Réduction du temps de détection et de réponse (MTTD / MTTR)",
+                                    "Limitation des impacts financiers et opérationnels",
+                                    "Visibilité accrue sur les menaces et les activités suspectes",
+                                    "Renforcement de la résilience et de la continuité des activités",
+                                    "Tranquillité d’esprit grâce à une surveillance proactive"
+                                ].map((item, idx) => (
+                                    <li key={idx} className="flex items-start gap-3">
+                                        <ShieldAlert className="w-5 h-5 text-[#092963] mt-1 shrink-0" />
+                                        <span className="text-gray-700">{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
                     </div>
+
+                    {/* Why SOC */}
+                    <div className="bg-gray-900 rounded-3xl p-8 md:p-12 text-white">
+                        <h3 className="text-2xl font-bold text-white mb-8 text-center">Pourquoi mettre en place un service SOC ?</h3>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div className="text-center p-6 bg-white/5 rounded-xl border border-white/10">
+                                <Eye className="w-10 h-10 text-red-500 mx-auto mb-4" />
+                                <h4 className="font-bold text-white mb-2">Détecter les menaces avant</h4>
+                                <p className="text-gray-400 text-sm">Identifier rapidement les comportements suspects et contenir les attaques à un stade précoce.</p>
+                            </div>
+                            <div className="text-center p-6 bg-white/5 rounded-xl border border-white/10">
+                                <Siren className="w-10 h-10 text-red-500 mx-auto mb-4" />
+                                <h4 className="font-bold text-white mb-2">Réagir efficacement</h4>
+                                <p className="text-gray-400 text-sm">Contenir et corriger les incidents de manière coordonnée, réduisant leur impact.</p>
+                            </div>
+                            <div className="text-center p-6 bg-white/5 rounded-xl border border-white/10">
+                                <LineChart className="w-10 h-10 text-red-500 mx-auto mb-4" />
+                                <h4 className="font-bold text-white mb-2">Améliorer la posture</h4>
+                                <p className="text-gray-400 text-sm">Amélioration continue grâce à l’analyse des incidents et aux retours d’expérience.</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </section>
 

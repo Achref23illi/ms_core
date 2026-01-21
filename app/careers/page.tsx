@@ -45,10 +45,10 @@ export default function CareersPage() {
                         <span className="inline-block py-1 px-3 rounded-full bg-[#eb7e2a]/20 text-[#eb7e2a] font-bold tracking-wider text-xs mb-6 border border-[#eb7e2a]/30 backdrop-blur-sm">
                             REJOIGNEZ-NOUS
                         </span>
-                        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight max-w-4xl mx-auto">
+                        <h1 className="text-2xl sm:text-3xl md:text-6xl font-bold text-white mb-6 leading-tight max-w-4xl mx-auto">
                             Transformez votre carrière avec <span className="text-[#eb7e2a]">Technologies MS Core</span>
                         </h1>
-                        <p className="text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed mb-10">
+                        <p className="text-base sm:text-lg md:text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed mb-10">
                             Rejoignez une équipe qui valorise votre talent, innove avec Microsoft et sécurise l'avenir numérique des entreprises.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">

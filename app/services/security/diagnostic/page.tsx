@@ -57,35 +57,107 @@ export default function SecurityDiagnosticPage() {
 
             {/* Content Section */}
             <section className="py-20 px-4">
-                <div className="container mx-auto max-w-5xl">
+                <div className="container mx-auto max-w-5xl space-y-16">
+
+                    {/* Introduction */}
+                    <div className="text-center md:text-left">
+                        <h2 className="text-3xl font-bold text-[#092963] mb-6">Comprendre votre posture de sécurité</h2>
+                        <p className="text-gray-600 mb-6 leading-relaxed">
+                            Le diagnostic de cybersécurité est une étape essentielle pour comprendre votre posture de sécurité actuelle, identifier les vulnérabilités critiques et prioriser les actions à mettre en place pour réduire les risques. Il offre une vision globale et objective de votre environnement technologique, organisationnel et humain.
+                        </p>
+                        <p className="text-gray-600 leading-relaxed">
+                            Chez Technologies MS Core, nous réalisons un diagnostic structuré et pragmatique qui permet aux dirigeants et aux équipes TI de prendre des décisions éclairées, basées sur des constats concrets et mesurables.
+                        </p>
+                    </div>
+
+                    {/* Ce que nous analysons */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                        <div>
-                            <h2 className="text-3xl font-bold text-[#092963] mb-6">Comprendre vos risques pour mieux vous protéger</h2>
-                            <p className="text-gray-600 mb-6 leading-relaxed">
-                                Nous analysons votre posture de cybersécurité afin d’identifier les vulnérabilités, les failles organisationnelles et les risques prioritaires pouvant affecter vos systèmes, vos données et vos opérations.
-                            </p>
-                            <p className="text-gray-600 mb-6 leading-relaxed">
-                                Ce diagnostic permet d’obtenir une vision claire de votre niveau de maturité et de définir un plan d’actions concret et priorisé.
-                            </p>
+                        <div className="order-2 md:order-1">
+                            <h3 className="text-2xl font-bold text-[#eb7e2a] mb-6">Ce que nous analysons</h3>
+                            <p className="text-gray-600 mb-4">Notre diagnostic couvre notamment :</p>
                             <ul className="space-y-3">
-                                <li className="flex items-start gap-2">
-                                    <CheckCircle2 className="w-5 h-5 text-[#eb7e2a] mt-1" />
-                                    <span className="text-gray-700">Identification des vulnérabilités critiques</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <CheckCircle2 className="w-5 h-5 text-[#eb7e2a] mt-1" />
-                                    <span className="text-gray-700">Analyse des failles organisationnelles</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <CheckCircle2 className="w-5 h-5 text-[#eb7e2a] mt-1" />
-                                    <span className="text-gray-700">Plan d'action priorisé</span>
-                                </li>
+                                {[
+                                    "La gouvernance de la sécurité de l’information",
+                                    "Les politiques, procédures et pratiques organisationnelles",
+                                    "Les contrôles de sécurité techniques (réseaux, postes, serveurs, cloud, identités, accès)",
+                                    "La protection des données et des informations sensibles",
+                                    "Les risques liés au facteur humain et aux usages",
+                                    "Le niveau de maturité globale en cybersécurité"
+                                ].map((item, idx) => (
+                                    <li key={idx} className="flex items-start gap-3">
+                                        <CheckCircle2 className="w-5 h-5 text-[#eb7e2a] mt-1 shrink-0" />
+                                        <span className="text-gray-700">{item}</span>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
-                        <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl bg-gray-100 flex items-center justify-center">
-                            <Search className="w-24 h-24 text-gray-300" />
+                        <div className="order-1 md:order-2 h-64 md:h-80 bg-gray-100 rounded-2xl flex items-center justify-center">
+                            {/* Placeholder Icon or Image */}
+                            <Search className="w-20 h-20 text-[#092963]/20" />
                         </div>
                     </div>
+
+                    {/* Notre approche */}
+                    <div className="bg-gray-50 rounded-3xl p-8 md:p-12">
+                        <h3 className="text-2xl font-bold text-[#092963] mb-6">Notre approche</h3>
+                        <p className="text-gray-600 mb-6 leading-relaxed">
+                            Nous adoptons une approche méthodique, proportionnée à la taille et au contexte de votre organisation. Notre démarche est indépendante, factuelle et orientée vers la réalité opérationnelle de votre organisation.
+                        </p>
+                        <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {[
+                                "Collecte d’informations et entretiens ciblés",
+                                "Analyse documentaire et technique",
+                                "Identification des vulnérabilités, failles et écarts",
+                                "Évaluation des risques et de leur impact potentiel",
+                                "Priorisation des actions correctives"
+                            ].map((item, idx) => (
+                                <li key={idx} className="flex items-center gap-3 bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                                    <div className="w-2 h-2 rounded-full bg-[#eb7e2a]" />
+                                    <span className="text-gray-700 font-medium">{item}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Livrables & Bénéfices */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <div>
+                            <h3 className="text-2xl font-bold text-[#eb7e2a] mb-6">Livrables</h3>
+                            <p className="text-gray-600 mb-4">À l’issue du diagnostic, vous recevez :</p>
+                            <ul className="space-y-3">
+                                {[
+                                    "Un rapport clair et structuré présentant les constats clés",
+                                    "Une évaluation de votre niveau de maturité en cybersécurité",
+                                    "Une cartographie des risques prioritaires",
+                                    "Un plan d’actions concret, hiérarchisé et réaliste",
+                                    "Des recommandations adaptées à vos contraintes opérationnelles et budgétaires"
+                                ].map((item, idx) => (
+                                    <li key={idx} className="flex items-start gap-3">
+                                        <FileText className="w-5 h-5 text-[#092963] mt-1 shrink-0" />
+                                        <span className="text-gray-700">{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 className="text-2xl font-bold text-[#eb7e2a] mb-6">Les bénéfices pour votre organisation</h3>
+                            <ul className="space-y-3">
+                                {[
+                                    "Vision claire de votre posture de cybersécurité",
+                                    "Réduction des risques techniques, humains et organisationnels",
+                                    "Meilleure priorisation des investissements en sécurité",
+                                    "Renforcement de la résilience et de la confiance",
+                                    "Base solide pour des démarches d’audit, de conformité ou d’amélioration continue"
+                                ].map((item, idx) => (
+                                    <li key={idx} className="flex items-start gap-3">
+                                        <ShieldAlert className="w-5 h-5 text-[#092963] mt-1 shrink-0" />
+                                        <span className="text-gray-700">{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
             </section>
 
