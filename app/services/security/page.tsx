@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Button } from '@/app/components/ui/button';
-import { ArrowLeft, ShieldCheck, Search, Lock, Cloud, Eye, CheckCircle2, UserCheck, GraduationCap, FileSearch } from 'lucide-react';
+import { ArrowLeft, ShieldCheck, Search, Lock, Cloud, Eye, CheckCircle2, UserCheck, GraduationCap, FileSearch, Server } from 'lucide-react';
 import Link from 'next/link';
 import { Footer } from '@/app/components';
 
@@ -12,50 +12,79 @@ const services = [
     {
         title: "Diagnostic en cybersécurité",
         icon: Search,
+        href: "/services/security/diagnostic",
         desc: "Évaluez le niveau réel de sécurité de votre organisation.",
-        detail: "Nous analysons votre posture de cybersécurité afin d’identifier les vulnérabilités, les failles organisationnelles et les risques prioritaires. Ce diagnostic permet d’obtenir une vision claire de votre niveau de maturité et de définir un plan d’actions concret et priorisé."
+        detail: "Nous analysons votre posture de cybersécurité afin d’identifier les vulnérabilités, les failles organisationnelles et les risques prioritaires."
     },
     {
         title: "Tests d’intrusion",
         icon: Lock,
+        href: "/services/security/penetration-testing",
         desc: "Testez la résistance de vos systèmes face à des attaques réelles.",
-        detail: "Nos experts simulent des cyberattaques contrôlées sur vos réseaux, applications et infrastructures afin d’identifier les failles exploitables avant qu’elles ne le soient par des acteurs malveillants."
+        detail: "Nos experts simulent des cyberattaques contrôlées sur vos réseaux, applications et infrastructures afin d’identifier les failles exploitables."
     },
     {
-        title: "Sécurité cloud",
+        title: "Architecture de sécurité",
+        icon: ShieldCheck,
+        href: "/services/security/architecture",
+        desc: "Concevez une infrastructure résiliente dès la base.",
+        detail: "Nous concevons des architectures sécurisées alignées sur le Microsoft Cloud Adoption Framework (CAF) et les meilleures pratiques."
+    },
+    {
+        title: "Sécurité des réseaux",
+        icon: Cloud, // using Cloud icon as placeholder specific network icon might be needed or reused
+        href: "/services/security/network",
+        desc: "Protégez votre infrastructure et vos accès.",
+        detail: "Pare-feu nouvelle génération, segmentation réseau (Zero Trust) et sécurisation des accès distants (VPN/ZTNA)."
+    },
+    {
+        title: "Sécurité Cloud",
         icon: Cloud,
-        desc: "Sécurisez vos environnements cloud et vos données critiques.",
-        detail: "Nous accompagnons les organisations dans la sécurisation de leurs environnements cloud (Microsoft Azure, Microsoft 365, etc.) en corrigeant les mauvaises configurations et en renforçant les contrôles d’accès."
+        href: "/services/security/cloud",
+        desc: "Sécurisez vos environnements Microsoft 365 et Azure.",
+        detail: "Protection des identités, des données et des applications dans le cloud avec une configuration optimale."
     },
     {
-        title: "Surveillance et réponse (SOC)",
+        title: "Sécurité Azure",
+        icon: Server, // differentiating from general cloud
+        href: "/services/security/azure",
+        desc: "Expertise pointue sur l'écosystème Azure.",
+        detail: "Implémentation de Defender for Cloud, Sentinel et Azure Policy pour une conformité et une sécurité maximale."
+    },
+    {
+        title: "Surveillance (SOC/MDR)",
         icon: Eye,
-        desc: "Détectez et réagissez rapidement aux cybermenaces.",
-        detail: "Grâce à une surveillance continue 24/7, nous détectons les activités suspectes, analysons les alertes et intervenons rapidement pour contenir, éradiquer et corriger les incidents."
+        href: "/services/security/monitoring",
+        desc: "Détection et réponse aux incidents 24/7.",
+        detail: "Surveillance continue de vos alertes, chasse aux menaces (Threat Hunting) et intervention rapide en cas d'incident."
     },
     {
         title: "Audit et conformité",
         icon: CheckCircle2,
-        desc: "Respectez les exigences réglementaires et normatives.",
-        detail: "Nous réalisons des audits de sécurité et vous accompagnons vers la conformité ISO 27001, RGPD, PCI DSS et autres exigences locales ou sectorielles."
+        href: "/services/security/compliance",
+        desc: "Respectez les normes (ISO 27001, Loi 25).",
+        detail: "Accompagnement complet pour vos audits de conformité, gestion des risques et alignement réglementaire."
     },
     {
         title: "Test d’hameçonnage",
         icon: UserCheck,
-        desc: "Réduisez les risques liés au facteur humain.",
-        detail: "Nous menons des campagnes de phishing simulées afin d’évaluer le niveau de vigilance de vos employés et renforcer la sensibilisation pour diminuer les compromissions de comptes."
+        href: "/services/security/phishing",
+        desc: "Sensibilisez vos utilisateurs par la pratique.",
+        detail: "Campagnes de simulation de phishing pour tester et éduquer vos collaborateurs face aux techniques d'ingénierie sociale."
     },
     {
-        title: "Cyberenquête et investigation",
+        title: "Cyberenquête (Forensics)",
         icon: FileSearch,
-        desc: "Analysez et réagissez efficacement après un incident.",
-        detail: "À la suite de fraudes, intrusions ou rançongiciels, nos experts collectent, préservent et analysent les preuves numériques pour identifier l'origine de l'attaque et soutenir vos démarches juridiques."
+        href: "/services/security/investigation",
+        desc: "Investigation numérique après incident.",
+        detail: "Collecte de preuves, analyse post-mortem et support juridique suite à une fraude ou une intrusion."
     },
     {
         title: "Formation et sensibilisation",
         icon: GraduationCap,
-        desc: "Développez une culture de cybersécurité durable.",
-        detail: "Nos programmes adaptés visent à réduire les incidents liés au facteur humain, renforcer les bons réflexes de sécurité et impliquer l’ensemble des employés dans la protection de l'information."
+        href: "/services/security/training",
+        desc: "Développez une culture de sécurité humaine.",
+        detail: "Programmes de formation adaptés (utilisateurs, TI, direction) pour réduire le risque humain durablement."
     }
 ];
 
@@ -120,27 +149,28 @@ export default function SecurityPage() {
                 <div className="container mx-auto max-w-7xl">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {services.map((service, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.1 }}
-                                className="group p-8 rounded-2xl bg-white border border-gray-100 shadow-lg shadow-gray-200/50 hover:shadow-xl hover:border-[#eb7e2a]/30 transition-all duration-300"
-                            >
-                                <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-[#092963] group-hover:bg-[#eb7e2a] group-hover:text-white transition-colors duration-300">
-                                    <service.icon className="w-6 h-6" />
-                                </div>
-                                <h3 className="text-xl font-bold text-[#092963] mb-3 group-hover:text-[#eb7e2a] transition-colors">
-                                    {service.title}
-                                </h3>
-                                <p className="text-gray-700 font-medium mb-3 min-h-[3rem]">
-                                    {service.desc}
-                                </p>
-                                <p className="text-sm text-gray-500 leading-relaxed border-t border-gray-100 pt-4">
-                                    {service.detail}
-                                </p>
-                            </motion.div>
+                            <Link href={service.href} key={index} className="block h-full">
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: index * 0.1 }}
+                                    className="group p-8 rounded-2xl bg-white border border-gray-100 shadow-lg shadow-gray-200/50 hover:shadow-xl hover:border-[#eb7e2a]/30 transition-all duration-300 h-full flex flex-col"
+                                >
+                                    <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-[#092963] group-hover:bg-[#eb7e2a] group-hover:text-white transition-colors duration-300 shrink-0">
+                                        <service.icon className="w-6 h-6" />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-[#092963] mb-3 group-hover:text-[#eb7e2a] transition-colors">
+                                        {service.title}
+                                    </h3>
+                                    <p className="text-gray-700 font-medium mb-3 shrink-0">
+                                        {service.desc}
+                                    </p>
+                                    <p className="text-sm text-gray-500 leading-relaxed border-t border-gray-100 pt-4 mt-auto">
+                                        {service.detail}
+                                    </p>
+                                </motion.div>
+                            </Link>
                         ))}
                     </div>
                 </div>

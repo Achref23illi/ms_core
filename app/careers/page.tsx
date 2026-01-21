@@ -36,7 +36,7 @@ export default function CareersPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-[#092963] via-transparent to-transparent" />
                 </div>
 
-                <div className="container mx-auto px-4 relative z-10 text-center">
+                <div className="container mx-auto px-4 relative z-10 text-center pt-32 md:pt-36">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
