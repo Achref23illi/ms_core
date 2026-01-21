@@ -1,11 +1,44 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { Mail, Phone, MapPin, Send, MessageSquare } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, MessageSquare, CheckCircle } from 'lucide-react';
 import { Button } from '@/app/components/ui/button';
 
 export function ContactSection() {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isSuccess, setIsSuccess] = useState(false);
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+
+        try {
+            const formData = new FormData(e.currentTarget as HTMLFormElement);
+            const data = {
+                type: 'contact',
+                ...Object.fromEntries(formData),
+            };
+
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+                setIsSuccess(true);
+            } else {
+                alert("Une erreur est survenue. Veuillez réessayer.");
+            }
+        } catch (error) {
+            console.error(error);
+            alert("Une erreur est survenue.");
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
     return (
         <section id="contact" className="relative py-24 bg-slate-50 overflow-hidden">
             {/* Background Elements */}
@@ -118,64 +151,102 @@ export function ContactSection() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5 }}
-                        className="bg-white rounded-3xl p-8 md:p-10 shadow-xl shadow-gray-200/50 border border-gray-100 relative"
+                        className="bg-white rounded-3xl p-8 md:p-10 shadow-xl shadow-gray-200/50 border border-gray-100 relative min-h-[500px] flex flex-col justify-center"
                     >
-                        <h3 className="text-2xl font-bold text-[#092963] mb-6 flex items-center gap-2">
-                            <MessageSquare className="w-6 h-6 text-[#eb7e2a]" />
-                            Envoyez-nous un message
-                        </h3>
-
-                        <form className="space-y-5">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                                <div className="space-y-2">
-                                    <label htmlFor="name" className="text-sm font-medium text-gray-700">Nom complet</label>
-                                    <input
-                                        id="name"
-                                        type="text"
-                                        className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#092963]/10 focus:border-[#092963] transition-all"
-                                        placeholder="John Doe"
-                                    />
+                        {isSuccess ? (
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                className="text-center py-10"
+                            >
+                                <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <CheckCircle className="w-10 h-10" />
                                 </div>
-                                <div className="space-y-2">
-                                    <label htmlFor="email" className="text-sm font-medium text-gray-700">Courriel</label>
-                                    <input
-                                        id="email"
-                                        type="email"
-                                        className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#092963]/10 focus:border-[#092963] transition-all"
-                                        placeholder="john@exemple.com"
-                                    />
-                                </div>
-                            </div>
-
-                            <div className="space-y-2">
-                                <label htmlFor="subject" className="text-sm font-medium text-gray-700">Sujet</label>
-                                <select
-                                    id="subject"
-                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#092963]/10 focus:border-[#092963] transition-all appearance-none"
+                                <h3 className="text-2xl font-bold text-[#092963] mb-4">Message envoyé !</h3>
+                                <p className="text-gray-600 mb-8 max-w-sm mx-auto">
+                                    Merci de nous avoir contactés. Notre équipe vous répondra dans les plus brefs délais.
+                                </p>
+                                <Button
+                                    onClick={() => setIsSuccess(false)}
+                                    className="bg-gray-100 text-gray-700 hover:bg-gray-200"
                                 >
-                                    <option value="">Sélectionnez un sujet</option>
-                                    <option value="cyber">Cybersécurité</option>
-                                    <option value="ai">Intelligence Artificielle</option>
-                                    <option value="cloud">Solutions Microsoft & Cloud</option>
-                                    <option value="hardware">Matériels & Équipements</option>
-                                    <option value="other">Autre demande</option>
-                                </select>
-                            </div>
+                                    Envoyer un autre message
+                                </Button>
+                            </motion.div>
+                        ) : (
+                            <>
+                                <h3 className="text-2xl font-bold text-[#092963] mb-6 flex items-center gap-2">
+                                    <MessageSquare className="w-6 h-6 text-[#eb7e2a]" />
+                                    Envoyez-nous un message
+                                </h3>
 
-                            <div className="space-y-2">
-                                <label htmlFor="message" className="text-sm font-medium text-gray-700">Message</label>
-                                <textarea
-                                    id="message"
-                                    rows={4}
-                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#092963]/10 focus:border-[#092963] transition-all resize-none"
-                                    placeholder="Comment pouvons-nous vous aider ?"
-                                />
-                            </div>
+                                <form onSubmit={handleSubmit} className="space-y-5">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                        <div className="space-y-2">
+                                            <label htmlFor="name" className="text-sm font-medium text-gray-700">Nom complet</label>
+                                            <input
+                                                id="name"
+                                                name="name"
+                                                required
+                                                type="text"
+                                                className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#092963]/10 focus:border-[#092963] transition-all"
+                                                placeholder="John Doe"
+                                            />
+                                        </div>
+                                        <div className="space-y-2">
+                                            <label htmlFor="email" className="text-sm font-medium text-gray-700">Courriel</label>
+                                            <input
+                                                id="email"
+                                                name="email"
+                                                required
+                                                type="email"
+                                                className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#092963]/10 focus:border-[#092963] transition-all"
+                                                placeholder="john@exemple.com"
+                                            />
+                                        </div>
+                                    </div>
 
-                            <Button className="w-full py-6 rounded-xl bg-[#eb7e2a] hover:bg-[#eb7e2a]/90 text-white font-bold text-lg shadow-lg shadow-[#eb7e2a]/20 transition-all hover:scale-[1.02] active:scale-[0.98]">
-                                Envoyer le message <Send className="w-5 h-5 ml-2" />
-                            </Button>
-                        </form>
+                                    <div className="space-y-2">
+                                        <label htmlFor="subject" className="text-sm font-medium text-gray-700">Sujet</label>
+                                        <select
+                                            id="subject"
+                                            name="subject"
+                                            required
+                                            className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#092963]/10 focus:border-[#092963] transition-all appearance-none"
+                                        >
+                                            <option value="">Sélectionnez un sujet</option>
+                                            <option value="cyber">Cybersécurité</option>
+                                            <option value="ai">Intelligence Artificielle</option>
+                                            <option value="cloud">Solutions Microsoft & Cloud</option>
+                                            <option value="hardware">Matériels & Équipements</option>
+                                            <option value="other">Autre demande</option>
+                                        </select>
+                                    </div>
+
+                                    <div className="space-y-2">
+                                        <label htmlFor="message" className="text-sm font-medium text-gray-700">Message</label>
+                                        <textarea
+                                            id="message"
+                                            name="message"
+                                            required
+                                            rows={4}
+                                            className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#092963]/10 focus:border-[#092963] transition-all resize-none"
+                                            placeholder="Comment pouvons-nous vous aider ?"
+                                        />
+                                    </div>
+
+                                    <Button
+                                        type="submit"
+                                        disabled={isSubmitting}
+                                        className="w-full py-6 rounded-xl bg-[#eb7e2a] hover:bg-[#eb7e2a]/90 text-white font-bold text-lg shadow-lg shadow-[#eb7e2a]/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                                    >
+                                        {isSubmitting ? 'Envoi en cours...' : (
+                                            <>Envoyer le message <Send className="w-5 h-5 ml-2" /></>
+                                        )}
+                                    </Button>
+                                </form>
+                            </>
+                        )}
                     </motion.div>
 
                 </div>

@@ -31,10 +31,48 @@ export function SupportFormModal({ isOpen, onClose, defaultTab = 'incident' }: S
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        setIsSubmitting(false);
-        setStep('success');
+
+        try {
+            const form = e.currentTarget as HTMLFormElement;
+            const formData = new FormData(form);
+
+            // Collect all data
+            const data: any = {
+                type: activeTab === 'incident' ? 'support' : 'diagnostic',
+            };
+
+            // Handle standard fields
+            formData.forEach((value, key) => {
+                // If key already exists (like multiple checkboxes), make it an array
+                if (data[key]) {
+                    if (!Array.isArray(data[key])) {
+                        data[key] = [data[key]];
+                    }
+                    data[key].push(value);
+                } else {
+                    data[key] = value;
+                }
+            });
+
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+                setStep('success');
+            } else {
+                alert("Une erreur est survenue lors de l'envoi. Veuillez réessayer.");
+            }
+        } catch (error) {
+            console.error(error);
+            alert("Une erreur est survenue.");
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     if (!isOpen) return null;
@@ -70,6 +108,7 @@ export function SupportFormModal({ isOpen, onClose, defaultTab = 'incident' }: S
                 {step !== 'success' && (
                     <div className="flex border-b border-gray-100">
                         <button
+                            type="button"
                             onClick={() => { setActiveTab('incident'); setStep('identification'); }}
                             className={cn(
                                 "flex-1 py-4 text-sm font-medium transition-colors relative",
@@ -85,6 +124,7 @@ export function SupportFormModal({ isOpen, onClose, defaultTab = 'incident' }: S
                             )}
                         </button>
                         <button
+                            type="button"
                             onClick={() => { setActiveTab('diagnostic'); setStep('identification'); }}
                             className={cn(
                                 "flex-1 py-4 text-sm font-medium transition-colors relative",
@@ -125,12 +165,12 @@ export function SupportFormModal({ isOpen, onClose, defaultTab = 'incident' }: S
                                     </div>
 
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                        <Input label="Nom et prénom" required />
-                                        <Input label="Fonction / Titre" />
-                                        <Input label="Entreprise / Organisation" required />
-                                        <Input label="Pays / Ville" required />
-                                        <Input label="Adresse courriel" type="email" required />
-                                        <Input label="Numéro de téléphone" type="tel" required />
+                                        <Input label="Nom et prénom" name="name" required />
+                                        <Input label="Fonction / Titre" name="jobTitle" />
+                                        <Input label="Entreprise / Organisation" name="company" required />
+                                        <Input label="Pays / Ville" name="city" required />
+                                        <Input label="Adresse courriel" name="email" type="email" required />
+                                        <Input label="Numéro de téléphone" name="phone" type="tel" required />
                                     </div>
                                 </div>
 
@@ -208,7 +248,7 @@ function RadioGroup({ label, options, name }: { label: string, options: string[]
             <div className="space-y-2">
                 {options.map((opt) => (
                     <label key={opt} className="flex items-center gap-2 cursor-pointer group">
-                        <input type="radio" name={name} className="accent-[#eb7e2a] w-4 h-4" />
+                        <input type="radio" value={opt} name={name} className="accent-[#eb7e2a] w-4 h-4" />
                         <span className="text-sm text-gray-600 group-hover:text-gray-900">{opt}</span>
                     </label>
                 ))}
@@ -217,14 +257,14 @@ function RadioGroup({ label, options, name }: { label: string, options: string[]
     );
 }
 
-function CheckboxGroup({ label, options }: { label: string, options: string[] }) {
+function CheckboxGroup({ label, options, name }: { label: string, options: string[], name: string }) {
     return (
         <div className="space-y-2">
             <label className="text-sm font-medium text-gray-700 block">{label}</label>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 {options.map((opt) => (
                     <label key={opt} className="flex items-center gap-2 cursor-pointer group">
-                        <input type="checkbox" className="accent-[#eb7e2a] w-4 h-4 rounded" />
+                        <input type="checkbox" name={name} value={opt} className="accent-[#eb7e2a] w-4 h-4 rounded" />
                         <span className="text-sm text-gray-600 group-hover:text-gray-900">{opt}</span>
                     </label>
                 ))}
@@ -260,6 +300,7 @@ function IncidentFormFields() {
 
             <CheckboxGroup
                 label="Quels types d’incidents vous affecte ?"
+                name="incidents"
                 options={[
                     "Hameçonnage (phishing)",
                     "Rançongiciel",
@@ -281,7 +322,7 @@ function IncidentFormFields() {
                 ]}
             />
 
-            <TextArea label="Souhaitez-vous ajouter des informations complémentaires ?" />
+            <TextArea label="Souhaitez-vous ajouter des informations complémentaires ?" name="message" />
         </div>
     );
 }
@@ -356,10 +397,10 @@ function QuestionSection({ title, questions }: { title: string, questions: strin
                         <p className="text-sm text-gray-700 flex-1">{q}</p>
                         <div className="flex gap-4 min-w-[120px]">
                             <label className="flex items-center gap-1 cursor-pointer">
-                                <input type="radio" name={`q_${title}_${i}`} className="accent-[#eb7e2a]" /> <span className="text-sm">Oui</span>
+                                <input type="radio" value="Oui" name={q} className="accent-[#eb7e2a]" /> <span className="text-sm">Oui</span>
                             </label>
                             <label className="flex items-center gap-1 cursor-pointer">
-                                <input type="radio" name={`q_${title}_${i}`} className="accent-[#eb7e2a]" /> <span className="text-sm">Non</span>
+                                <input type="radio" value="Non" name={q} className="accent-[#eb7e2a]" /> <span className="text-sm">Non</span>
                             </label>
                         </div>
                     </div>
