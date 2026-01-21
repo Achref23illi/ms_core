@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
+
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 import { StoreProvider } from './store';
@@ -40,7 +40,7 @@ export default async function RootLayout({
             <Header />
             {children}
             <CookieConsent />
-            <Analytics />
+
           </NextIntlClientProvider>
         </StoreProvider>
       </body>
