@@ -246,7 +246,7 @@ export function ServicesSection() {
                                 {/* Footer Action */}
                                 <div className="flex flex-col sm:flex-row gap-4 pt-6 pb-6 md:pb-10 mt-auto border-t border-gray-100 px-6 md:px-10">
                                     <Link href="/contact" className="w-full sm:w-auto">
-                                        <Button className="w-full sm:w-auto rounded-full bg-[#092963] hover:bg-[#092963]/90 text-white px-8">
+                                        <Button className="w-full sm:w-auto rounded-full bg-[#eb7e2a] hover:bg-[#eb7e2a]/90 text-white px-8">
                                             Demander une consultation
                                         </Button>
                                     </Link>

@@ -68,7 +68,7 @@ export function Footer() {
                             </li>
                             <li className="flex items-start gap-2">
                                 <MapPin className="w-4 h-4 mt-0.5" />
-                                <span>877 rue du butor, Lévis (QC)</span>
+                                <span>877 rue du butor, Lévis (QC), G7A 5M1</span>
                             </li>
 
                             <li className="pt-2 font-semibold text-background/90 text-xs uppercase tracking-wider">Côte d&apos;Ivoire</li>

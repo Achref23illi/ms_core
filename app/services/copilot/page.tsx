@@ -210,7 +210,7 @@ export default function CopilotPage() {
                         Faites passer votre entreprise au niveau supérieur avec Microsoft Copilot et l'expertise de Technologies MS Core.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
-                        <Link href="/contact" className="inline-flex items-center justify-center rounded-full bg-[#092963] text-white px-8 py-4 text-lg font-bold hover:bg-[#0f3475] transition-all shadow-lg hover:shadow-xl hover:scale-105">
+                        <Link href="/contact" className="inline-flex items-center justify-center rounded-full bg-[#eb7e2a] text-white px-8 py-4 text-lg font-bold hover:bg-[#eb7e2a]/90 transition-all shadow-lg hover:shadow-xl hover:scale-105">
                             Demander une consultation
                         </Link>
                     </div>

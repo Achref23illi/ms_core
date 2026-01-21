@@ -358,6 +358,62 @@ export default function AboutPage() {
                 </div>
             </section>
 
+            {/* Word from the Founder */}
+            <section className="py-20 px-4 bg-white relative overflow-hidden">
+                <div className="container mx-auto max-w-6xl">
+                    <div className="flex flex-col lg:flex-row gap-12 items-center">
+                        {/* Image Side */}
+                        <motion.div
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="w-full lg:w-1/3 flex justify-center lg:justify-end"
+                        >
+                            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-white shadow-2xl overflow-hidden ring-4 ring-[#092963]/10">
+                                <Image
+                                    src="/pfp.jpeg"
+                                    alt="Martin Soro, Fondateur"
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div>
+                        </motion.div>
+
+                        {/* Text Side */}
+                        <motion.div
+                            initial={{ opacity: 0, x: 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="w-full lg:w-2/3 space-y-6"
+                        >
+                            <div>
+                                <h2 className="text-3xl font-bold text-[#092963] mb-2">Mot du fondateur</h2>
+                                <div className="w-20 h-1.5 bg-[#eb7e2a] rounded-full"></div>
+                            </div>
+
+                            <div className="text-gray-600 leading-relaxed space-y-4 text-justify">
+                                <p>
+                                    Fort de près de dix années d’expérience en cybersécurité au Canada, j’ai œuvré au sein de plusieurs ministères et organismes gouvernementaux québécois, ainsi que dans des entreprises privées opérant dans des environnements critiques et fortement réglementés. Ces expériences m’ont permis d’intervenir sur des enjeux majeurs liés à la gestion des risques de sécurité, à la protection des données, à la conformité réglementaire et à la sécurisation des systèmes d’information.
+                                </p>
+                                <p>
+                                    Je suis titulaire de la certification <span className="font-semibold text-[#092963]">CISSP (Certified Information Systems Security Professional)</span>, une certification de référence reconnue à l’échelle internationale, attestant d’un haut niveau d’expertise en gouvernance de la sécurité de l’information, gestion des risques et cybersécurité.
+                                </p>
+                                <p>
+                                    Sur le plan académique, je suis titulaire d’une maîtrise en ingénierie obtenue au Québec, formation qui m’a permis de développer une approche structurée, rigoureuse et orientée solutions face aux enjeux technologiques de plus en plus complexes.
+                                </p>
+                                <p className="italic font-medium text-gray-800 border-l-4 border-[#eb7e2a] pl-4">
+                                    « À travers Technologies MS Core, ma mission est de mettre cette expertise au service des organisations au Canada et en Côte d’Ivoire, en proposant des services de cybersécurité adaptés aux réalités locales, tout en respectant les meilleures pratiques et standards internationaux. »
+                                </p>
+                            </div>
+
+                            <div className="pt-4">
+                                <h3 className="text-xl font-bold text-[#092963]">Martin Soro, M.Sc, CISSP</h3>
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
+
             {/* Services Pillars (Accordion) */}
             <section className="py-20 px-4 bg-gray-50">
                 <div className="container mx-auto max-w-5xl">

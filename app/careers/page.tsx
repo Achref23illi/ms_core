@@ -82,10 +82,19 @@ export default function CareersPage() {
                             </h2>
                             <div className="prose prose-lg text-gray-600 space-y-4">
                                 <p>
-                                    Technologies MS Core est une entreprise technologique fondée en 2020 à Lévis (Québec) au Canada. Depuis nos débuts, nous combinons la puissance de Microsoft, l'IA et la cybersécurité pour transformer les organisations.
+                                    Entreprise technologique fondée en <strong className="text-[#092963]">2020 à Lévis, Québec</strong>, nous aidons les organisations à tirer pleinement parti du potentiel des technologies modernes. En combinant l’expertise Microsoft, le Cloud, l’IA et la cybersécurité, notre objectif est simple : permettre à nos clients d’accroître leur efficacité tout en assurant leur résilience.
                                 </p>
                                 <p>
-                                    Notre récente expansion en <strong>Côte d’Ivoire (Abidjan)</strong> ouvre de nouvelles perspectives passionnantes. En nous rejoignant, vous participez à des projets d'envergure, tant au Canada qu'en Afrique de l'Ouest, avec une équipe qui allie expertise internationale et compréhension locale.
+                                    <strong>Notre expansion en Côte d’Ivoire</strong>
+                                </p>
+                                <p>
+                                    En réponse à la demande croissante de services technologiques avancés en Afrique de l'Ouest, Technologies MS Core a étendu ses activités en Côte d'Ivoire avec une filiale dédiée.
+                                </p>
+                                <p>
+                                    Cette expansion nous permet d’être plus près des organisations locales, qu’elles soient publiques ou privées, évoluant notamment dans les secteurs de la finance, de l’industrie, de l’énergie, du commerce, des services, de la santé, de l’éducation et des infrastructures critiques, afin de répondre à l’ensemble de leurs besoins technologiques.
+                                </p>
+                                <p>
+                                    Implantée à Abidjan, notre équipe locale combine la rigueur des standards internationaux avec une compréhension profonde du contexte économique et réglementaire ivoirien.
                                 </p>
                             </div>
 

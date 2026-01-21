@@ -161,7 +161,7 @@ export default function Microsoft365Page() {
                         Nos experts certifiés vous guident vers une infrastructure moderne, sécurisée et évolutive.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
-                        <Link href="/contact" className="inline-flex items-center justify-center rounded-full bg-white text-[#092963] px-8 py-4 text-lg font-bold hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl hover:scale-105">
+                        <Link href="/contact" className="inline-flex items-center justify-center rounded-full bg-[#eb7e2a] text-white px-8 py-4 text-lg font-bold hover:bg-[#eb7e2a]/90 transition-all shadow-lg hover:shadow-xl hover:scale-105">
                             Demander une consultation
                         </Link>
                     </div>

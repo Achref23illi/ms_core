@@ -56,10 +56,10 @@ export function AboutSection() {
                                 <h3 className="text-2xl font-bold text-gray-900">Notre Histoire</h3>
                             </div>
                             <p className="text-gray-600 leading-relaxed text-lg">
-                                Fondée en <span className="font-semibold text-[#092963]">2020 à Lévis, Québec</span>, Technologies MS Core se spécialise dans l’accompagnement des organisations vers une transformation numérique sécurisée et performante.
+                                Entreprise technologique fondée en <strong className="font-semibold text-[#092963]">2020 à Lévis, Québec</strong>, nous aidons les organisations à tirer pleinement parti du potentiel des technologies modernes.
                             </p>
                             <p className="text-gray-600 leading-relaxed text-lg mt-4">
-                                Depuis nos débuts, nous combinons l’expertise Microsoft, l'IA et la cybersécurité pour aider nos clients à accroître leur efficacité et renforcer leur résilience opérationnelle.
+                                En combinant l’expertise Microsoft, le Cloud, l’IA et la cybersécurité, notre objectif est simple : permettre à nos clients d’accroître leur efficacité tout en assurant leur résilience.
                             </p>
                         </motion.div>
 
@@ -78,14 +78,19 @@ export function AboutSection() {
                                     <div className="p-2 bg-white/10 rounded-lg backdrop-blur-sm">
                                         <MapPin className="w-5 h-5 text-[#eb7e2a]" />
                                     </div>
-                                    <h3 className="text-2xl font-bold">Expansion en Côte d'Ivoire</h3>
+                                    <h3 className="text-2xl font-bold">Notre expansion en Côte d’Ivoire</h3>
                                 </div>
-                                <p className="text-white/90 leading-relaxed mb-6">
-                                    En réponse à la demande croissante en Afrique de l’Ouest, nous avons établi une filiale à <span className="text-[#eb7e2a] font-semibold">Abidjan</span>.
-                                </p>
-                                <p className="text-white/80 text-sm leading-relaxed border-l-2 border-[#eb7e2a]/50 pl-4">
-                                    Une équipe locale qui combine la rigueur des standards internationaux avec une compréhension profonde du contexte ivoirien pour les secteurs de la finance, des services et des infrastructures critiques.
-                                </p>
+                                <div className="space-y-4">
+                                    <p className="text-white/90 leading-relaxed">
+                                        En réponse à la demande croissante de services technologiques avancés en Afrique de l'Ouest, Technologies MS Core a étendu ses activités en Côte d'Ivoire avec une filiale dédiée.
+                                    </p>
+                                    <p className="text-white/90 leading-relaxed">
+                                        Cette expansion nous permet d’être plus près des organisations locales, qu’elles soient publiques ou privées, évoluant notamment dans les secteurs de la finance, de l’industrie, de l’énergie, du commerce, des services, de la santé, de l’éducation et des infrastructures critiques, afin de répondre à l’ensemble de leurs besoins technologiques.
+                                    </p>
+                                    <p className="text-white/90 leading-relaxed">
+                                        Implantée à Abidjan, notre équipe locale combine la rigueur des standards internationaux avec une compréhension profonde du contexte économique et réglementaire ivoirien.
+                                    </p>
+                                </div>
                             </div>
                         </motion.div>
 
