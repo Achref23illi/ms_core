@@ -17,7 +17,7 @@ const servicesData = [
         link: '/services/security',
         tagline: "Protégez ce qui compte le plus : vos informations.",
         accroche: "Nous sécurisons votre entreprise contre les menaces modernes.",
-        description: "Diagnostiquez, testez et protégez vos infrastructures. De la surveillance SOC 24/7 à la conformité ISO 27001, nous couvrons tous vos besoins de sécurité.",
+        description: "Anticipez les cybermenaces, réduisez les risques et sécurisez votre environnement numérique.",
         subServices: [
             { title: "Diagnostic en cybersécurité", desc: "Évaluez le niveau réel de sécurité de votre organisation." },
             { title: "Tests d’intrusion", desc: "Testez la résistance de vos systèmes face à des attaques réelles." },
@@ -33,10 +33,10 @@ const servicesData = [
         id: 'ai',
         title: "Intelligence Artificielle",
         icon: Brain,
-        link: '/services/copilot',
+        link: '/services/ai',
         tagline: "Boostez votre entreprise avec la puissance de l’IA.",
         accroche: "Transformez vos processus, gagnez du temps et augmentez votre performance.",
-        description: "De la conception de solutions sur mesure à l'intégration de Microsoft Copilot, nous transformons vos données en leviers de performance.",
+        description: "Nous intégrons l'IA au cœur de vos processus pour transformer vos données et vos processus en avantages compétitifs.",
         subServices: [
             { title: "Solutions IA sur mesure", desc: "Conception et intégration adaptées à vos besoins métier." },
             { title: "Chatbots & Assistants", desc: "Améliorez l'expérience client grâce à l'IA conversationnelle." },
@@ -107,7 +107,7 @@ export function ServicesSection() {
                             <span className="text-[#092963]">pour votre croissance</span>
                         </h2>
                         <p className="max-w-2xl mx-auto text-lg text-muted-foreground">
-                            De la cybersécurité à l'intelligence artificielle, nous vous offrons une expertise de pointe pour transformer vos défis en opportunités.
+                            Nous accompagnons les organisations dans la sécurisation, la modernisation et l'optimisation de leurs environnements numériques grâce au cloud, à la cybersécurité et à l'intelligence artificielle.
                         </p>
                     </motion.div>
                 </div>

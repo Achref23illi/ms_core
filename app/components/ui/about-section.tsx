@@ -122,11 +122,11 @@ export function AboutSection() {
                                 <div className="group p-5 bg-gray-50 rounded-xl hover:bg-white hover:shadow-lg transition-all border border-transparent hover:border-gray-100">
                                     <div className="font-bold text-[#092963] mb-2 flex items-center gap-2">
                                         <img src="https://flagcdn.com/ca.svg" alt="Canada" className="w-5 h-4 object-cover rounded-sm shadow-sm" />
-                                        Siège Social (Québec)
+                                        Siège social Canada
                                     </div>
                                     <p className="text-sm text-gray-600 mb-3">877 rue du butor, Lévis (QC), Canada</p>
-                                    <a href="tel:5146092990" className="flex items-center gap-2 text-sm font-medium text-[#eb7e2a] hover:underline">
-                                        <Phone className="w-3 h-3" /> 514 609 2990
+                                    <a href="tel:+15146092990" className="flex items-center gap-2 text-sm font-medium text-[#eb7e2a] hover:underline">
+                                        <Phone className="w-3 h-3" /> +1 514 609 2990
                                     </a>
                                 </div>
 
@@ -134,11 +134,11 @@ export function AboutSection() {
                                 <div className="group p-5 bg-gray-50 rounded-xl hover:bg-white hover:shadow-lg transition-all border border-transparent hover:border-gray-100">
                                     <div className="font-bold text-[#092963] mb-2 flex items-center gap-2">
                                         <img src="https://flagcdn.com/ci.svg" alt="Côte d'Ivoire" className="w-5 h-4 object-cover rounded-sm shadow-sm" />
-                                        Filiale Abidjan
+                                        Filiale Côte d'Ivoire
                                     </div>
-                                    <p className="text-sm text-gray-600 mb-3">Port-Bouët, zone industrielle Vridi</p>
-                                    <a href="tel:0706052436" className="flex items-center gap-2 text-sm font-medium text-[#eb7e2a] hover:underline">
-                                        <Phone className="w-3 h-3" /> 07 06 05 24 36
+                                    <p className="text-sm text-gray-600 mb-3">Port-Bouët, Zone industrielle Vridi, Abidjan</p>
+                                    <a href="tel:+2250706052436" className="flex items-center gap-2 text-sm font-medium text-[#eb7e2a] hover:underline">
+                                        <Phone className="w-3 h-3" /> +225 07 06 05 24 36
                                     </a>
                                 </div>
                             </div>

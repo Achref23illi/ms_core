@@ -83,7 +83,7 @@ export function Header() {
                 className={cn(
                     "relative flex items-center justify-between px-6 py-3 transition-all duration-300 backdrop-blur-xl",
                     "rounded-full border border-gray-200/50 shadow-lg",
-                    scrolled ? "bg-white/90 w-[95%] md:w-[90%] lg:w-[85%]" : "bg-white/70 w-[90%] md:w-[80%]"
+                    scrolled ? "bg-white w-[95%] md:w-[90%] lg:w-[85%]" : "bg-white/95 w-[90%] md:w-[80%]"
                 )}
             >
                 {/* Logo */}

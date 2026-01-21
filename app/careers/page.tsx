@@ -82,7 +82,7 @@ export default function CareersPage() {
                             </h2>
                             <div className="prose prose-lg text-gray-600 space-y-4">
                                 <p>
-                                    Technologies MS Core est une entreprise technologique fondée en 2020 à Lévis, Québec. Depuis nos débuts, nous combinons la puissance de Microsoft, l'IA et la cybersécurité pour transformer les organisations.
+                                    Technologies MS Core est une entreprise technologique fondée en 2020 à Lévis (Québec) au Canada. Depuis nos débuts, nous combinons la puissance de Microsoft, l'IA et la cybersécurité pour transformer les organisations.
                                 </p>
                                 <p>
                                     Notre récente expansion en <strong>Côte d’Ivoire (Abidjan)</strong> ouvre de nouvelles perspectives passionnantes. En nous rejoignant, vous participez à des projets d'envergure, tant au Canada qu'en Afrique de l'Ouest, avec une équipe qui allie expertise internationale et compréhension locale.

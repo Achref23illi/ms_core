@@ -1,4 +1,4 @@
-import { HeroSection, HeroSectionFull, ServicesSection, AboutSection, ContactSection, Footer } from '@/app/components';
+import { HeroSection, HeroSectionFull, ServicesSection, AboutSection, ClientsSection, ContactSection, Footer } from '@/app/components';
 
 export default function Home() {
   return (
@@ -6,11 +6,11 @@ export default function Home() {
       <HeroSectionFull
         title={
           <>
-            Votre Partenaire <br />
-            <span className="text-[#eb7e2a]">Microsoft Certifié</span>
+            Accélérez votre transformation numérique<br />
+            <span className="text-[#eb7e2a]">en toute sécurité</span>
           </>
         }
-        subtitle="Nous combinons l'expertise Microsoft, l'IA et la cybersécurité de pointe pour accroître votre efficacité et renforcer votre résilience."
+        subtitle="Cybersécurité, cloud et intelligence artificielle pour des organisations performantes, sécurisées et résilientes."
         callToAction={{
           text: "Découvrir nos services",
           href: "#services",
@@ -19,6 +19,7 @@ export default function Home() {
       />
       <ServicesSection />
       <AboutSection />
+      <ClientsSection />
       <ContactSection />
       <Footer />
     </main>

@@ -381,7 +381,7 @@ export default function AboutPage() {
                         <div className="bg-white/5 rounded-2xl p-8 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
                             <div className="flex items-center gap-3 mb-6">
                                 <img src="https://flagcdn.com/ca.svg" alt="Canada" className="w-8 h-6 rounded shadow-sm object-cover" />
-                                <h3 className="text-2xl font-bold">Siège Social (Canada)</h3>
+                                <h3 className="text-2xl font-bold">Siège social Canada</h3>
                             </div>
                             <div className="space-y-4 text-blue-100">
                                 <div className="flex items-start gap-3">
@@ -390,7 +390,7 @@ export default function AboutPage() {
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <Phone className="w-5 h-5 text-[#eb7e2a]" />
-                                    <a href="tel:5146092990" className="hover:text-white transition-colors">514 609 2990</a>
+                                    <a href="tel:+15146092990" className="hover:text-white transition-colors">+1 514 609 2990</a>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <Mail className="w-5 h-5 text-[#eb7e2a]" />
@@ -403,16 +403,16 @@ export default function AboutPage() {
                         <div className="bg-white/5 rounded-2xl p-8 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
                             <div className="flex items-center gap-3 mb-6">
                                 <img src="https://flagcdn.com/ci.svg" alt="Côte d'Ivoire" className="w-8 h-6 rounded shadow-sm object-cover" />
-                                <h3 className="text-2xl font-bold">Filiale Abidjan</h3>
+                                <h3 className="text-2xl font-bold">Filiale Côte d'Ivoire</h3>
                             </div>
                             <div className="space-y-4 text-blue-100">
                                 <div className="flex items-start gap-3">
                                     <MapPin className="w-5 h-5 text-[#eb7e2a] mt-1" />
-                                    <p>Abidjan, Port-Bouët, zone industrielle Vridi</p>
+                                    <p>Port-Bouët, Zone industrielle Vridi, Abidjan</p>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <Phone className="w-5 h-5 text-[#eb7e2a]" />
-                                    <a href="tel:0706052436" className="hover:text-white transition-colors">07 06 05 24 36</a>
+                                    <a href="tel:+2250706052436" className="hover:text-white transition-colors">+225 07 06 05 24 36</a>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <Mail className="w-5 h-5 text-[#eb7e2a]" />

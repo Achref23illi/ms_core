@@ -10,3 +10,5 @@ export { ContactSection } from './contact-section';
 export { Footer } from './footer';
 export { Glow } from './glow';
 export { CertificationsBadges } from './certifications-badges';
+export { ClientsSection } from './clients-section';
+export { CookieConsent } from './cookie-consent';

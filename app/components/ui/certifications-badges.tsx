@@ -7,15 +7,17 @@ import { ShieldCheck } from 'lucide-react';
 
 const badges = [
     { src: '/badges/1-150x150.png', alt: 'Certification 1' },
-    { src: '/badges/2-150x150.png', alt: 'Certification 2' },
+    { src: '/badges/cybersecurity_architect.png', alt: 'Microsoft Cybersecurity Architect' },
     { src: '/badges/3-150x150.png', alt: 'Certification 3' },
-    { src: '/badges/4-150x150.png', alt: 'Certification 4' },
     { src: '/badges/5-150x150.png', alt: 'Certification 5' },
     { src: '/badges/7-150x150.png', alt: 'Certification 7' },
     { src: '/badges/8-150x150.png', alt: 'Certification 8' },
     { src: '/badges/9-150x150.png', alt: 'Certification 9' },
     { src: '/badges/10-150x150.png', alt: 'Certification 10' },
     { src: '/badges/11-150x150.png', alt: 'Certification 11' },
+    { src: '/badges/Scada.png', alt: 'PECB Lead SCADA Security Manager' },
+    { src: '/badges/iso27001.png', alt: 'PECB ISO/IEC 27001' },
+    { src: '/badges/cysa.png', alt: 'CompTIA CySA+' },
 ];
 
 export function CertificationsBadges() {

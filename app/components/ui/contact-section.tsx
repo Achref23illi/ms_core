@@ -71,7 +71,7 @@ export function ContactSection() {
                                 >
                                     <div className="flex items-center gap-2 mb-3">
                                         <img src="https://flagcdn.com/ca.svg" alt="Canada" className="w-5 h-4 object-cover rounded shadow-sm" />
-                                        <h4 className="font-bold text-[#092963]">Siège Social (Québec)</h4>
+                                        <h4 className="font-bold text-[#092963]">Siège social Canada</h4>
                                     </div>
                                     <div className="space-y-3 pl-1">
                                         <div className="flex items-start gap-3 text-sm text-gray-600">
@@ -80,7 +80,7 @@ export function ContactSection() {
                                         </div>
                                         <div className="flex items-center gap-3 text-sm text-gray-600">
                                             <Phone className="w-4 h-4 text-gray-400 shrink-0" />
-                                            <a href="tel:5146092990" className="hover:text-[#eb7e2a] transition-colors">514 609 2990</a>
+                                            <a href="tel:+15146092990" className="hover:text-[#eb7e2a] transition-colors">+1 514 609 2990</a>
                                         </div>
                                     </div>
                                 </motion.div>
@@ -94,16 +94,16 @@ export function ContactSection() {
                                 >
                                     <div className="flex items-center gap-2 mb-3">
                                         <img src="https://flagcdn.com/ci.svg" alt="Côte d'Ivoire" className="w-5 h-4 object-cover rounded shadow-sm" />
-                                        <h4 className="font-bold text-[#092963]">Filiale Abidjan</h4>
+                                        <h4 className="font-bold text-[#092963]">Filiale Côte d'Ivoire</h4>
                                     </div>
                                     <div className="space-y-3 pl-1">
                                         <div className="flex items-start gap-3 text-sm text-gray-600">
                                             <MapPin className="w-4 h-4 text-gray-400 mt-0.5 shrink-0" />
-                                            <span>Port-Bouët,<br />Zone industrielle Vridi</span>
+                                            <span>Port-Bouët, Zone industrielle Vridi,<br />Abidjan</span>
                                         </div>
                                         <div className="flex items-center gap-3 text-sm text-gray-600">
                                             <Phone className="w-4 h-4 text-gray-400 shrink-0" />
-                                            <a href="tel:0706052436" className="hover:text-[#eb7e2a] transition-colors">07 06 05 24 36</a>
+                                            <a href="tel:+2250706052436" className="hover:text-[#eb7e2a] transition-colors">+225 07 06 05 24 36</a>
                                         </div>
                                     </div>
                                 </motion.div>

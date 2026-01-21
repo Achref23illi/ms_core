@@ -48,7 +48,7 @@ export default function ContactPage() {
                             <h2 className="text-3xl font-bold text-[#092963]">Qui sommes-nous?</h2>
                             <div className="prose prose-lg text-gray-600 leading-relaxed text-base">
                                 <p className="mb-4">
-                                    Technologies MS Core est une entreprise technologique fondée en 2020 à Lévis au Québec, spécialisée dans l’accompagnement des organisations vers une transformation numérique sécurisée, performante et orientée résultats.
+                                    Technologies MS Core est une entreprise technologique fondée en 2020 à Lévis (Québec) au Canada, spécialisée dans l'accompagnement des organisations vers une transformation numérique sécurisée, performante et orientée résultats.
                                 </p>
                                 <p>
                                     Depuis nos débuts, nous aidons les entreprises à tirer pleinement parti du potentiel des technologies modernes en combinant l’expertise Microsoft, des solutions cloud innovantes, l’intelligence artificielle, ainsi que des services de cybersécurité de pointe. Notre objectif est de permettre à nos clients d’accroître leur efficacité, renforcer leur sécurité et accélérer leur croissance, tout en assurant l’agilité et la résilience de leurs opérations.
@@ -77,7 +77,7 @@ export default function ContactPage() {
                                         En réponse à la demande croissante de services technologiques avancés en Afrique de l’Ouest, Technologies MS Core a étendu ses activités en Côte d’Ivoire avec une filiale dédiée.
                                     </p>
                                     <p>
-                                        Cette expansion nous permet d’être au plus près des organisations locales, notamment dans les secteurs de la finance, des services et des infrastructures critiques, pour les accompagner sur l’ensemble de leurs besoins informatiques, cloud, sécurité et transformation numérique.
+                                        Cette expansion nous permet d'être plus près des organisations locales, qu'elles soient publiques ou privées, évoluant notamment dans les secteurs de la finance, de l'industrie, de l'énergie, du commerce, des services, de la santé, de l'éducation et des infrastructures critiques, afin de répondre à l'ensemble de leurs besoins technologiques.
                                     </p>
                                     <p className="text-sm border-t border-white/10 pt-4 mt-4">
                                         Implantée à Abidjan, notre équipe locale combine la rigueur des standards internationaux avec une compréhension profonde du contexte économique et réglementaire ivoirien.
