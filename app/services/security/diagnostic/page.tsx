@@ -23,8 +23,8 @@ export default function SecurityDiagnosticPage() {
                     {/* Placeholder image until a specific one is chosen */}
                     <div className="absolute inset-0 bg-gradient-to-br from-[#092963] to-[#0f3475] mix-blend-multiply" />
                     <Image
-                        src="/images/security-diagnostic.jpg" // We might need to map this to a generic image if it doesn't exist, using a pattern for now
-                        alt="Background"
+                        src="/images/service-cybersecurity.png"
+                        alt="Security Diagnostic Background"
                         fill
                         className="object-cover opacity-20"
                         priority

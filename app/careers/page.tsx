@@ -26,7 +26,7 @@ export default function CareersPage() {
             <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="/images/careers-hero.jpg"
+                        src="/images/page-careers.png"
                         alt="Équipe collaborative technologies ms core"
                         fill
                         className="object-cover"
@@ -88,6 +88,10 @@ export default function CareersPage() {
                                     Notre récente expansion en <strong>Côte d’Ivoire (Abidjan)</strong> ouvre de nouvelles perspectives passionnantes. En nous rejoignant, vous participez à des projets d'envergure, tant au Canada qu'en Afrique de l'Ouest, avec une équipe qui allie expertise internationale et compréhension locale.
                                 </p>
                             </div>
+
+                            <h3 className="text-xl md:text-2xl font-bold text-[#092963] pt-4">
+                                Pourquoi rejoindre Technologies MS Core?
+                            </h3>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
                                 <div className="space-y-3 p-4 bg-gray-50 rounded-xl border border-gray-100 hover:border-[#eb7e2a]/30 transition-colors">
@@ -234,7 +238,7 @@ export default function CareersPage() {
             <section className="py-20 px-4 bg-gray-50 border-t border-gray-200">
                 <div className="container mx-auto max-w-4xl text-center space-y-8">
                     <h2 className="text-2xl md:text-3xl font-bold text-[#092963]">Prêt à nous rejoindre ?</h2>
-                    <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-16">
+                    <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-12">
                         <div className="flex items-center justify-center gap-3">
                             <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-[#092963]">
                                 <Mail className="w-5 h-5" />
@@ -249,8 +253,17 @@ export default function CareersPage() {
                                 <Phone className="w-5 h-5" />
                             </div>
                             <div className="text-left">
-                                <p className="text-xs text-gray-500 uppercase tracking-wider font-bold">Appelez-nous</p>
-                                <a href="tel:5146092990" className="text-lg font-bold text-[#092963] hover:text-[#eb7e2a] transition-colors">514 609 2990</a>
+                                <p className="text-xs text-gray-500 uppercase tracking-wider font-bold">Canada</p>
+                                <a href="tel:+15146092990" className="text-lg font-bold text-[#092963] hover:text-[#eb7e2a] transition-colors">+1 514 609 2990</a>
+                            </div>
+                        </div>
+                        <div className="flex items-center justify-center gap-3">
+                            <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-[#092963]">
+                                <Phone className="w-5 h-5" />
+                            </div>
+                            <div className="text-left">
+                                <p className="text-xs text-gray-500 uppercase tracking-wider font-bold">Côte d&apos;Ivoire</p>
+                                <a href="tel:+2250706052436" className="text-lg font-bold text-[#092963] hover:text-[#eb7e2a] transition-colors">+225 07 06 05 24 36</a>
                             </div>
                         </div>
                     </div>

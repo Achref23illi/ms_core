@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowLeft, Monitor, Package, Settings, Globe, Server, Printer, Laptop } from 'lucide-react';
 import Link from 'next/link';
+import { Footer } from '@/app/components';
 
 // Services Data
 const services = [
@@ -45,22 +46,29 @@ export default function MaterielsPage() {
             </div>
 
             {/* Hero Section */}
-            <section className="relative pt-40 pb-20 px-4 bg-gray-50 overflow-hidden">
-                <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-50 -skew-x-12 translate-x-32 z-0 opacity-50 pointer-events-none" />
+            <section className="relative pt-40 pb-20 px-4 bg-[#092963] overflow-hidden text-white">
+                <div className="absolute inset-0 z-0">
+                    <div className="absolute inset-0 bg-[#092963]/80 mix-blend-multiply z-10" />
+                    <img
+                        src="/images/service-hardware.png"
+                        alt="Hardware Background"
+                        className="w-full h-full object-cover opacity-60"
+                    />
+                </div>
 
-                <div className="container mx-auto max-w-6xl relative z-10 text-center">
+                <div className="container mx-auto max-w-6xl relative z-20 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#092963]/10 text-[#092963] font-bold tracking-wider text-xs mb-6 border border-[#092963]/20">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/20 border border-cyan-400/30 text-cyan-200 font-bold tracking-wider text-xs mb-6 backdrop-blur-sm">
                             <Server className="w-4 h-4" /> SOLUTIONS MATÉRIELLES
                         </div>
-                        <h1 className="text-4xl md:text-5xl font-bold text-[#092963] mb-6 leading-tight">
+                        <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
                             Fourniture de matériels et <br /> solutions électroniques
                         </h1>
-                        <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                        <p className="text-xl text-cyan-100 max-w-3xl mx-auto leading-relaxed">
                             Équipez vos équipes avec des solutions fiables et performantes.
                         </p>
                     </motion.div>
@@ -103,25 +111,34 @@ export default function MaterielsPage() {
             </section>
 
             {/* Equipment Showcase (Visual only) */}
-            <section className="py-16 px-4 bg-[#f8fafc]">
-                <div className="container mx-auto max-w-6xl text-center">
+            <section className="py-16 px-4 bg-[#f8fafc] relative overflow-hidden">
+                <div className="container mx-auto max-w-6xl text-center relative z-10">
                     <h2 className="text-2xl font-bold text-[#092963] mb-12">Types d'équipements disponibles</h2>
-                    <div className="flex flex-wrap justify-center gap-8 md:gap-16 text-gray-400">
-                        <div className="flex flex-col items-center gap-3">
-                            <Laptop className="w-12 h-12 text-[#94a3b8]" />
-                            <span className="font-semibold text-gray-600">Ordinateurs</span>
+
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                        <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col items-center gap-4 group">
+                            <div className="w-20 h-20 bg-gray-50 rounded-full flex items-center justify-center group-hover:bg-blue-50 transition-colors">
+                                <Laptop className="w-10 h-10 text-gray-400 group-hover:text-[#092963] transition-colors" />
+                            </div>
+                            <span className="font-bold text-gray-700">Ordinateurs</span>
                         </div>
-                        <div className="flex flex-col items-center gap-3">
-                            <Server className="w-12 h-12 text-[#94a3b8]" />
-                            <span className="font-semibold text-gray-600">Serveurs</span>
+                        <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col items-center gap-4 group">
+                            <div className="w-20 h-20 bg-gray-50 rounded-full flex items-center justify-center group-hover:bg-blue-50 transition-colors">
+                                <Server className="w-10 h-10 text-gray-400 group-hover:text-[#092963] transition-colors" />
+                            </div>
+                            <span className="font-bold text-gray-700">Serveurs</span>
                         </div>
-                        <div className="flex flex-col items-center gap-3">
-                            <Printer className="w-12 h-12 text-[#94a3b8]" />
-                            <span className="font-semibold text-gray-600">Périphériques</span>
+                        <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col items-center gap-4 group">
+                            <div className="w-20 h-20 bg-gray-50 rounded-full flex items-center justify-center group-hover:bg-blue-50 transition-colors">
+                                <Printer className="w-10 h-10 text-gray-400 group-hover:text-[#092963] transition-colors" />
+                            </div>
+                            <span className="font-bold text-gray-700">Périphériques</span>
                         </div>
-                        <div className="flex flex-col items-center gap-3">
-                            <Monitor className="w-12 h-12 text-[#94a3b8]" />
-                            <span className="font-semibold text-gray-600">Écrans</span>
+                        <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col items-center gap-4 group">
+                            <div className="w-20 h-20 bg-gray-50 rounded-full flex items-center justify-center group-hover:bg-blue-50 transition-colors">
+                                <Monitor className="w-10 h-10 text-gray-400 group-hover:text-[#092963] transition-colors" />
+                            </div>
+                            <span className="font-bold text-gray-700">Écrans</span>
                         </div>
                     </div>
                 </div>
@@ -140,6 +157,7 @@ export default function MaterielsPage() {
                 </div>
             </section>
 
+            <Footer />
         </main>
     );
 }

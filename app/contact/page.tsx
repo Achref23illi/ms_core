@@ -9,22 +9,29 @@ export default function ContactPage() {
     return (
         <main className="min-h-screen bg-white">
             {/* Hero Section */}
-            <section className="relative pt-40 pb-20 px-4 bg-gray-50 overflow-hidden">
-                <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-50 -skew-x-12 translate-x-32 z-0 opacity-50 pointer-events-none" />
-                <div className="container mx-auto max-w-6xl relative z-10 text-center">
+            <section className="relative pt-40 pb-20 px-4 bg-[#092963] overflow-hidden text-white">
+                <div className="absolute inset-0 z-0">
+                    <div className="absolute inset-0 bg-[#092963]/80 mix-blend-multiply z-10" />
+                    <img
+                        src="/images/page-contact.png"
+                        alt="Global Contact Background"
+                        className="w-full h-full object-cover opacity-50"
+                    />
+                </div>
+                <div className="container mx-auto max-w-6xl relative z-20 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <span className="inline-block py-1 px-3 rounded-full bg-[#eb7e2a]/10 text-[#eb7e2a] font-bold tracking-wider text-xs mb-6 border border-[#eb7e2a]/20">
+                        <span className="inline-block py-1 px-3 rounded-full bg-[#eb7e2a]/20 text-[#eb7e2a] font-bold tracking-wider text-xs mb-6 border border-[#eb7e2a]/30 backdrop-blur-sm">
                             CONTACTEZ-NOUS
                         </span>
-                        <h1 className="text-4xl md:text-6xl font-bold text-[#092963] mb-6 leading-tight">
+                        <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                             Parlons de votre projet
                         </h1>
-                        <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                            Nos équipes au <span className="text-[#092963] font-semibold">Canada</span> et en <span className="text-[#092963] font-semibold">Côte d'Ivoire</span> sont prêtes à vous accompagner.
+                        <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+                            Nos équipes au <span className="text-[#eb7e2a] font-semibold">Canada</span> et en <span className="text-[#eb7e2a] font-semibold">Côte d'Ivoire</span> sont prêtes à vous accompagner.
                         </p>
                     </motion.div>
                 </div>

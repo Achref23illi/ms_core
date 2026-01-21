@@ -40,7 +40,7 @@ export const logos = {
 
 // Favicon
 export const favicon = {
-    ico: `${PUBLIC_PATH}favicon.ico`,
+    png: `${PUBLIC_PATH}favicon.png`,
     // Add other favicon sizes if needed
     // apple: `${PUBLIC_PATH}apple-touch-icon.png`,
     // favicon16: `${PUBLIC_PATH}favicon-16x16.png`,

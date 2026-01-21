@@ -8,7 +8,7 @@ export function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="bg-foreground text-background py-12 px-4">
+        <footer className="bg-foreground text-background py-12 px-4 relative z-50">
             <div className="container mx-auto max-w-6xl">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
                     {/* Brand */}
@@ -27,9 +27,9 @@ export function Footer() {
                     <div>
                         <h4 className="font-semibold mb-4">Services</h4>
                         <ul className="space-y-2 text-sm text-background/70">
-                            <li><Link href="/services/cybersecurite" className="hover:text-background transition-colors">Cybersécurité</Link></li>
-                            <li><Link href="/services/intelligence-artificielle" className="hover:text-background transition-colors">Intelligence Artificielle</Link></li>
-                            <li><Link href="/services/microsoft-cloud" className="hover:text-background transition-colors">Solutions Microsoft & Cloud</Link></li>
+                            <li><Link href="/services/security" className="hover:text-background transition-colors">Cybersécurité</Link></li>
+                            <li><Link href="/services/ai" className="hover:text-background transition-colors">Intelligence Artificielle</Link></li>
+                            <li><Link href="/services/microsoft-365" className="hover:text-background transition-colors">Solutions Microsoft & Cloud</Link></li>
                             <li><Link href="/services/materiels" className="hover:text-background transition-colors">Matériels & Équipements</Link></li>
                         </ul>
                     </div>
@@ -38,10 +38,17 @@ export function Footer() {
                     <div>
                         <h4 className="font-semibold mb-4">Entreprise</h4>
                         <ul className="space-y-2 text-sm text-background/70">
-                            <li><Link href="#about" className="hover:text-background transition-colors">À propos</Link></li>
-                            <li><Link href="/career" className="hover:text-background transition-colors">Carrières</Link></li>
+                            <li><Link href="/about" className="hover:text-background transition-colors">À propos</Link></li>
+                            <li><Link href="/careers" className="hover:text-background transition-colors">Carrières</Link></li>
                             <li><Link href="/privacy" className="hover:text-background transition-colors">Politique de confidentialité</Link></li>
-                            <li><Link href="/contact" className="hover:text-background transition-colors">Contact</Link></li>
+                            <li>
+                                <button
+                                    onClick={() => window.dispatchEvent(new Event('openCookieSettings'))}
+                                    className="hover:text-background transition-colors text-left"
+                                >
+                                    Gérer les cookies
+                                </button>
+                            </li>
                         </ul>
                     </div>
 
@@ -53,13 +60,25 @@ export function Footer() {
                                 <Mail className="w-4 h-4" />
                                 <a href="mailto:info@techmscore.com" className="hover:text-background transition-colors">info@techmscore.com</a>
                             </li>
+
+                            <li className="pt-2 font-semibold text-background/90 text-xs uppercase tracking-wider">Canada</li>
                             <li className="flex items-center gap-2">
                                 <Phone className="w-4 h-4" />
                                 <span>+1 514 609 2990</span>
                             </li>
                             <li className="flex items-start gap-2">
                                 <MapPin className="w-4 h-4 mt-0.5" />
-                                <span>877 rue du butor, Lévis (QC), Canada</span>
+                                <span>877 rue du butor, Lévis (QC)</span>
+                            </li>
+
+                            <li className="pt-2 font-semibold text-background/90 text-xs uppercase tracking-wider">Côte d&apos;Ivoire</li>
+                            <li className="flex items-center gap-2">
+                                <Phone className="w-4 h-4" />
+                                <span>+225 07 06 05 24 36</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <MapPin className="w-4 h-4 mt-0.5" />
+                                <span>Port-Bouët, Zone industrielle Vridi, Abidjan</span>
                             </li>
                         </ul>
                     </div>

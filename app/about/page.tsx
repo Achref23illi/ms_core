@@ -80,6 +80,15 @@ const pillars = [
         icon: ShieldCheck,
         content: (
             <div className="space-y-8">
+                <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
+                    <Image
+                        src="/images/service-cybersecurity.png"
+                        alt="Cybersécurité MS Core"
+                        fill
+                        className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#092963]/60 via-transparent to-transparent" />
+                </div>
                 <p className="font-semibold text-[#092963] text-lg bg-blue-50/50 p-4 rounded-lg italic">
                     « Nous sécurisons votre entreprise contre les menaces modernes. »
                 </p>
@@ -142,6 +151,15 @@ const pillars = [
         icon: Cpu,
         content: (
             <div className="space-y-8">
+                <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
+                    <Image
+                        src="/images/service-ai.png"
+                        alt="Intelligence Artificielle MS Core"
+                        fill
+                        className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#092963]/60 via-transparent to-transparent" />
+                </div>
                 <p className="font-semibold text-[#092963] text-lg bg-blue-50/50 p-4 rounded-lg italic">
                     « Transformez vos processus, gagnez du temps et augmentez votre performance. »
                 </p>
@@ -168,6 +186,15 @@ const pillars = [
         icon: Cloud,
         content: (
             <div className="space-y-8">
+                <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
+                    <Image
+                        src="/images/service-microsoft.png"
+                        alt="Solutions Microsoft MS Core"
+                        fill
+                        className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#092963]/60 via-transparent to-transparent" />
+                </div>
                 <p className="font-semibold text-[#092963] text-lg bg-blue-50/50 p-4 rounded-lg italic">
                     « Votre partenaire Microsoft pour moderniser votre entreprise. »
                 </p>
@@ -202,6 +229,15 @@ const pillars = [
         icon: HardDrive,
         content: (
             <div className="space-y-8">
+                <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
+                    <Image
+                        src="/images/service-hardware.png"
+                        alt="Matériels Informatiques MS Core"
+                        fill
+                        className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#092963]/60 via-transparent to-transparent" />
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="space-y-2">
                         <h4 className="font-bold text-[#092963]">Matériels Informatiques</h4>
@@ -299,14 +335,19 @@ export default function AboutPage() {
                                     <div className="p-2 bg-white/10 rounded-lg backdrop-blur-sm">
                                         <Globe className="w-6 h-6 text-[#eb7e2a]" />
                                     </div>
-                                    <h3 className="text-2xl font-bold">Expansion en Côte d’Ivoire</h3>
+                                    <h3 className="text-2xl font-bold">Notre expansion en Côte d’Ivoire</h3>
                                 </div>
-                                <p className="text-blue-100 leading-relaxed">
-                                    En réponse à la demande croissante en Afrique de l’Ouest, nous avons ouvert une filiale à <strong className="text-white">Abidjan</strong>.
-                                </p>
-                                <p className="text-blue-100 leading-relaxed text-sm">
-                                    Notre équipe locale accompagne les secteurs de la finance et des infrastructures critiques avec une compréhension profonde du contexte économique et réglementaire ivoirien.
-                                </p>
+                                <div className="space-y-4">
+                                    <p className="text-blue-100 leading-relaxed text-sm">
+                                        En réponse à la demande croissante de services technologiques avancés en Afrique de l&apos;Ouest, Technologies MS Core a étendu ses activités en Côte d&apos;Ivoire avec une filiale dédiée.
+                                    </p>
+                                    <p className="text-blue-100 leading-relaxed text-sm">
+                                        Cette expansion nous permet d’être plus près des organisations locales, qu’elles soient publiques ou privées, évoluant notamment dans les secteurs de la finance, de l’industrie, de l’énergie, du commerce, des services, de la santé, de l’éducation et des infrastructures critiques, afin de répondre à l’ensemble de leurs besoins technologiques.
+                                    </p>
+                                    <p className="text-blue-100 leading-relaxed text-sm">
+                                        Implantée à Abidjan, notre équipe locale combine la rigueur des standards internationaux avec une compréhension profonde du contexte économique et réglementaire ivoirien.
+                                    </p>
+                                </div>
                                 <div className="pt-4 border-t border-white/10 flex flex-wrap gap-4">
                                     <span className="text-xs px-3 py-1 bg-white/10 rounded-full">Standards Internationaux</span>
                                     <span className="text-xs px-3 py-1 bg-white/10 rounded-full">Expertise Locale</span>
@@ -345,26 +386,7 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Certifications */}
-            <section className="py-16 px-4 bg-white border-y border-gray-100">
-                <div className="container mx-auto max-w-6xl text-center">
-                    <p className="text-gray-500 font-semibold mb-8 uppercase tracking-widest text-sm">Nos Certifications et Normes</p>
-                    <div className="flex flex-wrap justify-center gap-4 md:gap-8">
-                        {["CISSP", "CEH", "ISO 27001", "SC-100", "CompTIA Security+"].map((cert, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.1 }}
-                                className="px-6 py-3 rounded-xl bg-gray-50 border border-gray-200 text-[#092963] font-bold shadow-sm hover:shadow-md hover:border-[#eb7e2a]/50 transition-all cursor-default"
-                            >
-                                {cert}
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+
 
             {/* Contact & Footer Info */}
             <section className="py-20 px-4 bg-[#092963] text-white">

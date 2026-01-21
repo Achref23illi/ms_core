@@ -1,4 +1,4 @@
-import { HeroSection, HeroSectionFull, ServicesSection, AboutSection, ClientsSection, ContactSection, Footer } from '@/app/components';
+import { HeroSection, HeroSectionFull, ServicesSection, AboutSection, ClientsSection, ContactSection, Footer, SupportSection } from '@/app/components';
 
 export default function Home() {
   return (
@@ -20,6 +20,7 @@ export default function Home() {
       <ServicesSection />
       <AboutSection />
       <ClientsSection />
+      <SupportSection />
       <ContactSection />
       <Footer />
     </main>

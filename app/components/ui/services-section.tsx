@@ -15,6 +15,7 @@ const servicesData = [
         title: "Cybersécurité",
         icon: Shield,
         link: '/services/security',
+        image: '/images/service-cybersecurity.png',
         tagline: "Protégez ce qui compte le plus : vos informations.",
         accroche: "Nous sécurisons votre entreprise contre les menaces modernes.",
         description: "Anticipez les cybermenaces, réduisez les risques et sécurisez votre environnement numérique.",
@@ -34,6 +35,7 @@ const servicesData = [
         title: "Intelligence Artificielle",
         icon: Brain,
         link: '/services/ai',
+        image: '/images/service-ai.png',
         tagline: "Boostez votre entreprise avec la puissance de l’IA.",
         accroche: "Transformez vos processus, gagnez du temps et augmentez votre performance.",
         description: "Nous intégrons l'IA au cœur de vos processus pour transformer vos données et vos processus en avantages compétitifs.",
@@ -48,6 +50,7 @@ const servicesData = [
         title: "Solutions Microsoft & Cloud",
         icon: Cloud,
         link: '/services/microsoft-365',
+        image: '/images/service-microsoft.png',
         tagline: "Travaillez plus vite, plus intelligemment et en toute sécurité.",
         accroche: "Votre partenaire Microsoft pour moderniser votre entreprise.",
         description: "Intégration, migration et sécurisation de votre environnement Microsoft 365 et Azure pour une productivité sans faille.",
@@ -65,6 +68,7 @@ const servicesData = [
         title: "Matériels & Électronique",
         icon: Package,
         link: '/services/materiels',
+        image: '/images/service-hardware.png',
         tagline: "Équipez vos équipes avec des solutions fiables et performantes.",
         accroche: "Le matériel adapté à votre excellence opérationnelle.",
         description: "Fourniture de matériels informatiques, logiciels et licences. Nous gérons l'installation, la configuration et la logistique pour vous.",
@@ -182,18 +186,29 @@ export function ServicesSection() {
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: -20 }}
                                 transition={{ duration: 0.4, ease: "easeOut" }}
-                                className="bg-white rounded-3xl p-6 md:p-10 border border-gray-100 shadow-xl shadow-gray-200/50 min-h-[600px] flex flex-col"
+                                className="bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-xl shadow-gray-200/50 min-h-[600px] flex flex-col"
                             >
-                                {/* Active Header */}
-                                <div className="mb-8">
-                                    <div className="flex items-center gap-3 text-[#eb7e2a] mb-4">
-                                        <activeService.icon className="w-8 h-8" />
-                                        <span className="text-sm font-bold uppercase tracking-wider">{activeService.title}</span>
+                                {/* Active Header with Image */}
+                                <div className="relative h-48 w-full">
+                                    <img
+                                        src={activeService.image}
+                                        alt={activeService.title}
+                                        className="w-full h-full object-cover"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
+                                    <div className="absolute bottom-4 left-6 md:left-10 flex items-center gap-3 text-[#eb7e2a] z-10">
+                                        <div className="p-2 bg-white rounded-lg shadow-sm">
+                                            <activeService.icon className="w-6 h-6" />
+                                        </div>
+                                        <span className="text-sm font-bold uppercase tracking-wider bg-white/80 backdrop-blur-sm px-2 py-1 rounded-md">{activeService.title}</span>
                                     </div>
+                                </div>
+
+                                <div className="p-6 md:p-10 pt-4 flex-grow flex flex-col">
                                     <h3 className="text-3xl font-bold text-[#092963] mb-4">
                                         {activeService.accroche}
                                     </h3>
-                                    <p className="text-lg text-muted-foreground leading-relaxed">
+                                    <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                                         {activeService.description}
                                     </p>
                                 </div>

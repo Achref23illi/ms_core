@@ -6,6 +6,7 @@ import { Button } from '@/app/components/ui/button';
 import { ArrowLeft, Rocket, Cloud, Shield, Server, Headphones, Settings, Lock, Zap } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Footer } from '@/app/components';
 
 // Services Data
 const services = [
@@ -62,34 +63,23 @@ export default function Microsoft365Page() {
             <section className="relative min-h-[80vh] h-auto flex items-center justify-center overflow-hidden bg-[#092963] pb-16">
                 {/* Background Image / Overlay */}
                 <div className="absolute inset-0 z-0">
+                    <div className="absolute inset-0 bg-[#092963]/80 mix-blend-multiply z-10" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#092963] to-transparent z-10" />
                     <Image
-                        src="/images/micro365.png"
+                        src="/images/service-microsoft.png"
                         alt="Microsoft 365 Background"
                         fill
-                        className="object-cover opacity-20 mix-blend-overlay"
+                        className="object-cover opacity-60"
                         priority
                     />
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#092963] via-[#092963]/90 to-[#0f3475]/80 mix-blend-multiply" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#092963] to-transparent" />
                 </div>
 
-                <div className="container mx-auto max-w-4xl px-4 relative z-10 text-center pt-32 md:pt-36">
+                <div className="container mx-auto max-w-4xl px-4 relative z-20 text-center pt-32 md:pt-36">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        {/* Floating elements animation if needed, or static logo */}
-                        <div className="relative w-32 h-32 mx-auto mb-6 animate-float">
-                            <Image
-                                src="/images/micro365.png"
-                                alt="Microsoft 365 Logo"
-                                fill
-                                className="object-contain drop-shadow-2xl"
-                                priority
-                            />
-                        </div>
-
                         <span className="inline-block py-1 px-3 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-200 font-semibold tracking-wider text-xs mb-5 backdrop-blur-sm">
                             SOLUTIONS CLOUD & MODERN WORK
                         </span>
@@ -178,6 +168,7 @@ export default function Microsoft365Page() {
                 </div>
             </section>
 
+            <Footer />
         </main>
     );
 }

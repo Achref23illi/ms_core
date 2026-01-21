@@ -5,6 +5,7 @@ import { motion } from 'motion/react';
 import { Button } from '@/app/components/ui/button';
 import { ArrowLeft, ShieldCheck, Search, Lock, Cloud, Eye, CheckCircle2, UserCheck, GraduationCap, FileSearch } from 'lucide-react';
 import Link from 'next/link';
+import { Footer } from '@/app/components';
 
 // Services Data
 const services = [
@@ -71,16 +72,25 @@ export default function SecurityPage() {
 
             {/* Hero Section */}
             <section className="relative pt-40 pb-20 px-4 bg-[#092963] overflow-hidden text-white">
-                <div className="absolute top-0 right-0 w-2/3 h-full bg-[url('/circuit-board.svg')] opacity-5 mix-blend-overlay pointer-events-none" />
-                <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl pointer-events-none" />
+                {/* Background Image with Overlay */}
+                <div className="absolute inset-0 z-0">
+                    <div className="absolute inset-0 bg-[#092963]/90 z-10" />
+                    <img
+                        src="/images/service-cybersecurity.png"
+                        alt="Security Background"
+                        className="w-full h-full object-cover opacity-40 mix-blend-overlay"
+                    />
+                </div>
 
-                <div className="container mx-auto max-w-6xl relative z-10 text-center">
+                <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl pointer-events-none z-10" />
+
+                <div className="container mx-auto max-w-6xl relative z-20 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#eb7e2a]/20 border border-[#eb7e2a]/30 text-[#eb7e2a] font-bold tracking-wider text-xs mb-6">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#eb7e2a]/20 border border-[#eb7e2a]/30 text-[#eb7e2a] font-bold tracking-wider text-xs mb-6 backdrop-blur-sm">
                             <ShieldCheck className="w-4 h-4" /> CYBERSÉCURITÉ
                         </div>
                         <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
@@ -149,6 +159,7 @@ export default function SecurityPage() {
                 </div>
             </section>
 
+            <Footer />
         </main>
     );
 }

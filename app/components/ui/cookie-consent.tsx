@@ -28,6 +28,14 @@ export function CookieConsent() {
             const timer = setTimeout(() => setIsVisible(true), 1000);
             return () => clearTimeout(timer);
         }
+
+        const handleOpenSettings = () => {
+            setIsVisible(true);
+            setShowDetails(true);
+        };
+
+        window.addEventListener('openCookieSettings', handleOpenSettings);
+        return () => window.removeEventListener('openCookieSettings', handleOpenSettings);
     }, []);
 
     const handleAcceptAll = () => {

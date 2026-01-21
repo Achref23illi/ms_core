@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowLeft, Brain, Bot, Lightbulb, Cpu, CheckCircle2, ArrowRight } from 'lucide-react';
+import { ArrowLeft, Brain, Bot, Lightbulb, Cpu, CheckCircle2, ArrowRight, Workflow } from 'lucide-react';
 import Link from 'next/link';
 import { Footer } from '@/app/components';
 
@@ -24,6 +24,12 @@ const aiServices = [
         description: "Nous offrons des formations et du conseil en intelligence artificielle afin d'aider vos équipes à comprendre, utiliser et encadrer l'IA de façon responsable et sécurisée.",
         icon: Lightbulb,
         href: '/services/ai/training'
+    },
+    {
+        title: "Automatisation intelligente des processus",
+        description: "Optimisez et automatisez vos processus métiers grâce à l’IA afin de réduire les tâches manuelles, améliorer la productivité et diminuer les coûts opérationnels.",
+        icon: Workflow,
+        href: '/services/ai/automation'
     }
 ];
 
@@ -40,10 +46,16 @@ export default function AIServicesPage() {
             {/* Hero Section */}
             <section className="relative min-h-[70vh] h-auto flex items-center justify-center overflow-hidden bg-[#092963] pb-16">
                 <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#092963] via-[#7c3aed] to-[#ec4899] mix-blend-multiply" />
+                    <div className="absolute inset-0 bg-[#092963]/80 z-10 mix-blend-multiply" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#092963] via-transparent to-transparent z-10" />
+                    <img
+                        src="/images/service-ai.png"
+                        alt="AI Background"
+                        className="w-full h-full object-cover opacity-60"
+                    />
                 </div>
 
-                <div className="container mx-auto max-w-4xl px-4 relative z-10 text-center pt-32 md:pt-36">
+                <div className="container mx-auto max-w-4xl px-4 relative z-20 text-center pt-32 md:pt-36">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -75,13 +87,25 @@ export default function AIServicesPage() {
                         viewport={{ once: true }}
                         className="text-center mb-16"
                     >
-                        <h2 className="text-3xl font-bold text-[#092963] mb-4">Nos services d'Intelligence Artificielle</h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto">
-                            Transformez vos processus, gagnez du temps et augmentez votre performance grâce à nos solutions IA sur mesure.
-                        </p>
+                        <h2 className="text-3xl font-bold text-[#092963] mb-6">Nos services d'Intelligence Artificielle</h2>
+                        <div className="max-w-3xl mx-auto space-y-6">
+                            <p className="text-gray-600 leading-relaxed">
+                                Nous concevons et intégrons des solutions d’intelligence artificielle adaptées à vos besoins métier afin d’automatiser, optimiser et améliorer vos opérations.
+                            </p>
+                            <p className="text-gray-600 leading-relaxed">
+                                Nos approches sont pragmatiques, sécurisées et orientées vers des gains mesurables, vous permettant de rester compétitif dans un marché en constante évolution.
+                            </p>
+                            <div className="flex flex-wrap justify-center gap-4 pt-4">
+                                {["Solutions sur mesure", "Automatisation des processus", "Approche sécurisée", "Aide à la décision et valorisation des données"].map((item) => (
+                                    <span key={item} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-50 text-violet-700 text-sm font-medium border border-violet-100">
+                                        <CheckCircle2 className="w-4 h-4" /> {item}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
                     </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {aiServices.map((service, index) => (
                             <motion.div
                                 key={service.title}
@@ -138,8 +162,12 @@ export default function AIServicesPage() {
                                 </li>
                             </ul>
                         </div>
-                        <div className="relative h-80 rounded-2xl overflow-hidden bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center">
-                            <Brain className="w-32 h-32 text-white/30" />
+                        <div className="relative h-80 rounded-2xl overflow-hidden bg-white shadow-xl">
+                            <img
+                                src="/images/service-ai.png"
+                                alt="AI Concept"
+                                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                            />
                         </div>
                     </div>
                 </div>

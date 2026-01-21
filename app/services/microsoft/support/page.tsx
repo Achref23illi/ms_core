@@ -17,7 +17,14 @@ export default function MicrosoftSupportPage() {
 
             <section className="relative min-h-[80vh] h-auto flex items-center justify-center overflow-hidden bg-[#092963] pb-16">
                 <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#092963] to-[#8b5cf6] mix-blend-multiply" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#092963] to-[#8b5cf6] mix-blend-multiply z-10" />
+                    <Image
+                        src="/images/service-microsoft.png"
+                        alt="Microsoft Support Background"
+                        fill
+                        className="object-cover opacity-60"
+                        priority
+                    />
                 </div>
 
                 <div className="container mx-auto max-w-4xl px-4 relative z-10 text-center pt-32 md:pt-36">
@@ -48,8 +55,13 @@ export default function MicrosoftSupportPage() {
                 <div className="container mx-auto max-w-5xl">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <div className="order-2 md:order-1">
-                            <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl bg-gray-100 flex items-center justify-center">
-                                <Headphones className="w-24 h-24 text-gray-300" />
+                            <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl">
+                                <Image
+                                    src="/images/service-microsoft.png"
+                                    alt="IT Support Visualization"
+                                    fill
+                                    className="object-cover"
+                                />
                             </div>
                         </div>
                         <div className="order-1 md:order-2">
