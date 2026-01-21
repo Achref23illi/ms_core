@@ -217,7 +217,7 @@ export function ServicesSection() {
                                 <div className="h-px w-full bg-gradient-to-r from-gray-200 via-gray-100 to-transparent mb-8" />
 
                                 {/* Sub Services Grid */}
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-8 mb-8 flex-grow">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-8 mb-8 flex-grow px-6 md:px-10">
                                     {activeService.subServices.map((sub, idx) => (
                                         <motion.div
                                             key={idx}
@@ -244,7 +244,7 @@ export function ServicesSection() {
                                 </div>
 
                                 {/* Footer Action */}
-                                <div className="flex flex-col sm:flex-row gap-4 pt-6 mt-auto border-t border-gray-100">
+                                <div className="flex flex-col sm:flex-row gap-4 pt-6 pb-6 md:pb-10 mt-auto border-t border-gray-100 px-6 md:px-10">
                                     <Link href="/contact" className="w-full sm:w-auto">
                                         <Button className="w-full sm:w-auto rounded-full bg-[#092963] hover:bg-[#092963]/90 text-white px-8">
                                             Demander une consultation
