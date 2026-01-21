@@ -105,7 +105,7 @@ export default function MaterielsPage() {
             {/* Equipment Showcase (Visual only) */}
             <section className="py-16 px-4 bg-[#f8fafc]">
                 <div className="container mx-auto max-w-6xl text-center">
-                    <h2 className="text-2xl font-bold text-[#092963] mb-12">Types d&apos;équipements disponibles</h2>
+                    <h2 className="text-2xl font-bold text-[#092963] mb-12">Types d'équipements disponibles</h2>
                     <div className="flex flex-wrap justify-center gap-8 md:gap-16 text-gray-400">
                         <div className="flex flex-col items-center gap-3">
                             <Laptop className="w-12 h-12 text-[#94a3b8]" />
@@ -130,7 +130,7 @@ export default function MaterielsPage() {
             {/* CTA */}
             <section className="py-20 px-4 bg-[#092963] text-white text-center">
                 <div className="container mx-auto max-w-4xl">
-                    <h2 className="text-3xl font-bold mb-6">Besoin d&apos;équipements spécifiques ?</h2>
+                    <h2 className="text-3xl font-bold mb-6">Besoin d'équipements spécifiques ?</h2>
                     <p className="text-blue-100 mb-8 text-lg">
                         Contactez-nous pour obtenir un devis personnalisé adapté à vos besoins et à votre budget.
                     </p>

@@ -24,7 +24,7 @@ export default function ContactPage() {
                             Parlons de votre projet
                         </h1>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                            Nos équipes au <span className="text-[#092963] font-semibold">Canada</span> et en <span className="text-[#092963] font-semibold">Côte d&apos;Ivoire</span> sont prêtes à vous accompagner.
+                            Nos équipes au <span className="text-[#092963] font-semibold">Canada</span> et en <span className="text-[#092963] font-semibold">Côte d'Ivoire</span> sont prêtes à vous accompagner.
                         </p>
                     </motion.div>
                 </div>

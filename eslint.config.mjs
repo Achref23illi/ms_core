@@ -13,6 +13,12 @@ const eslintConfig = defineConfig([
     'build/**',
     'next-env.d.ts',
   ]),
+  // Disable unescaped entities rule for French content with apostrophes
+  {
+    rules: {
+      'react/no-unescaped-entities': 'off',
+    },
+  },
 ])
 
 export default eslintConfig
