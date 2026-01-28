@@ -54,7 +54,7 @@ export function Footer() {
                             className="h-10 w-auto mb-4 brightness-0 invert"
                         />
                         <p className="text-background/70 text-sm leading-relaxed">
-                            Transformation numérique sécurisée, performante et orientée résultats.
+                            Là où la technologie rencontre l’intégrité, la sécurité et l’innovation.
                         </p>
                     </div>
 
