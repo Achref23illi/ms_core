@@ -11,21 +11,13 @@ const badges = [
         alt: 'Microsoft Certified: Security Operations Analyst Associate',
         href: 'https://learn.microsoft.com/en-us/credentials/certifications/security-operations-analyst/'
     },
-    {
-        src: '/badges/2-150x150.png',
-        alt: 'Microsoft Certified: Cybersecurity Architect Expert',
-        href: 'https://learn.microsoft.com/en-us/credentials/certifications/exams/sc-100/'
-    },
+
     {
         src: '/badges/3-150x150.png',
         alt: 'Microsoft Certified: Security, Compliance, and Identity Fundamentals',
         href: 'https://learn.microsoft.com/en-us/credentials/certifications/security-compliance-and-identity-fundamentals/'
     },
-    {
-        src: '/badges/4-150x150.png',
-        alt: 'Microsoft Certified: Azure Fundamentals',
-        href: 'https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/'
-    },
+
     {
         src: '/badges/5-150x150.png',
         alt: 'Microsoft Certified: Azure Administrator Associate',

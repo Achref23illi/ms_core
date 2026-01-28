@@ -10,11 +10,14 @@ const CONTACT_EMAIL = process.env.CONTACT_EMAIL || 'info@techmscore.com'; // Rec
 
 // --- Email Template Helper ---
 const generateEmailHtml = (data: any) => {
-    const { type, name, email, phone, subject, message, ...otherDetails } = data;
+    const { type, name, firstname, lastname, email, phone, subject, message, website, organization, ...otherDetails } = data;
 
-    const logoUrl = 'https://techmscore.com/logo.png'; // Update with actual production domain
+    const logoUrl = 'https://techmscore.com/logo.png';
     const primaryColor = '#092963';
     const accentColor = '#eb7e2a';
+
+    // Construct full name
+    const fullName = (firstname && lastname) ? `${firstname} ${lastname}` : (name || 'Client');
 
     let title = '';
     let description = '';
@@ -32,17 +35,20 @@ const generateEmailHtml = (data: any) => {
             title = 'Demande de Diagnostic Gratuit';
             description = 'Un utilisateur a rempli le formulaire de diagnostic de sécurité.';
             break;
+        case 'newsletter':
+            title = 'Nouvelle inscription à l\'infolettre';
+            description = 'Un utilisateur souhaite s\'abonner à l\'infolettre.';
+            break;
         default:
             title = 'Nouvelle soumission';
             description = 'Une nouvelle soumission a été reçue du site web.';
     }
 
-    // Format other details (like radio/checkbox answers)
+    // Format other details
     const formattedDetails = Object.entries(otherDetails)
-        .filter(([key]) => key !== 'motif' && key !== 'urgence' && key !== 'company' && key !== 'jobTitle' && key !== 'city' && key !== 'date' && key !== 'incidents') // We allow specific keys
+        .filter(([key]) => !['motif', 'urgence', 'company', 'jobTitle', 'city', 'date', 'incidents'].includes(key))
         .map(([key, value]) => {
-            if (typeof value === 'object' && value !== null) return ''; // Skip complex objects if any
-            // Simplify key names for display
+            if (typeof value === 'object' && value !== null) return '';
             const displayKey = key.replace(/_/g, ' ').replace(/^q_/, 'Question: ');
             return `
                 <tr style="border-bottom: 1px solid #eee;">
@@ -52,16 +58,21 @@ const generateEmailHtml = (data: any) => {
             `;
         }).join('');
 
-    // Explicit details map
-    const specificDetails = [
-        { label: 'Entreprise', value: data.company },
+    // Explicit details map (merged old and new fields)
+    const specificDetailsMap = [
+        { label: 'Entreprise', value: organization || data.company },
+        { label: 'Site Web', value: website },
         { label: 'Fonction', value: data.jobTitle },
         { label: 'Ville/Pays', value: data.city },
         { label: 'Motif', value: data.motif },
         { label: 'Urgence', value: data.urgence },
         { label: 'Incidents', value: Array.isArray(data.incidents) ? data.incidents.join(', ') : data.incidents },
         { label: 'Date détectée', value: data.date },
-    ].filter(item => item.value).map(item => `
+    ];
+
+    const specificDetails = specificDetailsMap
+        .filter(item => item.value)
+        .map(item => `
         <tr style="border-bottom: 1px solid #eee;">
             <td style="padding: 10px; color: #555; font-weight: bold; width: 40%;">${item.label}</td>
             <td style="padding: 10px; color: #333;">${item.value}</td>
@@ -88,7 +99,6 @@ const generateEmailHtml = (data: any) => {
                     <!-- Header -->
                     <tr>
                         <td style="background-color: ${primaryColor}; padding: 30px; text-align: center;">
-                            <!-- <img src="${logoUrl}" alt="MS Core Technologies" style="max-width: 150px; height: auto;"> -->
                             <h1 style="color: #ffffff; margin: 0; font-size: 24px; font-weight: 700;">Technologies MS Core</h1>
                         </td>
                     </tr>
@@ -112,7 +122,7 @@ const generateEmailHtml = (data: any) => {
                                                 <td style="padding-bottom: 10px; color: #888; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">Expéditeur</td>
                                             </tr>
                                             <tr>
-                                                <td style="font-size: 16px; font-weight: bold; color: ${primaryColor}; padding-bottom: 5px;">${name}</td>
+                                                <td style="font-size: 16px; font-weight: bold; color: ${primaryColor}; padding-bottom: 5px;">${fullName}</td>
                                             </tr>
                                             <tr>
                                                 <td style="font-size: 14px; color: #555; padding-bottom: 5px;"><a href="mailto:${email}" style="color: ${accentColor}; text-decoration: none;">${email}</a></td>
@@ -150,9 +160,6 @@ const generateEmailHtml = (data: any) => {
                                         <a href="mailto:?subject=Export%20Donn%C3%A9es%20MS%20Core&body=${encodeURIComponent(JSON.stringify(data, null, 2))}" style="display: inline-block; padding: 12px 24px; background-color: #f1f5f9; color: #092963; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 14px; border: 1px solid #cbd5e1;">
                                             📤 Exporter les données (JSON)
                                         </a>
-                                        <p style="font-size: 11px; color: #94a3b8; margin-top: 10px;">
-                                            Cliquez pour transférer les données brutes.
-                                        </p>
                                     </td>
                                 </tr>
                             </table>
@@ -178,7 +185,8 @@ const generateEmailHtml = (data: any) => {
 
 // --- Auto-Reply Template Helper ---
 const generateAutoReplyHtml = (data: any) => {
-    const { type, name } = data;
+    const { type, name, firstname, lastname } = data;
+    const displayName = firstname || name || 'Client'; // Personal touch with first name
     const primaryColor = '#092963';
     const accentColor = '#eb7e2a';
 
@@ -188,12 +196,16 @@ const generateAutoReplyHtml = (data: any) => {
 
     if (type === 'contact') {
         title = 'Confirmation de réception';
-        messageBody = `Bonjour ${name},<br><br>Nous avons bien reçu votre message via notre formulaire de contact. Merci de l'intérêt que vous portez à Technologies MS Core.`;
+        messageBody = `Bonjour ${displayName},<br><br>Nous avons bien reçu votre message via notre formulaire de contact. Merci de l'intérêt que vous portez à Technologies MS Core.`;
         delayInfo = 'Nos équipes traiteront votre demande et reviendront vers vous sous un délai de <strong>24 à 48 heures</strong>.';
+    } else if (type === 'newsletter') {
+        title = 'Inscription confirmée';
+        messageBody = `Bonjour ${displayName},<br><br>Merci de vous être inscrit à notre infolettre. Vous recevrez désormais nos actualités et conseils pour assurer la sécurité de votre entreprise.`;
+        delayInfo = 'Vous recevrez notre prochaine infolettre directement dans votre boîte de réception.';
     } else {
         // support or diagnostic
         title = 'Accusé de réception - Support & Diagnostic';
-        messageBody = `Bonjour ${name},<br><br>Nous accusons réception de votre demande de soutien ou de diagnostic. Votre dossier a été transmis à nos équipes techniques.`;
+        messageBody = `Bonjour ${displayName},<br><br>Nous accusons réception de votre demande de soutien ou de diagnostic. Votre dossier a été transmis à nos équipes techniques.`;
         delayInfo = 'Compte tenu de la nature de votre demande, nous nous engageons à vous apporter une réponse ou une intervention sous un délai de <strong>6 à 24 heures</strong>.';
     }
 
@@ -273,11 +285,14 @@ export async function POST(req: Request) {
         const htmlContent = generateEmailHtml(body);
         const subjectLine = body.subject
             ? `[Web] Nouveau contact : ${body.subject}`
-            : `[Web] Nouvelle demande : ${body.type === 'support' ? 'Soutien' : 'Diagnostic'}`;
+            : body.type === 'newsletter'
+                ? `[Web] Nouvelle inscription Infolettre`
+                : `[Web] Nouvelle demande : ${body.type === 'support' ? 'Soutien' : 'Diagnostic'}`;
 
         // 4. Send Email to Admin (Priority)
+        const senderName = (body.firstname && body.lastname) ? `${body.firstname} ${body.lastname}` : (body.name || 'Site Web');
         await transporter.sendMail({
-            from: `"${body.name}" <${SMTP_USER}>`,
+            from: `"${senderName}" <${SMTP_USER}>`,
             replyTo: body.email,
             to: CONTACT_EMAIL,
             subject: subjectLine,
@@ -291,7 +306,11 @@ export async function POST(req: Request) {
             await transporter.sendMail({
                 from: `"Technologies MS Core" <${SMTP_USER}>`,
                 to: body.email,
-                subject: body.type === 'contact' ? 'Confirmation de réception - Technologies MS Core' : 'Prise en charge de votre demande - Technologies MS Core',
+                subject: body.type === 'contact'
+                    ? 'Confirmation de réception - Technologies MS Core'
+                    : body.type === 'newsletter'
+                        ? 'Confirmation d\'inscription - Technologies MS Core'
+                        : 'Prise en charge de votre demande - Technologies MS Core',
                 html: autoReplyHtml,
             });
         } catch (autoReplyError) {

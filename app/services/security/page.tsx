@@ -10,7 +10,7 @@ import { Footer } from '@/app/components';
 // Services Data
 const services = [
     {
-        title: "Diagnostic en cybersécurité",
+        title: "Diagnostic de cybersécurité",
         icon: Search,
         href: "/services/security/diagnostic",
         desc: "Évaluez le niveau réel de sécurité de votre organisation.",
@@ -52,7 +52,7 @@ const services = [
         detail: "Implémentation de Defender for Cloud, Sentinel et Azure Policy pour une conformité et une sécurité maximale."
     },
     {
-        title: "Surveillance (SOC/MDR)",
+        title: "Surveillance de sécurité",
         icon: Eye,
         href: "/services/security/monitoring",
         desc: "Détection et réponse aux incidents 24/7.",
@@ -76,7 +76,7 @@ const services = [
         title: "Cyberenquête (Forensics)",
         icon: FileSearch,
         href: "/services/security/investigation",
-        desc: "Investigation numérique après incident.",
+        desc: "Cyberenquête après incident.",
         detail: "Collecte de preuves, analyse post-mortem et support juridique suite à une fraude ou une intrusion."
     },
     {

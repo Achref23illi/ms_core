@@ -151,7 +151,7 @@ export default function MaterielsPage() {
                     <p className="text-blue-100 mb-8 text-lg">
                         Contactez-nous pour obtenir un devis personnalisé adapté à vos besoins et à votre budget.
                     </p>
-                    <Link href="/contact" className="inline-flex items-center justify-center rounded-xl bg-white hover:bg-gray-100 text-[#092963] px-8 py-4 text-lg font-bold shadow-lg transition-all hover:scale-105">
+                    <Link href="/contact" className="inline-flex items-center justify-center rounded-xl bg-[#eb7e2a] hover:bg-[#eb7e2a]/90 text-white px-8 py-4 text-lg font-bold shadow-lg transition-all hover:scale-105">
                         Demander un devis
                     </Link>
                 </div>

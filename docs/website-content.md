@@ -30,7 +30,7 @@ Implantée à Abidjan, notre équipe locale combine la rigueur des standards int
 
 #### Sous-services:
 
-##### • Diagnostic en cybersécurité
+##### • Diagnostic de cybersécurité
 **Titre**: Évaluez le niveau réel de sécurité de votre organisation.
 
 Nous analysons votre posture de cybersécurité afin d'identifier les vulnérabilités, les failles organisationnelles et les risques prioritaires pouvant affecter vos systèmes, vos données et vos opérations. Ce diagnostic permet d'obtenir une vision claire de votre niveau de maturité et de définir un plan d'actions concret et priorisé.
@@ -45,7 +45,7 @@ Nos experts simulent des cyberattaques contrôlées sur vos réseaux, applicatio
 
 Nous accompagnons les organisations dans la sécurisation de leurs environnements cloud (Microsoft Azure, Microsoft 365, etc.) en corrigeant les mauvaises configurations, en renforçant les contrôles d'accès et en protégeant les données contre les fuites, les intrusions et les accès non autorisés.
 
-##### • Surveillance et réponse aux incidents (SOC)
+##### • Surveillance de sécurité
 **Titre**: Détectez et réagissez rapidement aux cybermenaces.
 
 Grâce à une surveillance continue de vos systèmes, nous détectons les activités suspectes, analysons les alertes de sécurité et intervenons rapidement pour contenir, éradiquer et corriger les incidents. Ce service réduit considérablement le temps de détection et l'impact des attaques.
@@ -60,7 +60,7 @@ Nous réalisons des audits de sécurité et accompagnons votre organisation dans
 
 Nous menons des campagnes de phishing simulées afin d'évaluer le niveau de vigilance de vos employés face aux tentatives de fraude. Ces tests permettent d'identifier les comportements à risque et de renforcer la sensibilisation pour diminuer les compromissions de comptes.
 
-##### • Cyberenquête et investigation numérique
+##### • Cyberenquête
 
 Nous accompagnons les organisations dans l'analyse approfondie des incidents de cybersécurité afin d'identifier leur origine, comprendre les modes opératoires des pirates, évaluer l'impact réel et produire des preuves numériques exploitables. Nos services de cyberenquête permettent de réagir efficacement aux incidents, de limiter les dommages et de renforcer la posture de sécurité des organisations.
 

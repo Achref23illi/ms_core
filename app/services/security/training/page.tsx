@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowLeft, GraduationCap, Users, ShieldCheck, CheckCircle2, BookOpen, Presentation, BrainCircuit, FileText, BarChart } from 'lucide-react';
+import { ArrowLeft, Users, GraduationCap, BrainCircuit, CheckCircle2, FileText, Target } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -17,12 +17,12 @@ export default function SecurityTrainingPage() {
 
             <section className="relative min-h-[80vh] h-auto flex items-center justify-center overflow-hidden bg-[#092963] pb-16">
                 <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#092963] to-[#2563eb] mix-blend-multiply z-10" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#092963] to-[#e11d48] mix-blend-multiply z-10" />
                     <Image
-                        src="/images/security-training.png"
+                        src="/images/service-training.jpg"
                         alt="Security Training Background"
                         fill
-                        className="object-cover opacity-60"
+                        className="object-cover opacity-30"
                         priority
                     />
                 </div>
@@ -33,14 +33,14 @@ export default function SecurityTrainingPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <span className="inline-block py-1 px-3 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-200 font-semibold tracking-wider text-xs mb-5 backdrop-blur-sm">
-                            CULTURE DE SÉCURITÉ
+                        <span className="inline-block py-1 px-3 rounded-full bg-rose-500/20 border border-rose-400/30 text-rose-200 font-semibold tracking-wider text-xs mb-5 backdrop-blur-sm">
+                            FORMATION ET CULTURE
                         </span>
                         <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
                             Formation et <span className="text-[#eb7e2a]">Sensibilisation</span>
                         </h1>
                         <p className="max-w-2xl mx-auto text-base text-gray-200 leading-relaxed mb-8">
-                            Développez une culture de cybersécurité durable et transformez vos collaborateurs en première ligne de défense.
+                            Renforcez votre première ligne de défense : vos employés. Développez une culture de sécurité durable au sein de votre organisation.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                             <Link href="/contact" className="inline-flex items-center justify-center rounded-full bg-[#eb7e2a] hover:bg-[#eb7e2a]/90 text-white px-6 py-2 text-sm font-bold shadow-lg shadow-[#eb7e2a]/20 transition-all">
@@ -52,109 +52,99 @@ export default function SecurityTrainingPage() {
             </section>
 
             <section className="py-20 px-4">
-                <div className="container mx-auto max-w-6xl space-y-20">
+                <div className="container mx-auto max-w-5xl space-y-16">
 
                     {/* Introduction */}
-                    <div className="text-center md:text-left max-w-4xl mx-auto md:mx-0">
-                        <h2 className="text-3xl font-bold text-[#092963] mb-6">Réduire le risque humain</h2>
-                        <p className="text-gray-600 mb-6 leading-relaxed text-lg">
-                            L’humain est souvent le maillon faible de la sécurité informatique, mais il peut aussi en devenir le meilleur atout. Une équipe bien formée est capable de détecter les anomalies, d’éviter les pièges et de protéger efficacement les données de l’entreprise.
+                    <div className="text-center md:text-left">
+                        <h2 className="text-3xl font-bold text-[#092963] mb-6">L'humain au cœur de la sécurité</h2>
+                        <p className="text-gray-600 mb-6 leading-relaxed">
+                            Les technologies seules ne suffisent pas à protéger une organisation. Les employés jouent un rôle clé dans la prévention des incidents de sécurité. La formation et la sensibilisation à la sécurité de l’information permettent de renforcer les bons réflexes, de réduire les erreurs humaines et d’impliquer l’ensemble des équipes dans la protection des données et des systèmes.
                         </p>
-                        <p className="text-gray-600 leading-relaxed text-lg">
-                            Nos programmes de formation et de sensibilisation visent à impliquer l’ensemble des employés dans la protection de l’information.
+                        <p className="text-gray-600 leading-relaxed">
+                            Chez Technologies MS Core, nous proposons des programmes de formation adaptés aux profils techniques et non techniques, conçus pour être concrets, accessibles et applicables au quotidien.
                         </p>
                     </div>
 
-                    {/* Programmes de formation */}
+                    {/* Types de formations */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <div className="order-2 md:order-1">
-                            <h3 className="text-2xl font-bold text-[#eb7e2a] mb-6">Nos programmes de formation</h3>
-                            <p className="text-gray-600 mb-4">Nous proposons des parcours adaptés à chaque public :</p>
-                            <ul className="grid grid-cols-1 gap-4">
+                            <h3 className="text-2xl font-bold text-[#eb7e2a] mb-6">Programmes de formation</h3>
+                            <p className="text-gray-600 mb-4">Nos formations couvrent notamment :</p>
+                            <ul className="space-y-3">
                                 {[
-                                    { icon: Users, text: "Sensibilisation générale pour tous les employés" },
-                                    { icon: Presentation, text: "Formation aux bonnes pratiques pour les gestionnaires" },
-                                    { icon: BrainCircuit, text: "Ateliers techniques pour les équipes TI et administrateurs" },
-                                    { icon: BookOpen, text: "Formation spécifique sur la réglementation (Loi 25, etc.)" }
+                                    "Sensibilisation générale à la cybersécurité",
+                                    "Formation des dirigeants et gestionnaires (risques)",
+                                    "Formation des équipes TI et sécurité",
+                                    "Protection des renseignements personnels",
+                                    "Bonnes pratiques (télétravail, numérique)",
+                                    "Gestion des incidents et comportements à risque"
                                 ].map((item, idx) => (
-                                    <li key={idx} className="flex items-center gap-4 bg-gray-50 p-4 rounded-xl border border-gray-100 hover:border-[#eb7e2a]/30 transition-colors">
-                                        <div className="p-2 bg-white rounded-full text-[#eb7e2a] shadow-sm">
-                                            <item.icon className="w-5 h-5" />
-                                        </div>
-                                        <span className="text-gray-700 font-medium">{item.text}</span>
+                                    <li key={idx} className="flex items-start gap-3">
+                                        <GraduationCap className="w-5 h-5 text-[#eb7e2a] mt-1 shrink-0" />
+                                        <span className="text-gray-700">{item}</span>
                                     </li>
                                 ))}
                             </ul>
                         </div>
-                        <div className="order-1 md:order-2">
-                            <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
-                                <Image
-                                    src="/images/security-training.png"
-                                    alt="Training Workshop Visualization"
-                                    fill
-                                    className="object-cover"
-                                />
-                                <div className="absolute inset-0 bg-[#092963]/10 mix-blend-overlay" />
-                            </div>
+                        <div className="order-1 md:order-2 h-64 md:h-80 bg-rose-50 rounded-2xl flex items-center justify-center border border-rose-100">
+                            <Users className="w-24 h-24 text-[#092963]/30" />
                         </div>
                     </div>
 
-                    {/* Approche & Thèmes */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                        <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-                            <h3 className="text-2xl font-bold text-[#092963] mb-6 flex items-center gap-3">
-                                <GraduationCap className="w-8 h-8 text-[#eb7e2a]" /> Notre approche
-                            </h3>
-                            <p className="text-gray-600 mb-4">Nous privilégions une pédagogie active et participative :</p>
-                            <ul className="space-y-3">
-                                {[
-                                    "Définition des objectifs pédagogiques selon vos besoins",
-                                    "Contenus interactifs (quiz, mises en situation)",
-                                    "Supports visuels et fiches mémo",
-                                    "Sessions en présentiel ou en virtuel",
-                                    "Évaluation des acquis en fin de formation"
-                                ].map((item, idx) => (
-                                    <li key={idx} className="flex items-start gap-3">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-[#eb7e2a] mt-2.5" />
-                                        <span className="text-gray-700">{item}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-
-                        <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-                            <h3 className="text-2xl font-bold text-[#092963] mb-6 flex items-center gap-3">
-                                <BookOpen className="w-8 h-8 text-blue-600" /> Thèmes abordés
-                            </h3>
-                            <p className="text-gray-600 mb-4">Exemples de sujets couverts :</p>
-                            <ul className="space-y-3">
-                                {[
-                                    "Gestion des mots de passe et authentification (MFA)",
-                                    "Détection du phishing (email, SMS)",
-                                    "Travail à distance sécurisé et usage du Wi-Fi",
-                                    " protection des données confidentielles",
-                                    "Sécurité physique et ingénierie sociale"
-                                ].map((item, idx) => (
-                                    <li key={idx} className="flex items-start gap-3">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2.5" />
-                                        <span className="text-gray-700">{item}</span>
-                                    </li>
-                                ))}
-                            </ul>
+                    {/* Notre approche */}
+                    <div className="bg-gray-50 rounded-3xl p-8 md:p-12">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                            <div>
+                                <h3 className="text-2xl font-bold text-[#092963] mb-6">Notre approche pédagogique</h3>
+                                <p className="text-gray-600 mb-4">Une méthode interactive et progressive :</p>
+                                <ul className="space-y-3">
+                                    {[
+                                        "Évaluation du niveau de maturité et besoins",
+                                        "Adaptation au contexte et secteur",
+                                        "Formation interactive et situations réelles",
+                                        "Exemples concrets et études de cas",
+                                        "Suivi et amélioration continue"
+                                    ].map((item, idx) => (
+                                        <li key={idx} className="flex items-center gap-3">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-[#eb7e2a]" />
+                                            <span className="text-gray-700">{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 className="text-2xl font-bold text-[#092963] mb-6">Sensibilisation continue</h3>
+                                <p className="text-gray-600 mb-4">Au-delà du ponctuel, nous visons la durée :</p>
+                                <ul className="space-y-3">
+                                    {[
+                                        "Programmes de sensibilisation récurrents",
+                                        "Diffusion de contenus de prévention",
+                                        "Intégration de la sécurité dans les processus",
+                                        "Renforcement de la culture de sécurité",
+                                        "Amélioration continue de la vigilance"
+                                    ].map((item, idx) => (
+                                        <li key={idx} className="flex items-center gap-3">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-rose-500" />
+                                            <span className="text-gray-700">{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
                     {/* Livrables & Bénéfices */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                         <div>
-                            <h3 className="text-2xl font-bold text-[#eb7e2a] mb-6">Livrables et suivi</h3>
+                            <h3 className="text-2xl font-bold text-[#eb7e2a] mb-6">Livrables</h3>
+                            <p className="text-gray-600 mb-4">Selon les besoins, vous bénéficiez de :</p>
                             <ul className="space-y-3">
                                 {[
-                                    "Supports de formation personnalisés",
-                                    "Attestations de participation",
-                                    "Rapport de synthèse et évaluation des acquis",
-                                    "Recommandations pour maintenir la vigilance",
-                                    "Campagnes de rappel (newsletters sécurité)"
+                                    "Supports de formation clairs et adaptés",
+                                    "Modules de sensibilisation personnalisés",
+                                    "Évaluations et questionnaires de compréhension",
+                                    "Rapports de participation et de progression",
+                                    "Recommandations pour renforcer la culture"
                                 ].map((item, idx) => (
                                     <li key={idx} className="flex items-start gap-3">
                                         <FileText className="w-5 h-5 text-[#092963] mt-1 shrink-0" />
@@ -164,14 +154,14 @@ export default function SecurityTrainingPage() {
                             </ul>
                         </div>
                         <div>
-                            <h3 className="text-2xl font-bold text-[#eb7e2a] mb-6">Les bénéfices</h3>
+                            <h3 className="text-2xl font-bold text-[#eb7e2a] mb-6">Les bénéfices pour votre organisation</h3>
                             <ul className="space-y-3">
                                 {[
-                                    "Réduction significative du risque d’erreur humaine",
-                                    "Amélioration de la conformité réglementaire",
-                                    "Meilleure réactivité en cas d’incident",
-                                    "Renforcement de l’image et de la crédibilité de l’entreprise",
-                                    "Valorisation du capital humain"
+                                    "Réduction des incidents causés par l’erreur humaine",
+                                    "Amélioration des comportements et réflexes de sécurité",
+                                    "Meilleure protection des renseignements personnels",
+                                    "Renforcement de la conformité et de la gouvernance",
+                                    "Culture de cybersécurité durable et mesurable"
                                 ].map((item, idx) => (
                                     <li key={idx} className="flex items-start gap-3">
                                         <CheckCircle2 className="w-5 h-5 text-[#092963] mt-1 shrink-0" />
@@ -182,24 +172,24 @@ export default function SecurityTrainingPage() {
                         </div>
                     </div>
 
-                    {/* Why Train */}
-                    <div className="bg-gray-50 rounded-3xl p-8 md:p-12">
-                        <h3 className="text-2xl font-bold text-[#092963] mb-8 text-center">Pourquoi former vos employés ?</h3>
+                    {/* Why Training */}
+                    <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-lg">
+                        <h3 className="text-2xl font-bold text-[#092963] mb-8 text-center">Pourquoi investir dans la formation ?</h3>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             <div className="text-center">
-                                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-[#eb7e2a] shadow-sm">1</div>
-                                <h4 className="font-bold text-[#092963] mb-2">Comportement sécuritaire</h4>
-                                <p className="text-gray-600 text-sm">Transformer les mauvaises habitudes en réflexes de sécurité.</p>
+                                <div className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 text-[#092963] font-bold text-xl">1</div>
+                                <h4 className="font-bold text-[#eb7e2a] mb-2">Réduire les risques humains</h4>
+                                <p className="text-gray-600 text-sm">La majorité des incidents impliquent une action humaine. La formation diminue significativement ces risques.</p>
                             </div>
                             <div className="text-center">
-                                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-[#eb7e2a] shadow-sm">2</div>
-                                <h4 className="font-bold text-[#092963] mb-2">Conformité</h4>
-                                <p className="text-gray-600 text-sm">Répondre aux obligations légales de formation (Loi 25, ISO 27001).</p>
+                                <div className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 text-[#092963] font-bold text-xl">2</div>
+                                <h4 className="font-bold text-[#eb7e2a] mb-2">Responsabiliser les employés</h4>
+                                <p className="text-gray-600 text-sm">Impliquer chaque employé dans la protection de l'information renforce la responsabilité collective.</p>
                             </div>
                             <div className="text-center">
-                                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-[#eb7e2a] shadow-sm">3</div>
-                                <h4 className="font-bold text-[#092963] mb-2">Responsabilisation</h4>
-                                <p className="text-gray-600 text-sm">Faire de chaque collaborateur un acteur de la protection des données.</p>
+                                <div className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 text-[#092963] font-bold text-xl">3</div>
+                                <h4 className="font-bold text-[#eb7e2a] mb-2">Renforcer la conformité</h4>
+                                <p className="text-gray-600 text-sm">Des employés formés contribuent au respect des politiques, des normes et à la résilience globale.</p>
                             </div>
                         </div>
                     </div>

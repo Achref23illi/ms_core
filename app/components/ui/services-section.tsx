@@ -20,10 +20,10 @@ const servicesData = [
         accroche: "Nous sécurisons votre entreprise contre les menaces modernes.",
         description: "Anticipez les cybermenaces, réduisez les risques et sécurisez votre environnement numérique.",
         subServices: [
-            { title: "Diagnostic en cybersécurité", desc: "Évaluez le niveau réel de sécurité de votre organisation." },
+            { title: "Diagnostic de cybersécurité", desc: "Évaluez le niveau réel de sécurité de votre organisation." },
             { title: "Tests d’intrusion", desc: "Testez la résistance de vos systèmes face à des attaques réelles." },
             { title: "Sécurité cloud", desc: "Sécurisez vos environnements cloud et vos données critiques." },
-            { title: "Surveillance (SOC)", desc: "Détectez et réagissez rapidement aux cybermenaces." },
+            { title: "Surveillance de sécurité", desc: "Détectez et réagissez rapidement aux cybermenaces." },
             { title: "Audit et conformité", desc: "Respectez les exigences réglementaires (ISO 27001, RGPD, etc.)." },
             { title: "Test d’hameçonnage", desc: "Réduisez les risques liés au facteur humain." },
             { title: "Cyberenquête", desc: "Analyse approfondie après incident pour identifier l'origine." },
@@ -38,11 +38,12 @@ const servicesData = [
         image: '/images/service-ai.png',
         tagline: "Boostez votre entreprise avec la puissance de l’IA.",
         accroche: "Transformez vos processus, gagnez du temps et augmentez votre performance.",
-        description: "Nous intégrons l'IA au cœur de vos processus pour transformer vos données et vos processus en avantages compétitifs.",
+        description: "Nous concevons et intégrons des solutions d’intelligence artificielle adaptées à vos besoins métier afin d’automatiser, optimiser et améliorer vos opérations. Nos approches sont pragmatiques, sécurisées et orientées vers des gains mesurables, vous permettant de rester compétitif dans un marché en constante évolution.",
         subServices: [
             { title: "Solutions IA sur mesure", desc: "Conception et intégration adaptées à vos besoins métier." },
             { title: "Chatbots & Assistants", desc: "Améliorez l'expérience client grâce à l'IA conversationnelle." },
             { title: "Formation IA", desc: "Rendez vos équipes autonomes et responsables face à l'IA." },
+            { title: "Automatisation intelligente", desc: "Optimisez et automatisez vos processus métiers grâce à l’IA afin de réduire les tâches manuelles, améliorer la productivité et diminuer les coûts opérationnels." },
         ]
     },
     {

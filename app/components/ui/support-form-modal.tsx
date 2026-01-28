@@ -347,9 +347,9 @@ function DiagnosticFormFields() {
             <QuestionSection
                 title="Gestion des risques & conformité"
                 questions={[
-                    "Avez-vous réalisé une analyses des risques cybersécurité au cours des 12 derniers mois ?",
+                    "Avez-vous réalisé une analyse des risques cybersécurité au cours des 12 derniers mois ?",
                     "Les risques identifiés font-ils l’objet d’un plan de traitement documenté et suivi ?",
-                    "Connaissez-vous les lois et règlements auxquelles votre organisation est assujettie en matière de sécurité ?",
+                    "Connaissez-vous les lois et règlements applicables à votre organisation en matière de sécurité de l'information ?",
                     "Des audits de sécurité ou de conformité sont-ils réalisés de façon périodique en interne ou par des firmes externes ?"
                 ]}
             />

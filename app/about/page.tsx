@@ -95,7 +95,7 @@ const pillars = [
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="space-y-2">
                         <h4 className="font-bold text-[#092963] flex items-center gap-2">
-                            <Search className="w-4 h-4 text-[#eb7e2a]" /> Diagnostic en cybersécurité
+                            <Search className="w-4 h-4 text-[#eb7e2a]" /> Diagnostic de cybersécurité
                         </h4>
                         <p className="text-sm">Analyse de votre posture de sécurité pour identifier vulnérabilités et failles. Plan d’actions concret et priorisé.</p>
                     </div>
@@ -113,7 +113,7 @@ const pillars = [
                     </div>
                     <div className="space-y-2">
                         <h4 className="font-bold text-[#092963] flex items-center gap-2">
-                            <Eye className="w-4 h-4 text-[#eb7e2a]" /> Surveillance et réponse (SOC)
+                            <Eye className="w-4 h-4 text-[#eb7e2a]" /> Surveillance de sécurité
                         </h4>
                         <p className="text-sm">Surveillance continue 24/7 pour détecter les activités suspectes et intervenir rapidement pour contenir les incidents.</p>
                     </div>
@@ -131,7 +131,7 @@ const pillars = [
                     </div>
                     <div className="space-y-2 md:col-span-2">
                         <h4 className="font-bold text-[#092963] flex items-center gap-2">
-                            <Search className="w-4 h-4 text-[#eb7e2a]" /> Cyberenquête et investigation numérique
+                            <Search className="w-4 h-4 text-[#eb7e2a]" /> Cyberenquête
                         </h4>
                         <p className="text-sm">Analyse approfondie post-incident (fraudes, rançongiciels). Collecte de preuves numériques (forensique), rapports structurés pour prises de décision ou démarches juridiques.</p>
                     </div>
@@ -413,6 +413,66 @@ export default function AboutPage() {
                     </div>
                 </div>
             </section>
+
+            {/* Values Section - MS CORE */}
+            <section className="py-24 px-4 bg-[#051125] text-white overflow-hidden relative">
+                <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
+                <div className="container mx-auto max-w-5xl relative z-10">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="mb-20 text-center md:text-left"
+                    >
+                        <h2 className="text-3xl md:text-5xl font-bold mb-8">Nos Valeurs <span className="text-[#eb7e2a]">— MS CORE</span></h2>
+                        <div className="prose prose-lg text-gray-300 max-w-4xl text-justify mx-auto md:mx-0">
+                            <p>Chez MS CORE Technologies, nos valeurs ne sont pas de simples mots : elles constituent l’essence même de notre engagement envers nos clients, nos partenaires et notre équipe. En tant qu’entreprise technologique orientée vers l’innovation, nous avons construit le sigle MS CORE comme un rappel de notre promesse et de notre culture.</p>
+                        </div>
+                    </motion.div>
+
+                    <div className="grid gap-12">
+                        {[
+                            { letter: 'M', word: 'Maîtrise', text: "Nous visons l’excellence technique et stratégique dans tout ce que nous entreprenons. La maîtrise de nos compétences est la base sur laquelle nous bâtissons des solutions fiables, performantes et pérennes." },
+                            { letter: 'S', word: 'Sécurité', text: "La cybersécurité est au cœur de notre ADN. Nous plaçons la protection des systèmes et des données au premier plan, en intégrant dès le départ les meilleures pratiques de sécurité dans chaque projet." },
+                            { letter: 'C', word: 'Collaboration', text: "Nous croyons que les meilleures solutions naissent de l’intelligence collective. La collaboration avec nos clients, nos partenaires et au sein de nos équipes est essentielle pour co-créer des résultats à valeur ajoutée." },
+                            { letter: 'O', word: 'Ouverture', text: "Parce que la technologie évolue en continu, nous restons ouverts aux nouvelles idées, aux technologies émergentes et aux perspectives diverses. Cette ouverture nourrit notre innovation et notre capacité d’adaptation." },
+                            { letter: 'R', word: 'Responsabilité', text: "Nous assumons l’entière responsabilité de nos engagements. Que ce soit dans la qualité de notre service, le respect des délais ou l’impact éthique de nos solutions, nous sommes responsables de nos actions et de leurs résultats." },
+                            { letter: 'E', word: 'Excellence', text: "L’excellence ne se limite pas à la performance technique : elle inclut l’expérience client, la rigueur dans l’exécution et la recherche constante de l’amélioration." }
+                        ].map((item, index) => (
+                            <motion.div
+                                key={item.letter}
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1 }}
+                                className="relative pl-0 md:pl-8 group"
+                            >
+                                {/* Layout Container */}
+                                <div className="flex flex-col md:flex-row gap-6 md:gap-10 items-start md:items-center">
+
+                                    {/* Large Letter & Title */}
+                                    <div className="relative shrink-0">
+                                        <div className="text-[6rem] md:text-[8rem] font-black text-[#eb7e2a]/20 leading-[0.8] select-none absolute -top-4 -left-4 md:-top-8 md:-left-8 z-0 transition-colors group-hover:text-[#eb7e2a]/30">
+                                            {item.letter}
+                                        </div>
+                                        <h3 className="text-4xl md:text-5xl font-bold text-white relative z-10 pl-6 pt-2">
+                                            {item.word}
+                                        </h3>
+                                    </div>
+
+                                    {/* Description Card */}
+                                    <div className="flex-1 bg-white/5 border-l-2 border-[#eb7e2a] py-6 px-6 md:px-8 rounded-r-xl hover:bg-white/10 transition-all duration-300 mt-4 md:mt-0 w-full group-hover:translate-x-2">
+                                        <p className="text-gray-300 text-lg leading-relaxed">
+                                            {item.text}
+                                        </p>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
 
             {/* Services Pillars (Accordion) */}
             <section className="py-20 px-4 bg-gray-50">

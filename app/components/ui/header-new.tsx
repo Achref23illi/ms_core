@@ -27,13 +27,13 @@ const serviceCategories: ServiceCategory[] = [
         href: '/services/security',
         image: '/images/service-cybersecurity.png',
         items: [
-            { label: 'Diagnostic en cybersécurité', href: '/services/security/diagnostic' },
+            { label: 'Diagnostic de cybersécurité', href: '/services/security/diagnostic' },
             { label: 'Tests d\'intrusion', href: '/services/security/penetration-testing' },
             { label: 'Sécurité cloud', href: '/services/security/cloud' },
-            { label: 'Surveillance SOC 24/7', href: '/services/security/monitoring' },
+            { label: 'Surveillance de sécurité', href: '/services/security/monitoring' },
             { label: 'Audit et conformité', href: '/services/security/compliance' },
             { label: 'Test d\'hameçonnage', href: '/services/security/phishing' },
-            { label: 'Investigation numérique', href: '/services/security/investigation' },
+            { label: 'Cyberenquête', href: '/services/security/investigation' },
             { label: 'Formation sécurité', href: '/services/security/training' },
         ]
     },
@@ -84,6 +84,7 @@ const navItems = [
     { label: 'Accueil', href: '/' },
     { label: 'Services', href: '#', hasDropdown: true },
     { label: 'À propos', href: '/about' },
+    { label: 'Actualités', href: '/actualites' },
     { label: 'Carrière', href: '/careers' },
 ];
 
