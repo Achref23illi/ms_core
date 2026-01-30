@@ -19,7 +19,7 @@ export default function CompliancePage() {
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-gradient-to-br from-[#092963] to-[#475569] mix-blend-multiply z-10" />
                     <Image
-                        src="/images/service-governance.jpg"
+                        src="/images/service-governance.png"
                         alt="Compliance Background"
                         fill
                         className="object-cover opacity-30"

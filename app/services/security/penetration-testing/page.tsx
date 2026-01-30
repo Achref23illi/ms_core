@@ -19,7 +19,7 @@ export default function PenetrationTestingPage() {
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-gradient-to-br from-[#092963] to-[#7f1d1d] mix-blend-multiply z-10" />
                     <Image
-                        src="/images/security-pentest.jpg"
+                        src="/images/security-pentest.png"
                         alt="Penetration Testing Background"
                         fill
                         className="object-cover opacity-60"

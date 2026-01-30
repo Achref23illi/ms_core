@@ -19,7 +19,7 @@ export default function CyberInvestigationPage() {
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-gradient-to-br from-[#092963] to-[#312e81] mix-blend-multiply z-10" />
                     <Image
-                        src="/images/service-investigation.jpg"
+                        src="/images/service-investigation.png"
                         alt="Cyber Investigation Background"
                         fill
                         className="object-cover opacity-30"
