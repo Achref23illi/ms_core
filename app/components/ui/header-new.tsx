@@ -92,7 +92,7 @@ export function Header() {
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [servicesOpen, setServicesOpen] = useState(false);
-    const [activeCategory, setActiveCategory] = useState<string>('security');
+    const [activeCategory, setActiveCategory] = useState<string | null>('security');
     const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
     const [mobileActiveCategory, setMobileActiveCategory] = useState<string | null>(null);
 
@@ -104,6 +104,10 @@ export function Header() {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    useEffect(() => {
+        if (servicesOpen) setActiveCategory('security');
+    }, [servicesOpen]);
 
     // Close menu on outside click
     useEffect(() => {
@@ -219,7 +223,10 @@ export function Header() {
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
                         >
-                            <div className="rounded-2xl border border-gray-200 bg-white shadow-2xl overflow-hidden">
+                            <div className={cn(
+                                "rounded-2xl border border-gray-200 shadow-2xl overflow-hidden transition-all duration-200 ease-in-out",
+                                activeCategory ? "bg-white w-full" : "bg-gray-50 w-72"
+                            )}>
                                 <div className="flex">
                                     {/* Categories Sidebar */}
                                     <div className="w-72 bg-gray-50 p-4 border-r border-gray-100">
@@ -236,6 +243,7 @@ export function Header() {
                                                         key={category.id}
                                                         href={category.href}
                                                         onClick={() => setServicesOpen(false)}
+                                                        onMouseEnter={() => setActiveCategory(null)}
                                                         className="w-full flex items-center gap-3 p-3 rounded-xl transition-all text-left hover:bg-gray-50 group"
                                                     >
                                                         <div className={cn(
@@ -296,65 +304,67 @@ export function Header() {
                                     </div>
 
                                     {/* Services Detail Panel */}
-                                    <div className="flex-1 p-6 relative">
-                                        {activeCategoryData && activeCategoryData.image && (
-                                            <div className="absolute top-0 left-0 right-0 h-32 bg-gray-100 z-0">
-                                                <img
-                                                    src={activeCategoryData.image}
-                                                    alt={activeCategoryData.title}
-                                                    className="w-full h-full object-cover opacity-30"
-                                                />
-                                                <div className="absolute inset-0 bg-gradient-to-t from-white to-transparent" />
-                                            </div>
-                                        )}
-                                        {activeCategoryData && activeCategoryData.items.length > 0 && (
-                                            <motion.div
-                                                key={activeCategoryData.id}
-                                                initial={{ opacity: 0, x: 10 }}
-                                                animate={{ opacity: 1, x: 0 }}
-                                                transition={{ duration: 0.2 }}
-                                                className="relative z-10 pt-16"
-                                            >
-                                                <div className="flex items-center justify-between mb-4">
-                                                    <div className="flex items-center gap-3">
-                                                        <div className={cn(
-                                                            "w-10 h-10 rounded-lg flex items-center justify-center bg-gradient-to-br shadow-lg",
-                                                            activeCategoryData.color
-                                                        )}>
-                                                            <activeCategoryData.icon className="w-5 h-5 text-white" />
-                                                        </div>
-                                                        <div>
-                                                            <h3 className="font-bold text-[#092963] text-lg">{activeCategoryData.title}</h3>
-                                                            <p className="text-sm text-gray-500">{activeCategoryData.description}</p>
-                                                        </div>
-                                                    </div>
-                                                    <Link
-                                                        href={activeCategoryData.href}
-                                                        onClick={() => setServicesOpen(false)}
-                                                        className="flex items-center gap-1 text-sm font-semibold text-[#eb7e2a] hover:underline"
-                                                    >
-                                                        Voir tout <ArrowRight className="w-4 h-4" />
-                                                    </Link>
+                                    {activeCategoryData && (
+                                        <div className="flex-1 p-6 relative">
+                                            {activeCategoryData.image && (
+                                                <div className="absolute top-0 left-0 right-0 h-32 bg-gray-100 z-0">
+                                                    <img
+                                                        src={activeCategoryData.image}
+                                                        alt={activeCategoryData.title}
+                                                        className="w-full h-full object-cover opacity-30"
+                                                    />
+                                                    <div className="absolute inset-0 bg-gradient-to-t from-white to-transparent" />
                                                 </div>
-
-                                                <div className="grid grid-cols-2 gap-2">
-                                                    {activeCategoryData.items.map((item) => (
+                                            )}
+                                            {activeCategoryData.items.length > 0 && (
+                                                <motion.div
+                                                    key={activeCategoryData.id}
+                                                    initial={{ opacity: 0, x: 10 }}
+                                                    animate={{ opacity: 1, x: 0 }}
+                                                    transition={{ duration: 0.2 }}
+                                                    className="relative z-10 pt-16"
+                                                >
+                                                    <div className="flex items-center justify-between mb-4">
+                                                        <div className="flex items-center gap-3">
+                                                            <div className={cn(
+                                                                "w-10 h-10 rounded-lg flex items-center justify-center bg-gradient-to-br shadow-lg",
+                                                                activeCategoryData.color
+                                                            )}>
+                                                                <activeCategoryData.icon className="w-5 h-5 text-white" />
+                                                            </div>
+                                                            <div>
+                                                                <h3 className="font-bold text-[#092963] text-lg">{activeCategoryData.title}</h3>
+                                                                <p className="text-sm text-gray-500">{activeCategoryData.description}</p>
+                                                            </div>
+                                                        </div>
                                                         <Link
-                                                            key={item.href}
-                                                            href={item.href}
+                                                            href={activeCategoryData.href}
                                                             onClick={() => setServicesOpen(false)}
-                                                            className="flex items-center gap-2 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+                                                            className="flex items-center gap-1 text-sm font-semibold text-[#eb7e2a] hover:underline"
                                                         >
-                                                            <div className="w-2 h-2 rounded-full bg-gray-300 group-hover:bg-[#eb7e2a] transition-colors" />
-                                                            <span className="text-sm text-gray-700 group-hover:text-[#092963] transition-colors">
-                                                                {item.label}
-                                                            </span>
+                                                            Voir tout <ArrowRight className="w-4 h-4" />
                                                         </Link>
-                                                    ))}
-                                                </div>
-                                            </motion.div>
-                                        )}
-                                    </div>
+                                                    </div>
+
+                                                    <div className="grid grid-cols-2 gap-2">
+                                                        {activeCategoryData.items.map((item) => (
+                                                            <Link
+                                                                key={item.href}
+                                                                href={item.href}
+                                                                onClick={() => setServicesOpen(false)}
+                                                                className="flex items-center gap-2 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+                                                            >
+                                                                <div className="w-2 h-2 rounded-full bg-gray-300 group-hover:bg-[#eb7e2a] transition-colors" />
+                                                                <span className="text-sm text-gray-700 group-hover:text-[#092963] transition-colors">
+                                                                    {item.label}
+                                                                </span>
+                                                            </Link>
+                                                        ))}
+                                                    </div>
+                                                </motion.div>
+                                            )}
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         </motion.div>
