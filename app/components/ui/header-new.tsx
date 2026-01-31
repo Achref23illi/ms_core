@@ -47,6 +47,7 @@ const serviceCategories: ServiceCategory[] = [
         image: '/images/service-ai.png',
         items: [
             { label: 'Intégration de solutions IA', href: '/services/ai/integration' },
+            { label: 'Automatisation', href: '/services/ai/automation' },
             { label: 'Chatbots et assistants', href: '/services/ai/chatbots' },
             { label: 'Formation IA', href: '/services/ai/training' },
         ]

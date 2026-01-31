@@ -87,7 +87,7 @@ export default function CompliancePage() {
                         </div>
                         <div className="order-1 md:order-2 h-64 md:h-80 relative rounded-2xl overflow-hidden border border-gray-200 shadow-lg">
                             <Image
-                                src="/images/service-compliance-detail.png"
+                                src="/images/audit.jpg"
                                 alt="Compliance Audit Details"
                                 fill
                                 className="object-cover"

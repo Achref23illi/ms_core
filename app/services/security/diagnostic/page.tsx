@@ -93,7 +93,7 @@ export default function SecurityDiagnosticPage() {
                         </div>
                         <div className="order-1 md:order-2 h-64 md:h-80 relative rounded-2xl overflow-hidden border border-gray-200 shadow-lg">
                             <Image
-                                src="/images/service-diagnostic-detail.png"
+                                src="/images/diagnostic.jpg"
                                 alt="Security Diagnostic Details"
                                 fill
                                 className="object-cover"
