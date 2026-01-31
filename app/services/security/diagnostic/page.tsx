@@ -91,9 +91,13 @@ export default function SecurityDiagnosticPage() {
                                 ))}
                             </ul>
                         </div>
-                        <div className="order-1 md:order-2 h-64 md:h-80 bg-gray-100 rounded-2xl flex items-center justify-center">
-                            {/* Placeholder Icon or Image */}
-                            <Search className="w-20 h-20 text-[#092963]/20" />
+                        <div className="order-1 md:order-2 h-64 md:h-80 relative rounded-2xl overflow-hidden border border-gray-200 shadow-lg">
+                            <Image
+                                src="/images/service-diagnostic-detail.png"
+                                alt="Security Diagnostic Details"
+                                fill
+                                className="object-cover"
+                            />
                         </div>
                     </div>
 
