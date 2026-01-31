@@ -5,6 +5,7 @@ import { motion } from 'motion/react';
 import { ArrowLeft, Workflow, CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
 import { Footer } from '@/app/components';
+import Image from 'next/image';
 
 export default function AIAutomationPage() {
     return (
@@ -17,7 +18,14 @@ export default function AIAutomationPage() {
 
             <section className="relative min-h-[80vh] h-auto flex items-center justify-center overflow-hidden bg-[#092963] pb-16">
                 <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#092963] to-[#7c3aed] mix-blend-multiply" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#092963] to-[#7c3aed] mix-blend-multiply z-10" />
+                    <Image
+                        src="/images/service-ai-automation-hero.png"
+                        alt="AI Automation Background"
+                        fill
+                        className="object-cover opacity-60"
+                        priority
+                    />
                 </div>
 
                 <div className="container mx-auto max-w-4xl px-4 relative z-10 text-center pt-32 md:pt-36">
@@ -70,13 +78,18 @@ export default function AIAutomationPage() {
                             </ul>
                         </div>
                         <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl bg-gray-100 flex items-center justify-center">
-                            <Workflow className="w-24 h-24 text-gray-300" />
+                            <Image
+                                src="/images/service-ai-automation-detail.png"
+                                alt="AI Automation Workflow"
+                                fill
+                                className="object-cover"
+                            />
                         </div>
                     </div>
                 </div>
             </section>
 
             <Footer />
-        </main>
+        </main >
     );
 }
