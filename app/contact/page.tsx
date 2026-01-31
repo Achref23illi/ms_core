@@ -90,7 +90,7 @@ export default function ContactPage() {
                             viewport={{ once: true }}
                         >
                             <h2 className="text-2xl font-bold text-[#092963] mb-8">
-                                Vous voulez en savoir plus sur MS Core ?
+                                Dites-nous comment nous pouvons vous aider.
                             </h2>
 
                             <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm">

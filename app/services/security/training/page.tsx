@@ -86,8 +86,13 @@ export default function SecurityTrainingPage() {
                                 ))}
                             </ul>
                         </div>
-                        <div className="order-1 md:order-2 h-64 md:h-80 bg-rose-50 rounded-2xl flex items-center justify-center border border-rose-100">
-                            <Users className="w-24 h-24 text-[#092963]/30" />
+                        <div className="order-1 md:order-2 h-64 md:h-80 relative rounded-2xl overflow-hidden border border-rose-100 shadow-lg">
+                            <Image
+                                src="/images/service-training-detail.png"
+                                alt="Security Training Details"
+                                fill
+                                className="object-cover"
+                            />
                         </div>
                     </div>
 

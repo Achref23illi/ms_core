@@ -514,6 +514,13 @@ export function Header() {
                                         À propos
                                     </Link>
                                     <Link
+                                        href="/actualites"
+                                        className="block px-4 py-3 text-sm font-medium text-[#092963] hover:bg-gray-50 rounded-xl"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                    >
+                                        Actualités
+                                    </Link>
+                                    <Link
                                         href="/careers"
                                         className="block px-4 py-3 text-sm font-medium text-[#092963] hover:bg-gray-50 rounded-xl"
                                         onClick={() => setMobileMenuOpen(false)}
