@@ -177,7 +177,10 @@ export default function CareersPage() {
                                     <div className="flex items-center gap-1"><Clock className="w-4 h-4" /> Temps plein</div>
                                 </div>
                             </div>
-                            <Button className="bg-white text-[#092963] border-2 border-[#092963] hover:bg-[#092963] hover:text-white rounded-full px-6 transition-colors whitespace-nowrap">
+                            <Button
+                                className="bg-white text-[#092963] border-2 border-[#092963] hover:bg-[#092963] hover:text-white rounded-full px-6 transition-colors whitespace-nowrap"
+                                onClick={() => window.location.href = 'mailto:info@techmscore.com?subject=Candidature%20-%20Sp%C3%A9cialiste%20en%20Outils%20de%20S%C3%A9curit%C3%A9%20Microsoft%20M365'}
+                            >
                                 Postuler <ChevronRight className="w-4 h-4 ml-1" />
                             </Button>
                         </motion.div>
@@ -197,7 +200,10 @@ export default function CareersPage() {
                                     <div className="flex items-center gap-1"><Clock className="w-4 h-4" /> Temps plein</div>
                                 </div>
                             </div>
-                            <Button className="bg-white text-[#092963] border-2 border-[#092963] hover:bg-[#092963] hover:text-white rounded-full px-6 transition-colors whitespace-nowrap">
+                            <Button
+                                className="bg-white text-[#092963] border-2 border-[#092963] hover:bg-[#092963] hover:text-white rounded-full px-6 transition-colors whitespace-nowrap"
+                                onClick={() => window.location.href = 'mailto:info@techmscore.com?subject=Candidature%20-%20Sp%C3%A9cialiste%20en%20Gestion%20des%20Identit%C3%A9s%20et%20des%20Acc%C3%A8s%20(IAM)'}
+                            >
                                 Postuler <ChevronRight className="w-4 h-4 ml-1" />
                             </Button>
                         </motion.div>
@@ -208,7 +214,10 @@ export default function CareersPage() {
                             <p className="text-blue-200 mb-8 max-w-2xl mx-auto">
                                 Nous sommes toujours à la recherche de talents exceptionnels. Envoyez-nous une candidature spontanée et dites-nous comment vous pouvez faire la différence.
                             </p>
-                            <Button className="bg-[#eb7e2a] hover:bg-[#d66c1b] text-white rounded-full px-8 py-6 h-auto text-lg hover:scale-105 transition-transform">
+                            <Button
+                                className="bg-[#eb7e2a] hover:bg-[#d66c1b] text-white rounded-full px-8 py-6 h-auto text-lg hover:scale-105 transition-transform"
+                                onClick={() => window.location.href = 'mailto:info@techmscore.com?subject=Candidature%20Spontan%C3%A9e'}
+                            >
                                 Envoyer une candidature spontanée
                             </Button>
                         </div>
