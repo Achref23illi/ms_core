@@ -10,8 +10,16 @@ import {
     ChevronRight, ArrowLeft
 } from 'lucide-react';
 import { Button } from '@/app/components/ui/button';
+import { JobApplicationModal } from '@/app/components/ui/job-application-modal';
 
 export default function CareersPage() {
+    const [isApplicationModalOpen, setIsApplicationModalOpen] = React.useState(false);
+    const [selectedJobTitle, setSelectedJobTitle] = React.useState('');
+
+    const openApplicationModal = (jobTitle: string) => {
+        setSelectedJobTitle(jobTitle);
+        setIsApplicationModalOpen(true);
+    };
     return (
         <main className="min-h-screen bg-white">
 
@@ -179,7 +187,7 @@ export default function CareersPage() {
                             </div>
                             <Button
                                 className="bg-white text-[#092963] border-2 border-[#092963] hover:bg-[#092963] hover:text-white rounded-full px-6 transition-colors whitespace-nowrap"
-                                onClick={() => window.location.href = 'mailto:info@techmscore.com?subject=Candidature%20-%20Sp%C3%A9cialiste%20en%20Outils%20de%20S%C3%A9curit%C3%A9%20Microsoft%20M365'}
+                                onClick={() => openApplicationModal('Spécialiste en Outils de Sécurité Microsoft M365')}
                             >
                                 Postuler <ChevronRight className="w-4 h-4 ml-1" />
                             </Button>
@@ -202,7 +210,7 @@ export default function CareersPage() {
                             </div>
                             <Button
                                 className="bg-white text-[#092963] border-2 border-[#092963] hover:bg-[#092963] hover:text-white rounded-full px-6 transition-colors whitespace-nowrap"
-                                onClick={() => window.location.href = 'mailto:info@techmscore.com?subject=Candidature%20-%20Sp%C3%A9cialiste%20en%20Gestion%20des%20Identit%C3%A9s%20et%20des%20Acc%C3%A8s%20(IAM)'}
+                                onClick={() => openApplicationModal('Spécialiste en Gestion des Identités et des Accès (IAM)')}
                             >
                                 Postuler <ChevronRight className="w-4 h-4 ml-1" />
                             </Button>
@@ -216,7 +224,7 @@ export default function CareersPage() {
                             </p>
                             <Button
                                 className="bg-[#eb7e2a] hover:bg-[#d66c1b] text-white rounded-full px-8 py-6 h-auto text-lg hover:scale-105 transition-transform"
-                                onClick={() => window.location.href = 'mailto:info@techmscore.com?subject=Candidature%20Spontan%C3%A9e'}
+                                onClick={() => openApplicationModal('Candidature Spontanée')}
                             >
                                 Envoyer une candidature spontanée
                             </Button>
@@ -288,6 +296,12 @@ export default function CareersPage() {
                 </div>
             </section>
 
+            {/* Application Modal */}
+            <JobApplicationModal
+                isOpen={isApplicationModalOpen}
+                onClose={() => setIsApplicationModalOpen(false)}
+                defaultJobTitle={selectedJobTitle}
+            />
         </main>
     );
 }
