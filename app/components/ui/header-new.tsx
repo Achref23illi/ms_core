@@ -84,6 +84,7 @@ const serviceCategories: ServiceCategory[] = [
 const navItems = [
     { label: 'Accueil', href: '/' },
     { label: 'Services', href: '#', hasDropdown: true },
+    { label: 'Formation', href: '/formation' },
     { label: 'À propos', href: '/about' },
     { label: 'Actualités', href: '/actualites' },
     { label: 'Carrière', href: '/careers' },
@@ -507,6 +508,13 @@ export function Header() {
 
                                 {/* Other nav items */}
                                 <div className="border-t border-gray-100 pt-2 mt-2">
+                                    <Link
+                                        href="/formation"
+                                        className="block px-4 py-3 text-sm font-medium text-[#092963] hover:bg-gray-50 rounded-xl"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                    >
+                                        Formation
+                                    </Link>
                                     <Link
                                         href="/about"
                                         className="block px-4 py-3 text-sm font-medium text-[#092963] hover:bg-gray-50 rounded-xl"

@@ -216,5 +216,263 @@ Comprendre les mécanismes du triangle de la fraude permet aux entreprises ivoir
 Découvrez comment Technologies MS Core peut vous accompagner dans la prévention de la fraude :
 [Nos services de cybersécurité](/services/security)
 `
+    },
+    {
+        id: '3',
+        slug: 'due-care-due-diligence-securite-information',
+        title: 'Due Care et Due Diligence en sécurité de l’information : quelles responsabilités pour les dirigeants d’entreprise en Côte d’Ivoire ?',
+        excerpt: 'La sécurité de l’information n’est plus uniquement une affaire technique. Elle est devenue une responsabilité directe des dirigeants, engageant la pérennité de l’entreprise. Découvrez pourquoi.',
+        date: '04 Février 2026',
+        author: 'Technologies MS Core',
+        readTime: '6 min',
+        image: '/images/service-governance.png', // Placeholder due to image generation issue
+        category: 'Gouvernance',
+        content: `
+## À l’ère de la transformation numérique, la sécurité de l’information n’est plus uniquement une affaire technique.
+
+Elle est devenue une responsabilité directe des dirigeants, engageant la pérennité de l’entreprise, sa réputation et, dans certains cas, leur responsabilité personnelle.
+
+Deux notions clés permettent de comprendre cette responsabilité : le Due Care et le Due Diligence.
+
+### Comprendre le Due Care en sécurité de l’information
+
+Le **Due Care** (devoir de prudence) correspond aux mesures raisonnables qu’un dirigeant ou une organisation doit mettre en place pour protéger ses actifs informationnels.
+
+En pratique, le Due Care signifie :
+
+*   identifier les risques liés aux systèmes d’information,
+*   mettre en place des contrôles de sécurité appropriés,
+*   protéger les données sensibles, les systèmes critiques et les opérations,
+*   agir comme le ferait un dirigeant prudent et responsable dans un contexte similaire.
+
+Le Due Care répond à la question :
+**« Avons-nous mis en place les mesures nécessaires pour prévenir les risques ? »**
+
+Ne pas démontrer un Due Care suffisant peut exposer l’entreprise à :
+
+*   des incidents de sécurité,
+*   des pertes financières,
+*   des sanctions réglementaires,
+*   des poursuites pour négligence.
+
+### Comprendre le Due Diligence en sécurité de l’information
+
+Le **Due Diligence** (devoir de vigilance) va plus loin.
+Il s’agit de la capacité à démontrer, preuves à l’appui, que l’organisation :
+
+*   évalue régulièrement ses risques,
+*   surveille l’efficacité de ses mesures de sécurité,
+*   améliore continuellement sa posture de sécurité,
+*   agit de manière proactive face aux menaces.
+
+Le Due Diligence repose sur :
+
+*   des analyses de risques documentées,
+*   des audits et diagnostics réguliers,
+*   une surveillance des incidents,
+*   des plans d’amélioration suivis et mesurés.
+
+Le Due Diligence répond à la question :
+**« Pouvons-nous prouver que nous gérons activement nos risques de sécurité ? »**
+
+Les deux sont indissociables.
+**Sans Due Care, il n’y a pas de protection.**
+**Sans Due Diligence, il n’y a pas de preuve de responsabilité.**
+
+### La responsabilité juridique du dirigeant en matière de Due Care et Due Diligence
+
+Au-delà des considérations techniques, le Due Care et le Due Diligence engagent directement la responsabilité juridique et managériale du dirigeant. Dans de nombreux cadres réglementaires et contractuels, le dirigeant est tenu de démontrer qu’il a pris toutes les mesures raisonnables pour protéger les actifs informationnels de son organisation.
+
+En cas d’incident de sécurité, de fraude ou de fuite de données, la question centrale n’est pas uniquement de savoir ce qui s’est produit, mais surtout :
+**« Quelles mesures le dirigeant avait-il mises en place pour prévenir et gérer ce risque ? »**
+
+### Une obligation de moyens renforcée
+
+En sécurité de l’information, la responsabilité du dirigeant repose généralement sur une obligation de moyens, et non de résultats. Cela signifie que le dirigeant n’est pas tenu de garantir l’absence totale d’incident, mais doit être en mesure de prouver qu’il a agi de manière prudente, raisonnable et informée.
+
+Cette obligation implique notamment :
+
+*   l’identification et l’évaluation régulière des risques liés aux systèmes d’information,
+*   la mise en œuvre de contrôles de sécurité proportionnés aux enjeux de l’entreprise,
+*   la documentation des décisions et des actions prises,
+*   la supervision effective des mesures de sécurité.
+
+L’absence de ces éléments peut être interprétée comme une négligence, engageant la responsabilité du dirigeant.
+
+### Responsabilité en cas de fraude, de cyberattaque ou de fuite de données
+
+Lorsqu’un incident survient, les autorités, partenaires, assureurs ou actionnaires examinent :
+
+*   si les risques étaient connus ou raisonnablement prévisibles,
+*   si des mesures de prévention étaient en place,
+*   si l’organisation disposait de procédures de détection et de réaction,
+*   si le dirigeant exerçait une surveillance adéquate.
+
+Dans ce contexte, le Due Diligence devient un élément clé de défense.
+Il permet de démontrer que l’organisation :
+
+*   surveillait activement son environnement numérique,
+*   évaluait régulièrement l’efficacité de ses contrôles,
+*   améliorait continuellement sa posture de sécurité.
+
+### Le rôle de la documentation et de la preuve
+
+Dans une approche juridique, ce qui n’est pas documenté est souvent considéré comme inexistant.
+Le dirigeant doit pouvoir s’appuyer sur :
+
+*   des rapports de diagnostic et d’audit,
+*   des analyses de risques formalisées,
+*   des tableaux de bord de sécurité,
+*   des plans d’action suivis et mis à jour.
+
+Ces éléments constituent des preuves concrètes de Due Care et de Due Diligence, essentielles en cas de contrôle, de litige ou d’incident majeur.
+
+### Comment Technologies MS CORE accompagne le Due Care et le Due Diligence
+
+Technologies MS CORE accompagne les dirigeants et les organisations ivoiriennes dans la mise en œuvre concrète de leur Due Care et de leur Due Diligence en sécurité de l’information.
+
+**Pour le Due Care**
+
+*   Diagnostic de cybersécurité
+*   Identification des risques et vulnérabilités
+*   Mise en place de contrôles de sécurité adaptés
+*   Sécurisation des environnements IT et cloud
+*   Protection des données sensibles
+
+**Pour le Due Diligence**
+
+*   Analyses de risques documentées
+*   Audits et évaluations régulières
+*   Mise en place de la surveillance de sécurité (SOC / SIEM)
+*   Tableaux de bord et indicateurs de sécurité
+*   Plans d’amélioration et suivi des actions
+*   Accompagnement à la conformité (ISO 27001, bonnes pratiques)
+
+Notre objectif est simple : Aider les dirigeants à prendre des décisions éclairées, à réduire les risques et à démontrer leur responsabilité.
+
+### Conclusion
+
+Le Due Care et le Due Diligence ne sont pas des concepts théoriques.
+Ce sont des outils de gouvernance essentiels pour tout dirigeant soucieux de la pérennité de son entreprise.
+
+Technologies MS CORE se positionne comme un partenaire de confiance, accompagnant les entreprises dans la maîtrise de leurs risques numériques, aujourd’hui et pour l’avenir.
+
+[Demander un diagnostic de sécurité gratuit](/contact) pour évaluer votre posture de sécurité dès aujourd’hui.
+`
+    },
+    {
+        id: '4',
+        slug: 'cyber-assurance-cote-d-ivoire-enjeu-vital',
+        title: 'Cyber assurance en Côte d’Ivoire : pourquoi c’est devenu un enjeu vital pour les entreprises',
+        excerpt: 'La cyber assurance devient un levier stratégique pour protéger les entreprises contre les impacts financiers, juridiques et opérationnels d’un incident cyber.',
+        date: '11 Février 2026',
+        author: 'Technologies MS Core',
+        readTime: '5 min',
+        image: '/images/service-cybersecurity.png', // Placeholder
+        category: 'Assurance',
+        content: `
+## La transformation numérique des entreprises en Côte d’Ivoire s’accélère : services financiers, e-commerce, administrations, plateformes digitales.
+
+Cette évolution s’accompagne d’une hausse des cyberattaques, fraudes, rançongiciels et fuites de données.
+
+Dans ce contexte, la cyber assurance devient un levier stratégique pour protéger les entreprises contre les impacts financiers, juridiques et opérationnels d’un incident cyber. Mais attention : une cyber assurance ne s’achète pas sans préparation.
+
+### Qu’est-ce que la cyber assurance ?
+
+La cyber assurance est un contrat d’assurance conçu pour couvrir les conséquences d’un incident cyber, notamment :
+
+*   Frais d’investigation et d’expertise numérique
+*   Restauration des systèmes et des données
+*   Interruption d’activité et pertes d’exploitation
+*   Fraude informatique et cyber extorsion (selon le contrat)
+*   Assistance juridique et communication de crise
+
+Elle ne remplace pas la cybersécurité, elle complète les mesures de protection existantes.
+
+### Pourquoi la cyber assurance est devenue essentielle en Côte d’Ivoire ?
+
+#### 1. Les cyberattaques ont un impact business réel
+
+Un incident cyber peut entraîner :
+
+*   Un arrêt total ou partiel des activités
+*   Des pertes financières importantes
+*   Une perte de confiance des clients et partenaires
+*   Une atteinte durable à la réputation
+
+Pour de nombreuses entreprises ivoiriennes, un seul incident majeur peut menacer la survie de l’entreprise.
+
+#### 2. Le cadre légal et réglementaire se renforce
+
+Les entreprises opérant en Côte d’Ivoire doivent respecter :
+
+*   La loi sur la protection des données à caractère personnel
+*   Les obligations liées à la cybercriminalité
+
+En cas de fuite de données ou de négligence avérée, la responsabilité du dirigeant peut être engagée. La cyber assurance permet de couvrir certains frais juridiques et de gestion de crise.
+
+### La cyber assurance est-elle disponible en Côte d’Ivoire ?
+
+Oui, mais elle reste encore peu répandue. Certaines compagnies locales, souvent via des partenariats internationaux, proposent des offres de cyber assurance ou des extensions spécifiques.
+
+Dans la majorité des cas :
+
+*   La souscription passe par des courtiers spécialisés
+*   Les assureurs internationaux apportent la capacité de couverture
+*   La préparation technique est déterminante pour l’acceptation du dossier
+
+### Les erreurs fréquentes des entreprises
+
+*   Souscrire à une cyber assurance sans comprendre les exclusions
+*   Déclarer des mesures de sécurité non réellement en place
+*   Négliger les accès cloud et les applications web
+*   Ne pas avoir de plan de réponse aux incidents
+*   Penser que l’assurance remplace la cybersécurité
+
+Résultat : refus d’indemnisation ou litiges après sinistre.
+
+### Comment Technologies MS Core aide votre entreprise à obtenir une cyber assurance
+
+Technologies MS Core accompagne les entreprises avant, pendant et après la souscription d’une cyber assurance suivant les étapes suivantes :
+
+#### 1. Diagnostic de cyber-assurabilité
+
+*   Évaluation complète de la posture cybersécurité
+*   Identification des écarts bloquants pour les assureurs
+*   Score de maturité cyber et priorités de correction
+
+#### 2. Mise à niveau sécurité
+
+*   Sécurisation des accès (MFA, comptes, privilèges)
+*   Protection Microsoft 365 et environnements cloud
+*   Sauvegardes, PRA/PCA, protection contre les ransomwares
+*   Gestion des vulnérabilités et correctifs
+*   Sensibilisation des employés
+
+#### 3. Tests et validation
+
+*   Tests d’intrusion applicatifs ou infrastructures
+*   Vérification post-remédiation
+*   Rapports clairs et exploitables par les assureurs
+
+#### 4. Dossier prêt pour assureurs et courtiers
+
+*   Preuves techniques et documentaires
+*   Résumé exécutif pour dirigeants
+*   Assistance dans les questionnaires assureurs
+*   Accompagnement lors des échanges avec les courtiers
+
+### Conclusion
+
+La cyber assurance n’est plus une option réservée aux grandes entreprises. Elle est un outil de gestion des risques incontournable, à condition d’être correctement préparée.
+
+Technologies MS Core accompagne les entreprises pour :
+
+*   Réduire leur exposition aux cyber risques
+*   Répondre aux exigences des assureurs
+*   Sécuriser durablement leurs activités
+
+Nous ne vendons pas de cyber assurance. Nous rendons votre entreprise assurable et résiliente.
+`
     }
 ];

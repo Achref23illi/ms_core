@@ -132,16 +132,16 @@ export default function BlogPostPage(props: BlogPostPageProps) {
 
             <article>
                 {/* Hero / Header */}
-                <div className="relative h-[60vh] min-h-[500px] w-full overflow-hidden">
+                <div className="relative min-h-[70vh] w-full overflow-hidden flex flex-col justify-end">
                     <div className="absolute inset-0 bg-[#092963]/80 z-10" />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/50 to-transparent z-20" />
                     <img
                         src={post.image}
                         alt={post.title}
-                        className="w-full h-full object-cover"
+                        className="absolute inset-0 w-full h-full object-cover"
                     />
 
-                    <div className="absolute inset-0 z-30 flex flex-col justify-end pb-20 px-4">
+                    <div className="relative z-30 pb-20 px-4 pt-48 w-full">
                         <div className="container mx-auto max-w-4xl">
                             <Link
                                 href="/actualites"
