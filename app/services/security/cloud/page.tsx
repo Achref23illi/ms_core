@@ -88,7 +88,7 @@ export default function CloudSecurityPage() {
                         </div>
                         <div className="order-1 md:order-2 h-64 md:h-80 relative rounded-2xl overflow-hidden border border-blue-100 shadow-lg">
                             <Image
-                                src="/images/service-cloud-detail.png"
+                                src="/images/service-cloud-detail.jpg"
                                 alt="Cloud Security Details"
                                 fill
                                 className="object-cover"
