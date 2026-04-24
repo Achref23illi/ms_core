@@ -19,7 +19,7 @@ export default function NetworkSecurityPage() {
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-gradient-to-br from-[#092963] to-[#1e3a8a] mix-blend-multiply z-10" />
                     <Image
-                        src="/images/security-network.jpg"
+                        src="/images/service-cybersecurity.png"
                         alt="Network Security Background"
                         fill
                         className="object-cover opacity-60"
@@ -90,7 +90,7 @@ export default function NetworkSecurityPage() {
                         <div className="order-1 md:order-2">
                             <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
                                 <Image
-                                    src="/images/security-network.jpg"
+                                    src="/images/cloud-infrastructure.png"
                                     alt="Network Security Visualization"
                                     fill
                                     className="object-cover"
