@@ -142,8 +142,8 @@ export function AboutSection() {
                                         Filiale Côte d'Ivoire
                                     </div>
                                     <p className="text-sm text-gray-600 mb-3">Port-Bouët, Zone industrielle Vridi, Abidjan</p>
-                                    <a href="tel:+2250706052436" className="flex items-center gap-2 text-sm font-medium text-[#eb7e2a] hover:underline">
-                                        <Phone className="w-3 h-3" /> +225 07 06 05 24 36
+                                    <a href="tel:+2250769911719" className="flex items-center gap-2 text-sm font-medium text-[#eb7e2a] hover:underline">
+                                        <Phone className="w-3 h-3" /> +225 07 69 91 17 19
                                     </a>
                                 </div>
                             </div>
