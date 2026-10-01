@@ -289,7 +289,7 @@ export default function CareersPage() {
                             </div>
                             <div className="text-left">
                                 <p className="text-xs text-gray-500 uppercase tracking-wider font-bold">Côte d&apos;Ivoire</p>
-                                <a href="tel:+2250706052436" className="text-lg font-bold text-[#092963] hover:text-[#eb7e2a] transition-colors">+225 07 06 05 24 36</a>
+                                <a href="tel:+2250769911719" className="text-lg font-bold text-[#092963] hover:text-[#eb7e2a] transition-colors">+225 07 69 91 17 19</a>
                             </div>
                         </div>
                     </div>

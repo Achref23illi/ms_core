@@ -176,7 +176,7 @@ Nous assurons la vente, la distribution, l'importation et l'exportation de maté
 ### Filiale - Côte d'Ivoire
 - **Adresse**: Abidjan, Port-Bouët, zone industrielle Vridi
 - **Email**: info@techmscore.com
-- **Téléphone**: 07 06 05 24 36
+- **Téléphone**: 07 69 91 17 19
 
 ---
 

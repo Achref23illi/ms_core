@@ -116,7 +116,7 @@ export function Footer() {
                                     <ul className="space-y-2">
                                         <li className="flex items-center gap-2">
                                             <Phone className="w-4 h-4" />
-                                            <span>+225 07 06 05 24 36</span>
+                                            <span>+225 07 69 91 17 19</span>
                                         </li>
                                         <li className="flex items-start gap-2">
                                             <MapPin className="w-4 h-4 mt-0.5 min-w-[16px]" />

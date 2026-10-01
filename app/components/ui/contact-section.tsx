@@ -136,7 +136,7 @@ export function ContactSection() {
                                         </div>
                                         <div className="flex items-center gap-3 text-sm text-gray-600">
                                             <Phone className="w-4 h-4 text-gray-400 shrink-0" />
-                                            <a href="tel:+2250706052436" className="hover:text-[#eb7e2a] transition-colors">+225 07 06 05 24 36</a>
+                                            <a href="tel:+2250769911719" className="hover:text-[#eb7e2a] transition-colors">+225 07 69 91 17 19</a>
                                         </div>
                                     </div>
                                 </motion.div>

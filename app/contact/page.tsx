@@ -292,7 +292,7 @@ export default function ContactPage() {
                                         </address>
                                         <div className="flex items-center gap-3 text-gray-900 font-bold text-xl">
                                             <Phone className="w-6 h-6 text-[#eb7e2a]" />
-                                            <a href="tel:+2250706052436" className="hover:text-[#eb7e2a] transition-colors">+225 07 06 05 24 36</a>
+                                            <a href="tel:+2250769911719" className="hover:text-[#eb7e2a] transition-colors">+225 07 69 91 17 19</a>
                                         </div>
                                         <div className="mt-6 h-64 bg-gray-100 rounded-xl overflow-hidden relative border border-gray-200">
                                             <iframe
